@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'custom': '400px', // Define un breakpoint llamado 'custom' a 700px
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

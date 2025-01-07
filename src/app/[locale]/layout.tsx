@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import NavBar from "../components/NavBar";
 
 
 
@@ -90,7 +91,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <NavBar />
+          <div className='max-w-5xl mx-auto p-2'>
+            {children}
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
