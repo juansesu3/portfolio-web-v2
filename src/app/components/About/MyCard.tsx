@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
+import CircularProgressBar from './CircularProgressBar';
 
 const MyCard = () => {
     return (
@@ -135,9 +136,85 @@ const MyCard = () => {
                                     to leverage this experience and skill set in future
                                     opportunities.</p>
                             </div>
+                            <hr />
                         </div>
                     </div>
-
+                    {/* Skills */}
+                    <div>
+                        <h2 className='text-purple-500 font-semibold text-lg mb-4 uppercase'>Skills</h2>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>React.js</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
+                                <h4>TypeScript</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
+                                <h4>Python</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={100} size={40} strokeWidth={6} /></div>
+                                <h4>Problem Solving</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>Next.js</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>Express.js</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>Tailwind CSS</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
+                                <h4>Node.js</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
+                                <h4>MongoDB</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={60} size={40} strokeWidth={6} /></div>
+                                <h4>Google Cloud</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>Docker</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>Git</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
+                                <h4>GitHub</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={70} size={40} strokeWidth={6} /></div>
+                                <h4>Azure DevOps</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
