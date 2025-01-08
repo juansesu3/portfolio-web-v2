@@ -11,7 +11,9 @@ export default {
     extend: {
       screens: {
         'custom': '400px', 
+        'custom3': '500px',
         'custom2': '500px', // Define un breakpoint llamado 'custom' a 700px
+
       },
       colors: {
         background: "var(--background)",

@@ -2,5 +2,48 @@
     "navbar": {
         "home": "Inicio",
         "about": "Sobre"
+    },
+    "chtabot": {
+        "title": "Chatte mit uns",
+        "subtitle": "👋 Hallo, schreibe uns bei Fragen – wir helfen dir gerne weiter!",
+        "bca-start": "Chat starten",
+        "option_1": "Produktempfehlungen",
+        "option_2": "Kundenservice",
+        "welcome_message": "Hallo! 👋 Ich bin Sofia und freue mich, dir zu helfen. Ich kann dir Produkte empfehlen, dir helfen, das zu finden, was du suchst, oder dich durch unseren Online-Shop führen. Lass mich wissen, wie ich dir helfen kann! 😊",
+        "toast_message_1": "Hallo! Wir sind hier, um dir bei allen Fragen zu helfen. 😊",
+        "toast_message_2": "Denke daran, wir sind hier, um dir bei allem zu helfen, was du brauchst. 🚀",
+        "toast_message_3": "Wir sind immer für Fragen oder Empfehlungen da. 😊",
+        "titleAgent": "Verfügbar",
+        "info_agent_1": {
+            "name": "Sofia",
+            "shortDescription": "Spezialist für Produktempfehlungen",
+            "description": "Sofia ist eine Kundendienstmitarbeiterin, die sich auf Kundenbetreuung und Informationsmanagement spezialisiert hat.",
+            "state": "bereit",
+            "profile-detail": {
+                "how_can_i_help": "Wie kann ich Ihnen helfen?",
+                "how_can_i_hep_desc":"Ich bin Spezialistin für personalisierte Empfehlungen von Sportprodukten. Ich helfe Kunden, die idealen Produkte basierend auf ihren Fitnesszielen und -bedürfnissen zu finden, und biete maßgeschneiderte Vorschläge sowie professionelle Beratung.",
+                "look_": "Schauen Sie, wie ich arbeite",
+                "comming_soon": "Kommt bald...",
+                "options": {
+                    "option_1": "Nachricht",
+                    "option_2": "Chat löschen",
+                    "option_3": "Besonderheit"
+                },
+                "alert_clean_chat": {
+                    "title": "Sind Sie sicher, dass Sie den Chat löschen möchten?",
+                    "text": "Diese Aktion kann nicht rückgängig gemacht werden.",
+                    "ok": "Ja, löschen",
+                    "cancel": "Abbrechen",
+                    "succes": "Chat erfolgreich gelöscht",
+                    "succes_tittle": "Erfolg"
+                }
+            }
+        },
+        "info_agent_2": {
+            "name": "Juan",
+            "shortDescription": "Spezialist für Kundenservice",
+            "description": "Juan ist ein Kundendienstmitarbeiter, der sich auf Kundenbetreuung und Informationsmanagement spezialisiert hat.",
+            "state": "Bald"
+        }
     }
 }

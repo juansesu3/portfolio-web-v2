@@ -3,6 +3,9 @@ import "../globals.css";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import UiChatBot from "../components/ChatAgent/UiChatBot";
+import Layout from "../components/Layout";
 
 
 
@@ -91,10 +94,16 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <NavBar />
-          <div className='max-w-5xl mx-auto p-2'>
+        <Layout>
+        <NavBar />
+          <div className='max-w-5xl mx-auto px-2'>
             {children}
           </div>
+       
+          <Footer />
+
+        </Layout>
+       
         </NextIntlClientProvider>
       </body>
     </html>

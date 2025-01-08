@@ -16,6 +16,11 @@ const nextConfig = {
         hostname: 'pandorai.s3.amazonaws.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.daisyui.com',
+        pathname: '/**',
+      },
     ],
   },
 };

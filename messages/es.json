@@ -2,5 +2,48 @@
     "navbar": {
         "home": "Inicio",
         "about": "Sobre"
+    },
+    "chtabot": {
+        "title": "Chatea con nosotros",
+        "subtitle": "👋 Hola, escríbenos si tienes alguna pregunta, ¡estamos felices de ayudarte!",
+        "bca-start": "Iniciar Chat",
+        "option_1": "Recomendaciones de productos",
+        "option_2": "Atención al cliente",
+        "welcome_message": "¡Hola! 👋 Soy Sofía, encantada de ayudarte. Puedo recomendarte productos, asistirte para encontrar lo que buscas o ayudarte a navegar por nuestra tienda online. ¡Dime cómo puedo ayudarte! 😊",
+        "toast_message_1": "¡Hola! Estamos aquí para ayudarte con cualquier duda. 😊",
+        "toast_message_2": "Recuerda que estamos aquí para ayudarte en lo que necesites. 🚀",
+        "toast_message_3": "Siempre estamos disponibles para cualquier consulta o recomendación. 😊",
+        "titleAgent": "Disponibles",
+        "info_agent_1": {
+            "name": "Sofia",
+            "shortDescription": "Especialista en recomendación de productos",
+            "description": "Sofia es un agente de atención al cliente que se especializa en la atención al cliente y la gestión de la información.",
+            "state": "listo",
+            "profile-detail": {
+                "how_can_i_help": "¿Cómo puedo ayudarte?",
+                "how_can_i_hep_desc":"Soy una especialista en recomendaciones personalizadas de productos deportivos. Ayudo a los clientes a encontrar los productos ideales según sus objetivos y necesidades en fitness, ofreciendo sugerencias adaptadas y asesoramiento profesional.",
+                "look_": "Mira cómo funciono",
+                "comming_soon": "Próximamente...",
+                "options": {
+                    "option_1": "Mensaje",
+                    "option_2": "Limpiar chat",
+                    "option_3": "Capricho"
+                },
+                "alert_clean_chat": {
+                    "title": "¿Estás seguro de que deseas limpiar el chat?",
+                    "text": "Esta acción no se puede deshacer.",
+                    "ok": "Sí, limpiar",
+                    "cancel": "Cancelar",
+                    "succes": "Chat limpiado con éxito",
+                    "succes_tittle": "Éxito"
+                }
+            }
+        },
+        "info_agent_2": {
+            "name": "Juan",
+            "shortDescription": "Especialista en servicio al cliente",
+            "description": "Juan es un agente de atención al cliente que se especializa en la atención al cliente y la gestión de la información.",
+            "state": "Próximamente"
+        }
     }
 }

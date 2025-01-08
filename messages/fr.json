@@ -2,5 +2,48 @@
     "navbar": {
         "home": "Inicio",
         "about": "Sobre"
+    },
+    "chtabot": {
+        "title": "Discutez avec nous",
+        "subtitle": "👋 Bonjour, envoyez-nous un message pour toute question, nous sommes ravis de vous aider !",
+        "bca-start": "Commencer la discussion",
+        "option_1": "Recommandations de produits",
+        "option_2": "Service client",
+        "welcome_message": "Bonjour ! 👋 Je suis Sofia, ravie de vous aider. Je peux recommander des produits, vous aider à trouver ce que vous cherchez ou vous guider dans notre boutique en ligne. Dites-moi comment je peux vous aider ! 😊",
+        "toast_message_1": "Bonjour ! Nous sommes là pour répondre à toutes vos questions. 😊",
+        "toast_message_2": "N'oubliez pas, nous sommes là pour vous aider avec tout ce dont vous avez besoin. 🚀",
+        "toast_message_3": "Nous sommes toujours là pour vos questions ou recommandations. 😊",
+        "titleAgent": "Disponibles",
+        "info_agent_1": {
+            "name": "Sofia",
+            "shortDescription": "Spécialiste en recommandations de produits",
+            "description": "Sofia est une agente de service client spécialisée dans le support client et la gestion de l'information.",
+            "state": "prête",
+            "profile-detail": {
+                "how_can_i_help": "Comment puis-je vous aider ?",
+                "how_can_i_hep_desc":"Je suis spécialiste en recommandations personnalisées de produits sportifs. J'aide les clients à trouver les produits idéaux en fonction de leurs objectifs et besoins en matière de fitness, en offrant des suggestions adaptées et des conseils professionnels.",
+                "look_": "Regardez comment je fonctionne",
+                "comming_soon": "Bientôt disponible...",
+                "options": {
+                    "option_1": "Message",
+                    "option_2": "Effacer le chat",
+                    "option_3": "Capriccio"
+                },
+                "alert_clean_chat": {
+                    "title": "Êtes-vous sûr de vouloir effacer le chat ?",
+                    "text": "Cette action ne peut pas être annulée.",
+                    "ok": "Oui, effacer",
+                    "cancel": "Annuler",
+                    "succes": "Chat effacé avec succès",
+                    "succes_tittle": "Succès"
+                }
+            }
+        },
+        "info_agent_2": {
+            "name": "Juan",
+            "shortDescription": "Spécialiste en service client",
+            "description": "Juan est un agent de service client spécialisé dans le support client et la gestion de l'information.",
+            "state": "Bientôt"
+        }
     }
 }

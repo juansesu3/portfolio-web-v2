@@ -2,5 +2,48 @@
     "navbar": {
         "home": "Inicio",
         "about": "Sobre"
+    },
+    "chtabot": {
+        "title": "Chat with us",
+        "subtitle": "👋 Hi, message us with any questions, we're happy to help!",
+        "bca-start": "Start Chat",
+        "option_1": "Product Recommendations",
+        "option_2": "Customer Services",
+        "welcome_message": "Hi there! 👋 I’m Sofia, delighted to help you. I can recommend products, assist you in finding what you’re looking for, or help you navigate our online store. Just let me know how I can assist! 😊",
+        "toast_message_1": "Hi there! We’re here to help you with any questions. 😊",
+        "toast_message_2": "Remember, we’re here to help you with anything you need. 🚀",
+        "toast_message_3": "We’re always here for any questions or recommendations. 😊",
+        "titleAgent": "Available",
+        "info_agent_1": {
+            "name": "Sofia",
+            "shortDescription": "Specialist in product recommendations",
+            "description": "Sofia is a customer service agent specializing in customer support and information management.",
+            "state": "ready",
+            "profile-detail": {
+                "how_can_i_help": "How can I help you?",
+                "how_can_i_hep_desc":"I am a specialist in personalized recommendations for sports products. I help clients find the ideal products based on their fitness goals and needs, offering tailored suggestions and professional advice.",
+                "look_": "Look how I work",
+                "comming_soon": "Coming Soon...",
+                "options": {
+                    "option_1": "Message",
+                    "option_2": "Clean Chat",
+                    "option_3": "Quirk"
+                },
+                "alert_clean_chat": {
+                    "title": "Are you sure you want to clear the chat?",
+                    "text": "This action cannot be undone.",
+                    "ok": "Yes, clean",
+                    "cancel": "Cancel",
+                    "succes": "Chat cleared successfully",
+                    "succes_tittle": "Success"
+                }
+            }
+        },
+        "info_agent_2": {
+            "name": "Juan",
+            "shortDescription": "Specialist in customer service",
+            "description": "Juan is a customer service agent specializing in customer support and information management.",
+            "state": "Soon"
+        }
     }
 }
