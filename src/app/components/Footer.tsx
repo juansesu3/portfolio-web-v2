@@ -16,7 +16,7 @@ const Footer = () => {
               <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> Work together!</Link>
             </div>
           </div>
-          <div className='flex flex-col items-center gap-2'>
+          <div className='flex flex-col items-center justify-center gap-2'>
             <Link href="/" className="text-xl font-bold w-20 h-20 ">
               <Image
                 src="/assets/logofinalpulido-black-3.png" // nota la barra inclinada al inicio

@@ -18,6 +18,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'pandorai.ch',
+        pathname: '/**',
+      },
+      
+      {
+        protocol: 'https',
         hostname: 'img.daisyui.com',
         pathname: '/**',
       },
