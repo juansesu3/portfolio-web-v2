@@ -3,11 +3,12 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <div className="relative  py-16">
+        <div className="relative  py-8">
             <div className="max-w-7xl mx-auto flex flex-row items-center justify-between">
                 <div className="text-left  w-1/2">
-                    <h1 className="text-2xl sm:text-5xl font-extrabold tracking-tight">
-                        <span className='text-purple-500'>Aprender</span>  Nunca Termina
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight whitespace-nowrap">
+                        <span className='text-purple-500'>Aprender</span>  Nunca <br />
+                        Termina
                     </h1>
                     <p className="mt-4 text-md sm:text-xl">
                         Explora artículos sobre desarrollo full-stack, inteligencia artificial y consejos para potenciar tu carrera tecnológica.
