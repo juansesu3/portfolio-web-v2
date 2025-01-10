@@ -21,6 +21,12 @@ const nextConfig = {
         hostname: 'pandorai.ch',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'negiupp.com',
+        pathname: '/**',
+      },
+  
       
       {
         protocol: 'https',

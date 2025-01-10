@@ -3,7 +3,7 @@ import React from 'react';
 
 const CardArticle = ({ image, title, intro, date, readTime }) => {
     return (
-        <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all ease-in-out duration-300">
+        <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl  transform hover:scale-105 transition-all ease-in-out duration-300">
             {/* Imagen del artículo */}
             <Image
                         width={500}

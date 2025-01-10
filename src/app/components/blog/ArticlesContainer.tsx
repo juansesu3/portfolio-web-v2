@@ -70,17 +70,21 @@ const ArticlesContainer = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 custom2:grid-cols-2 md:grid-cols-3 gap-6 px-2">
-      {testData.map((article, index) => (
-        <CardArticle
-          key={index} // Usamos el índice como key en este caso, pero puede ser algo único si lo tienes
-          image={article.image}
-          title={article.title}
-          intro={article.intro}
-          date={article.date}
-          readTime={article.readTime}
-        />
-      ))}
+    <div>
+      <h2 className="text-4xl font-bold text-center mb-8">Articles</h2>
+
+      <div className="grid grid-cols-1 custom2:grid-cols-2 md:grid-cols-3 gap-6 px-2">
+        {testData.map((article, index) => (
+          <CardArticle
+            key={index} // Usamos el índice como key en este caso, pero puede ser algo único si lo tienes
+            image={article.image}
+            title={article.title}
+            intro={article.intro}
+            date={article.date}
+            readTime={article.readTime}
+          />
+        ))}
+      </div>
     </div>
   )
 }
