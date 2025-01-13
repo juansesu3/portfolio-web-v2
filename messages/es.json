@@ -1,7 +1,117 @@
 {
     "navbar": {
         "home": "Inicio",
-        "about": "Sobre"
+        "about": "Acerca de",
+        "projects": "Proyectos",
+        "services_t": "Servicios",
+        "services": {
+            "service_1": "Consultoría",
+            "service_2": "Desarrollo Web",
+            "service_3": "Diseño UI | UX",
+            "service_4": "Desarrollo de Agentes de IA"
+        },
+        "blog": "Blog",
+        "contact": "Contacto",
+        "lets_talk": "Hablemos"
+    },
+    "footter": {
+        "title": "Sobre Mí",
+        "links": {
+            "one": "¿Quién Soy?",
+            "two": "¿Qué es Negiupp?",
+            "three": "¿Cómo puedo ayudarte?",
+            "four": "¡Trabajemos juntos!"
+        },
+        "rigth": "Todos los derechos reservados"
+    },
+    "home": {
+        "section_one": {
+            "box_one": {
+                "rol": "Desarrollador Fullstack",
+                "name": "Juan Sebastián Suárez Ramírez",
+                "short_desc": "Construyo soluciones innovadoras que combinan tecnología, creatividad y rendimiento."
+            },
+            "box_two": {
+                "title": "Más Sobre Mí",
+                "sub_title": "Credenciales"
+            },
+            "box_three": {
+                "title": "Portafolio",
+                "sub_title": "Mis Proyectos"
+            }
+        },
+        "section_two": {
+            "box_one": {
+                "title": "IA",
+                "sub_title": "Soluciones de IA"
+            },
+            "box_two": {
+                "title": "Especialización",
+                "sub_title": "Servicios Ofrecidos"
+            },
+            "box_three": {
+                "title": "Conéctate Conmigo",
+                "sub_title": "Perfiles"
+            }
+        },
+        "section_three": {
+            "box_one": {
+                "title_1": "Años de Experiencia",
+                "title_2": "Clientes Globales",
+                "title_3": "Total de Proyectos"
+            },
+            "box_two": {
+                "title": "Hablemos",
+                "title_2": "Y Trabajemos",
+                "title_3": "Juntos"
+            }
+        }
+    },
+    "projects": {
+        "title": "Explora nuestros ",
+        "title_two": "Proyectos",
+        "sub_title": "Aquí encontrarás una colección de mis mejores creaciones, donde la innovación y la creatividad se fusionan. Descubre cómo he ayudado a mis clientes a alcanzar sus objetivos con soluciones únicas.",
+        "cta_btn": "¡Hablemos de tu Proyecto!",
+        "sub_title_two": "Mis Proyectos"
+    },
+    "blog": {
+        "title": "Aprender ",
+        "title_two": "Nunca ",
+        "title_three": "Terminar ",
+        "sub_title": "Explora artículos sobre desarrollo full-stack, inteligencia artificial y consejos para potenciar tu carrera tecnológica.",
+        "cta_btn": "Suscribete",
+        "cta_input": "Ingresa tu correo",
+        "sub_title_two": "Articulos",
+        "read_art": "de lectura",
+        "footer_bay": {
+            "title_one": "¡Gracias",
+            "title_two": "por ",
+            "title_three": "visitar ",
+            "title_four": "nuestro ",
+            "title_five": "blog!",
+            "sub_title": "Esperamos que hayas disfrutado nuestros artículos y encontrado información valiosa.",
+            "sub_title_two": "¡No te pierdas nuestras últimas actualizaciones y recursos exclusivos!",
+            "cta_btn": "Contáctanos",
+            "end": "¿Interesado en trabajar con nosotros? Revisa nuestros",
+            "end_two": "servicios."
+        }
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "subtitle": "¿Tienes preguntas o un proyecto en mente? Completa el formulario o agenda una reunión directamente con nosotros.",
+        "form": {
+            "name": "Nombre Completo",
+            "input_name": "Ingresa tu nombre",
+            "email": "Correo Electrónico",
+            "input_mail": "Ingresa tu correo",
+            "message": "Mensaje",
+            "input_message": "Escribe tu mensaje...",
+            "send": "Enviar Mensaje"
+        },
+        "calendly": {
+            "title": "Agenda una Reunión",
+            "subtitle": "¿Prefieres una charla en persona? Usa nuestro calendario para agendar una reunión."
+        }
     },
     "chtabot": {
         "title": "Chatea con nosotros",
@@ -21,7 +131,7 @@
             "state": "listo",
             "profile-detail": {
                 "how_can_i_help": "¿Cómo puedo ayudarte?",
-                "how_can_i_hep_desc":"Soy una especialista en recomendaciones personalizadas de productos deportivos. Ayudo a los clientes a encontrar los productos ideales según sus objetivos y necesidades en fitness, ofreciendo sugerencias adaptadas y asesoramiento profesional.",
+                "how_can_i_hep_desc": "Soy una especialista en recomendaciones personalizadas de productos deportivos. Ayudo a los clientes a encontrar los productos ideales según sus objetivos y necesidades en fitness, ofreciendo sugerencias adaptadas y asesoramiento profesional.",
                 "look_": "Mira cómo funciono",
                 "comming_soon": "Próximamente...",
                 "options": {

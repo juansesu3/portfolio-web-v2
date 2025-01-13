@@ -1,19 +1,21 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
+  const t = useTranslations("footter");
   return (
     <div className='flex flex-col w-full border-t border-gray-100 pt-4 bg-white mt-6'>
       <div className='max-w-5xl mx-auto p-2 flex flex-col gap-4 w-full '>
         <div className='flex justify-between w-full mb-4'>
           <div className='flex flex-col gap-4'>
-            <h3 className=' font-bold'>About Me</h3>
+            <h3 className=' font-bold'>{t('title')}</h3>
             <div className='flex flex-col gap-2'>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> Who I am?</Link>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> What is negiupp?</Link>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> How can i help you?</Link>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> Work together!</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.one')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.two')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.three')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.four')}</Link>
             </div>
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>
@@ -40,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='flex justify-center'>
-          <p className='text-slate-500/50 font-bold'>© 2025 <Link href={'/'} className='text-purple-500 hover:text-purple-600 transition-all duration-300 ease-in-out '> negiupp.com </Link> | All rigth reserved</p>
+          <p className='text-slate-500/50 font-bold'>© 2025 <Link href={'/'} className='text-purple-500 hover:text-purple-600 transition-all duration-300 ease-in-out '> negiupp.com </Link> | {t('rigth')}</p>
         </div>
       </div>
     </div>

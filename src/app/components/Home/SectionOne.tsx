@@ -1,8 +1,12 @@
+'use client'
+import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const SectionOne = () => {
+
+    const t = useTranslations("home");
     return (
         <>
             <div className='flex md:flex-row flex-col gap-4 justify-between'>
@@ -17,11 +21,11 @@ const SectionOne = () => {
                     <div className='w-full'></div>
                     <div className='flex flex-col gap-2 text-white w-md justify-center'>
                         <div>
-                            <h2 className='uppercase  text-gray-300 font-bold'>FullStack Developer</h2>
+                            <h2 className='uppercase  text-gray-300 font-bold'>{t('section_one.box_one.rol')}</h2>
                             <h3 className='text-md font-bold '>Juan Sebastian Suarez Ramirez</h3>
                         </div>
                         <div>
-                            <p className='text-md font-light'>I build innovative solutions that combine technology, creativity, and performance.</p>
+                            <p className='text-md font-light'>{t('section_one.box_one.short_desc')}</p>
                         </div>
                     </div>
                     <Link href="/" className="text-xl font-bold w-6 h-6 absolute bottom-3 right-4 ">
@@ -44,8 +48,8 @@ const SectionOne = () => {
                             className='object-contain w-full'
                         />
                         <div>
-                            <h2 className='uppercase text-slate-500 text-sm'>More About Me</h2>
-                            <h3 className='text-md text-black font-bold'>Credentials</h3>
+                            <h2 className='uppercase text-slate-500 text-sm'>{t('section_one.box_two.title')}</h2>
+                            <h3 className='text-md text-black font-bold'>{t('section_one.box_two.sub_title')}</h3>
                         </div>
                     </div>
                     <div className='border border-gray-100 flex flex-col justify-between gap-2 rounded-2xl shadow-md p-4  w-full cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out'>
@@ -57,8 +61,8 @@ const SectionOne = () => {
                             className='object-contain rounded-xl w-full'
                         />
                         <div>
-                            <h2 className='uppercase text-slate-500 text-sm'>ShowCase</h2>
-                            <h3 className='text-md text-black font-bold'>My Projects</h3>
+                            <h2 className='uppercase text-slate-500 text-sm'>{t('section_one.box_three.title')}</h2>
+                            <h3 className='text-md text-black font-bold'>{t('section_one.box_three.sub_title')}</h3>
                         </div>
                     </div>
                 </div>

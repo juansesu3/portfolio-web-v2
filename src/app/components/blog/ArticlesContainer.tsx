@@ -1,5 +1,6 @@
 import React from 'react'
 import CardArticle from './CardArticle'
+import { useTranslations } from 'next-intl';
 
 const ArticlesContainer = () => {
   // Array de objetos con datos de prueba
@@ -68,10 +69,10 @@ const ArticlesContainer = () => {
       readTime: "4 min"
     }
   ];
-
+  const t = useTranslations('blog');
   return (
     <div>
-      <h2 className="text-4xl font-bold text-center mb-8">Articles</h2>
+      <h2 className="text-4xl font-bold text-center mb-8">{t('sub_title_two')}</h2>
 
       <div className="grid grid-cols-1 custom2:grid-cols-2 md:grid-cols-3 gap-6 px-2">
         {testData.map((article, index) => (

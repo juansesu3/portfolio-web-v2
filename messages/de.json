@@ -1,7 +1,117 @@
 {
     "navbar": {
-        "home": "Inicio",
-        "about": "Sobre"
+        "home": "Startseite",
+        "about": "Über Mich",
+        "projects": "Projekte",
+        "services_t": "Dienstleistungen",
+        "services": {
+            "service_1": "Beratung",
+            "service_2": "Webentwicklung",
+            "service_3": "UI | UX Design",
+            "service_4": "Entwicklung von KI-Agenten"
+        },
+        "blog": "Blog",
+        "contact": "Kontakt",
+        "lets_talk": "Lass uns reden"
+    },
+    "footter": {
+        "title": "Über Mich",
+        "links": {
+            "one": "Wer Bin Ich?",
+            "two": "Was ist Negiupp?",
+            "three": "Wie Kann Ich Helfen?",
+            "four": "Lass uns Zusammenarbeiten!"
+        },
+        "rigth": "Alle Rechte Vorbehalten"
+    },
+    "projects": {
+        "title": "Entdecken Sie unsere ",
+        "title_two": "Projekte",
+        "sub_title": "Hier finden Sie eine Sammlung meiner besten Kreationen, wo Innovation und Kreativität aufeinandertreffen. Entdecken Sie, wie ich meinen Kunden geholfen habe, ihre Ziele mit einzigartigen Lösungen zu erreichen.",
+        "cta_btn": "Lassen Sie uns über Ihr Projekt sprechen!",
+        "sub_title_two": "Meine Projekte"
+    },
+    "blog": {
+        "title": "Lernen ",
+        "title_two": "Hört ",
+        "title_three": "Niemals Auf ",
+        "sub_title": "Entdecken Sie Artikel über Full-Stack-Entwicklung, künstliche Intelligenz und Tipps zur Förderung Ihrer Technologie-Karriere.",
+        "cta_btn": "Abonnieren",
+        "cta_input": "Geben Sie Ihre E-Mail ein",
+        "sub_title_two": "Artikel",
+        "read_art": "lesen",
+        "footer_bay": {
+            "title_one": "Danke",
+            "title_two": " für ",
+            "title_three": "den Besuch ",
+            "title_four": "unseres ",
+            "title_five": "Blogs!",
+            "sub_title": "Wir hoffen, dass Ihnen unsere Artikel gefallen haben und Sie wertvolle Informationen gefunden haben.",
+            "sub_title_two": "Verpassen Sie nicht unsere neuesten Updates und exklusiven Ressourcen!",
+            "cta_btn": "Kontaktieren Sie uns",
+            "end": "Interessiert an einer Zusammenarbeit? Sehen Sie sich unsere",
+            "end_two": "Dienstleistungen an."
+        }
+    },
+    "home": {
+        "section_one": {
+            "box_one": {
+                "rol": "Fullstack-Entwickler",
+                "name": "Juan Sebastian Suarez Ramirez",
+                "short_desc": "Ich entwickle innovative Lösungen, die Technologie, Kreativität und Leistung vereinen."
+            },
+            "box_two": {
+                "title": "Mehr Über Mich",
+                "sub_title": "Zertifikate"
+            },
+            "box_three": {
+                "title": "Portfolio",
+                "sub_title": "Meine Projekte"
+            }
+        },
+        "section_two": {
+            "box_one": {
+                "title": "KI",
+                "sub_title": "KI-Lösungen"
+            },
+            "box_two": {
+                "title": "Spezialisierung",
+                "sub_title": "Angebotene Dienstleistungen"
+            },
+            "box_three": {
+                "title": "Bleiben Sie Verbunden",
+                "sub_title": "Profile"
+            }
+        },
+        "section_three": {
+            "box_one": {
+                "title_1": "Jahre Erfahrung",
+                "title_2": "Kunden Weltweit",
+                "title_3": "Projekte Insgesamt"
+            },
+            "box_two": {
+                "title": "Lass uns",
+                "title_2": "Zusammen",
+                "title_3": "Arbeiten"
+            }
+        }
+    },
+    "contact": {
+        "title": "Kontaktiere uns",
+        "subtitle": "Haben Sie Fragen oder ein Projekt im Kopf? Füllen Sie das Formular aus oder vereinbaren Sie direkt einen Termin mit uns.",
+        "form": {
+            "name": "Vollständiger Name",
+            "input_name": "Geben Sie Ihren Namen ein",
+            "email": "E-Mail-Adresse",
+            "input_mail": "Geben Sie Ihre E-Mail-Adresse ein",
+            "message": "Nachricht",
+            "input_message": "Schreiben Sie Ihre Nachricht...",
+            "send": "Nachricht Senden"
+        },
+        "calendly": {
+            "title": "Einen Termin Vereinbaren",
+            "subtitle": "Möchten Sie lieber persönlich sprechen? Nutzen Sie unseren Kalender, um einen Termin zu vereinbaren."
+        }
     },
     "chtabot": {
         "title": "Chatte mit uns",
@@ -21,7 +131,7 @@
             "state": "bereit",
             "profile-detail": {
                 "how_can_i_help": "Wie kann ich Ihnen helfen?",
-                "how_can_i_hep_desc":"Ich bin Spezialistin für personalisierte Empfehlungen von Sportprodukten. Ich helfe Kunden, die idealen Produkte basierend auf ihren Fitnesszielen und -bedürfnissen zu finden, und biete maßgeschneiderte Vorschläge sowie professionelle Beratung.",
+                "how_can_i_hep_desc": "Ich bin Spezialistin für personalisierte Empfehlungen von Sportprodukten. Ich helfe Kunden, die idealen Produkte basierend auf ihren Fitnesszielen und -bedürfnissen zu finden, und biete maßgeschneiderte Vorschläge sowie professionelle Beratung.",
                 "look_": "Schauen Sie, wie ich arbeite",
                 "comming_soon": "Kommt bald...",
                 "options": {

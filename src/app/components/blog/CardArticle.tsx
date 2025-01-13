@@ -1,7 +1,10 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 
 const CardArticle = ({ image, title, intro, date, readTime }) => {
+    
+    const t = useTranslations('blog')
     return (
         <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl  transform hover:scale-105 transition-all ease-in-out duration-300">
             {/* Imagen del artículo */}
@@ -24,7 +27,7 @@ const CardArticle = ({ image, title, intro, date, readTime }) => {
                 {/* Fecha y tiempo de lectura */}
                 <div className="flex justify-between items-center text-sm text-gray-500 mt-auto">
                     <span>{date}</span>
-                    <span>{readTime} min de lectura</span>
+                    <span>{readTime} {t('read_art')}</span>
                 </div>
             </div>
         </div>

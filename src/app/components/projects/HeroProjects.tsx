@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 const HeroProjects = () => {
+  const t = useTranslations("projects")
   return (
     <section className="relative  py-16 ">
       {/* Contenido principal */}
@@ -10,7 +12,7 @@ const HeroProjects = () => {
         {/* Texto del Hero */}
         <div className="max-w-2xl text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-center sm:text-left">
-            Explora Nuestros <br /> <span className="text-purple-500">Proyectos</span>
+            {t('title')}<br /> <span className="text-purple-500">{t('title_two')}</span>
           </h1>
           <div className=" flex sm:hidden mb-4">
           <Image
@@ -22,14 +24,14 @@ const HeroProjects = () => {
           />
         </div>
           <p className="text-lg md:text-xl mb-8 text-center sm:text-left">
-          Aquí encontrarás una colección de mis mejores creaciones, donde la innovación y la creatividad se fusionan. Descubre cómo he ayudado a mis clientes a alcanzar sus objetivos con soluciones únicas.
+          {t('sub_title')}
           </p>
           <div className="flex sm:justify-start justify-center gap-4">
             <Link 
               href="#portfolio" 
               className="bg-purple-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-400 hover:shadow-xl transition-all duration-300"
             >
-              ¡Hablemos de tu Proyecto!
+              {t('cta_btn')}
             </Link>
             
           </div>

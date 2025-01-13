@@ -1,7 +1,117 @@
 {
     "navbar": {
-        "home": "Inicio",
-        "about": "Sobre"
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "services_t": "Services",
+        "services": {
+            "service_1": "Consulting",
+            "service_2": "Web Development",
+            "service_3": "UI | UX Design",
+            "service_4": "AI Agents Development"
+        },
+        "blog": "Blog",
+        "contact": "Contact",
+        "lets_talk": "Let's Talk"
+    },
+    "footter": {
+        "title": "About Me",
+        "links": {
+            "one": "Who Am I?",
+            "two": "What is Negiupp?",
+            "three": "How Can I Help You?",
+            "four": "Let's Work Together!"
+        },
+        "rigth": "All Rights Reserved"
+    },
+    "home": {
+        "section_one": {
+            "box_one": {
+                "rol": "Fullstack Developer",
+                "name": "Juan Sebastian Suarez Ramirez",
+                "short_desc": "I build innovative solutions that combine technology, creativity, and performance."
+            },
+            "box_two": {
+                "title": "More About Me",
+                "sub_title": "Credentials"
+            },
+            "box_three": {
+                "title": "Showcase",
+                "sub_title": "My Projects"
+            }
+        },
+        "section_two": {
+            "box_one": {
+                "title": "AI",
+                "sub_title": "AI Solutions"
+            },
+            "box_two": {
+                "title": "Specialization",
+                "sub_title": "Offered Services"
+            },
+            "box_three": {
+                "title": "Stay Connected",
+                "sub_title": "Profiles"
+            }
+        },
+        "section_three": {
+            "box_one": {
+                "title_1": "Years of Experience",
+                "title_2": "Global Clients",
+                "title_3": "Total Projects"
+            },
+            "box_two": {
+                "title": "Let's",
+                "title_2": "Work",
+                "title_3": "Together"
+            }
+        }
+    },
+    "projects": {
+        "title": "Explore our ",
+        "title_two": "Projects",
+        "sub_title": "Here you'll find a collection of my best creations, where innovation and creativity come together. Discover how I have helped my clients achieve their goals with unique solutions.",
+        "cta_btn": "Let's Talk About Your Project!",
+        "sub_title_two": "My Projects"
+    },
+    "blog": {
+        "title": "Learning ",
+        "title_two": "Never ",
+        "title_three": "Ends ",
+        "sub_title": "Explore articles on full-stack development, artificial intelligence, and tips to boost your tech career.",
+        "cta_btn": "Subscribe",
+        "cta_input": "Enter your email",
+        "sub_title_two": "Articles",
+        "read_art":"reading",
+        "footer_bay": {
+            "title_one": "Thank",
+            "title_two": " you ",
+            "title_three": "for ",
+            "title_four": "visiting ",
+            "title_five": "our blog!",
+            "sub_title": "We hope you enjoyed our articles and found valuable information.",
+            "sub_title_two": "Don't miss our latest updates and exclusive resources!",
+            "cta_btn": "Contact Us",
+            "end": "Interested in working with us? Check out our",
+            "end_two": "services."
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Do you have questions or a project in mind? Fill out the form or schedule a meeting directly with us.",
+        "form": {
+            "name": "Full Name",
+            "input_name": "Enter your name",
+            "email": "Email Address",
+            "input_mail": "Enter your email",
+            "message": "Message",
+            "input_message": "Write your message...",
+            "send": "Send Message"
+        },
+        "calendly": {
+            "title": "Schedule a Meeting",
+            "subtitle": "Prefer a chat in person? Use our calendar to schedule a meeting."
+        }
     },
     "chtabot": {
         "title": "Chat with us",
@@ -21,7 +131,7 @@
             "state": "ready",
             "profile-detail": {
                 "how_can_i_help": "How can I help you?",
-                "how_can_i_hep_desc":"I am a specialist in personalized recommendations for sports products. I help clients find the ideal products based on their fitness goals and needs, offering tailored suggestions and professional advice.",
+                "how_can_i_hep_desc": "I am a specialist in personalized recommendations for sports products. I help clients find the ideal products based on their fitness goals and needs, offering tailored suggestions and professional advice.",
                 "look_": "Look how I work",
                 "comming_soon": "Coming Soon...",
                 "options": {
