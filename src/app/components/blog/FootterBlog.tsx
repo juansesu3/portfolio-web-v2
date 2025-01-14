@@ -17,7 +17,7 @@ const FootterBlog = () => {
             {/* Call to Action */}
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
 
-                <Link href="/contact" className='bg-white border border-gray-100 hover:bg-purple-600 hover:text-white  font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300'>
+                <Link href="/contact" className='bg-purple-600 border border-gray-100 hover:bg-white text-white hover:text-black  font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300'>
 
                     {t('cta_btn')}
 

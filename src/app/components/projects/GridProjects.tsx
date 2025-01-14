@@ -1,7 +1,9 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 
 // Datos de ejemplo para los proyectos
 const projects = [
@@ -11,7 +13,8 @@ const projects = [
     description: 'Plataforma moderna de comercio electrónico para una experiencia de compra fluida.',
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1713345137122.png&w=640&q=75',
     technologies: ['react', 'nextjs', 'tailwindcss'],
-    link: '/projects/ecommerce'
+    link: '/projects/ecommerce',
+    slug: 'e-commerce-web-App'
   },
   {
     id: 2,
@@ -19,7 +22,8 @@ const projects = [
     description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1697543716503.png&w=640&q=75',
     technologies: ['vue', 'firebase', 'sass'],
-    link: '/projects/task-manager'
+    link: '/projects/task-manager',
+    slug: 'sistema-de-gestión-de-tareas'
   },
   {
     id: 3,
@@ -27,7 +31,8 @@ const projects = [
     description: 'Una app para administrar gastos y finanzas personales con gráficos interactivos.',
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1692007995201.png&w=640&q=75',
     technologies: ['angular', 'nodejs', 'bootstrap'],
-    link: '/projects/finance-app'
+    link: '/projects/finance-app',
+    slug: 'aplicación-de-finanzas'
   },
   {
     id: 4,
@@ -35,7 +40,8 @@ const projects = [
     description: 'Plataforma moderna de comercio electrónico para una experiencia de compra fluida.',
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1713345137122.png&w=640&q=75',
     technologies: ['react', 'nextjs', 'tailwindcss'],
-    link: '/projects/ecommerce'
+    link: '/projects/ecommerce',
+    slug: 'e-commerce-web-app'
   },
   {
     id: 5,
@@ -43,7 +49,8 @@ const projects = [
     description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1697543716503.png&w=640&q=75',
     technologies: ['vue', 'firebase', 'sass'],
-    link: '/projects/task-manager'
+    link: '/projects/task-manager',
+    slug: 'sistema-de-gestión-de-tareas'
   },
   {
     id: 6,
@@ -51,18 +58,28 @@ const projects = [
     description: 'Una app para administrar gastos y finanzas personales con gráficos interactivos.',
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1692007995201.png&w=640&q=75',
     technologies: ['angular', 'nodejs', 'bootstrap'],
-    link: '/projects/finance-app'
+    link: '/projects/finance-app',
+    slug: 'aplicación-de-finanzas'
   }
 ]
 
 const GridProjects = () => {
   const t = useTranslations('projects')
+
+  const pathname = usePathname();
+  const localeFromPath = pathname.split("/")[1] || "en";
+  const [locale, setLocale] = useState(localeFromPath);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  useEffect(() => {
+    setLocale(localeFromPath);
+  }, [localeFromPath]);
   return (
     <section className="py-12">
       <h2 className="text-4xl font-bold text-center mb-8">{t('sub_title_two')}</h2>
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:px-0 px-1">
         {projects.map((project) => (
-          <Link href={project.link} key={project.id} className="group">
+          <Link href={`/${locale}/projects/${project.slug}`} key={project.id} className="group">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 h-full flex flex-col">
               {/* Imagen del proyecto */}
               <div className="relative h-52">

@@ -1,15 +1,25 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaCode } from "react-icons/fa6";
 import { CiMobile3 } from "react-icons/ci";
 
 import { GiProcessor } from "react-icons/gi";
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const SectionTwo = () => {
     const t = useTranslations("home");
     const t_ = useTranslations("navbar");
+    const pathname = usePathname();
+    const localeFromPath = pathname.split("/")[1] || "en";
+    const [locale, setLocale] = useState(localeFromPath);
+
+
+    useEffect(() => {
+        setLocale(localeFromPath);
+    }, [localeFromPath]);
     return (
         <div className=''>
             {/* desktop */}
@@ -29,9 +39,9 @@ const SectionTwo = () => {
                 </div>
                 <div className='border relative border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
                     <div className='flex justify-between gap-4 my-auto'>
-                        <div className='border group  border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2 items-center justify-center text-center ' ><GiProcessor size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_4')}</p></div>
-                        <div className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><CiMobile3 size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_3')}</p></div>
-                        <div className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><FaCode size={60} /><p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_2')}</p></div>
+                        <Link href={`/${locale}/services/ai-agents-development`} className='border group  border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2 items-center justify-center text-center ' ><GiProcessor size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_4')}</p></Link>
+                        <Link href={`/${locale}/services/design-ux-ui`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><CiMobile3 size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_3')}</p></Link>
+                        <Link href={`/${locale}/services/web-development`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><FaCode size={60} /><p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_2')}</p></Link>
                     </div>
                     <Image className='w-16 absolute -right-2 -bottom-0.5' src='https://my-page-negiupp.s3.amazonaws.com/1736495010295.webp' width={500} height={500} alt='robot ' />
                     <div>
@@ -57,9 +67,9 @@ const SectionTwo = () => {
             <div className='gap-4 justify-between lg:hidden flex flex-col'>
                 <div className='relative border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
                     <div className='flex custom3:flex-row flex-col justify-around gap-4 my-auto'>
-                    <div className='border group  border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2 items-center justify-center text-center ' ><GiProcessor size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_4')}</p></div>
-                        <div className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><CiMobile3 size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_3')}</p></div>
-                        <div className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><FaCode size={60} /><p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_2')}</p></div>
+                        <Link href={`/${locale}/services/ai-agents-development`} className='border group  border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2 items-center justify-center text-center ' ><GiProcessor size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_4')}</p></Link>
+                        <Link href={`/${locale}/services/design-ux-ui`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><CiMobile3 size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_3')}</p></Link>
+                        <Link href={`/${locale}/services/web-development`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><FaCode size={60} /><p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_2')}</p></Link>
                     </div>
                     <Image className='w-16 absolute -right-2 -bottom-0.5' src='https://my-page-negiupp.s3.amazonaws.com/1736495010295.webp' width={500} height={500} alt='robot ' />
                     <div>

@@ -150,20 +150,20 @@ const NavBar = () => {
           </button>
           {/* Menú desplegable de servicios */}
           <div
-            className={`w-52 md:bg-white md:shadow-md border-b mt-2 rounded-md md:absolute md:top-5 md:w-52 overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen ? 'max-h-[500px] translate-y-0 opacity-100 flex flex-col items-center' : 'max-h-0 -translate-y-2 opacity-0 flex flex-col items-center'
+            className={`w-52 md:bg-white border border-gray-100 md:shadow-md border-b mt-2 rounded-md md:absolute md:top-5 md:w-52 overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen ? 'max-h-[500px] translate-y-0 opacity-100 flex flex-col items-center' : 'max-h-0 -translate-y-2 opacity-0 flex flex-col items-center'
               }`}
             style={{ transitionProperty: 'max-height, transform, opacity' }}
           >
-            <Link href={`/${locale}/services/consulting`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="block text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
+            <Link href={`/${locale}/services/consulting`} onClick={() => { toggleMenu(); closeDropdowns(); }} className=" w-full flex justify-center items-center  text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
               {t('services.service_1')}
             </Link>
-            <Link href={`/${locale}/services/development`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="block text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
+            <Link href={`/${locale}/services/development`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="w-full flex justify-center items-center text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
               {t('services.service_2')}
             </Link>
-            <Link href={`/${locale}/services/design`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="block text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
+            <Link href={`/${locale}/services/design`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="w-full flex justify-center items-center text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
               {t('services.service_3')}
             </Link>
-            <Link href={`/${locale}/services/support`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="block text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
+            <Link href={`/${locale}/services/support`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="w-full flex justify-center items-center text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
               {t('services.service_4')}
             </Link>
           </div>
