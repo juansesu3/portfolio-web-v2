@@ -154,9 +154,7 @@ const NavBar = () => {
               }`}
             style={{ transitionProperty: 'max-height, transform, opacity' }}>
 
-            <Link href={`/${locale}/services/consulting`} onClick={() => { toggleMenu(); closeDropdowns(); }} className=" w-full flex justify-center items-center  text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
-              {t('services.service_1')}
-            </Link>
+         
             <Link href={`/${locale}/services/ai-agents-development`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="w-full flex justify-center items-center text-sm py-2 px-4 hover:bg-purple-100 hover:text-purple-500">
               {t('services.service_4')}
             </Link>

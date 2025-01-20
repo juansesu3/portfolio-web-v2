@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import { useState } from 'react';
 import { FaBrain, FaRobot, FaIndustry, FaSearch, FaChartLine, FaShoppingCart, FaUserTie } from 'react-icons/fa';
 
@@ -128,6 +129,9 @@ const AiAgentsServices = () => {
       <h1 className="text-4xl font-bold text-center mb-8 text-purple-500">
         Desarrollo de Agentes de IA
       </h1>
+      <div className='flex justify-center items-center w-20 h-20 mx-auto mb-8'>
+    <Image src={'https://my-page-negiupp.s3.amazonaws.com/1737368910098.png'} width={500} height={500 } alt='ai-chip'></Image>
+      </div>
 
       <div className="flex justify-center mb-6 space-x-4 overflow-x-auto scroll-snap-x px-2 py-2 sm:px-4 scrollbar-hide">
         <button
@@ -157,7 +161,7 @@ const AiAgentsServices = () => {
 
       <div className="bg-white rounded-lg py-6">
         <div
-          className="text-gray-600 leading-relaxed"
+            className="prose-custom  max-w-none leading-relaxed"
           dangerouslySetInnerHTML={{ __html: services[activeTab].description }}
         />
       </div>
