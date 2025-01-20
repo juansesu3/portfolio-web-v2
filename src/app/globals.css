@@ -17,7 +17,7 @@ body {
 
 
 .prose-custom {
-  @apply  max-w-none leading-relaxed;
+  @apply  max-w-none text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify;
 }
 .prose-custom h3 {
   @apply text-lg font-semibold mt-4 text-purple-600;

@@ -133,7 +133,7 @@ const AiAgentsServices = () => {
     <Image src={'https://my-page-negiupp.s3.amazonaws.com/1737368910098.png'} width={500} height={500 } alt='ai-chip'></Image>
       </div>
 
-      <div className="flex justify-center mb-6 space-x-4 overflow-x-auto scroll-snap-x px-2 py-2 sm:px-4 scrollbar-hide">
+      <div className="flex justify-center mb-6 space-x-4 overflow-x-auto scroll-snap-x py-2 scrollbar-hide">
         <button
           className={`px-4 py-2 rounded-lg text-sm text-nowrap font-medium border border-gray-100 ${activeTab === 'ecommerce' ? 'bg-purple-500 text-white' : 'bg-white shadow-md border border-gray-100 text-gray-700'
             }`}
