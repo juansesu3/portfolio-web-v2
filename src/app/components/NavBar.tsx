@@ -107,9 +107,6 @@ const NavBar = () => {
             }
             style={{ transitionProperty: 'max-height, opacity' }}
           >
-            <button onClick={() => changeLanguage('de')} className="block w-full text-sm py-2 px-4 text-left hover:bg-purple-100 hover:text-purple-500">
-              🇩🇪
-            </button>
             <button onClick={() => changeLanguage('en')} className="block w-full text-sm py-2 px-4 text-left hover:bg-purple-100 hover:text-purple-500">
               🇬🇧
             </button>
@@ -186,9 +183,6 @@ const NavBar = () => {
             }
             style={{ transitionProperty: 'max-height, opacity' }}
           >
-            <button onClick={() => changeLanguage('de')} className="block w-full text-sm py-2 px-4 text-left hover:bg-purple-100 hover:text-purple-500">
-              🇩🇪
-            </button>
             <button onClick={() => changeLanguage('en')} className="block w-full text-sm py-2 px-4 text-left hover:bg-purple-100 hover:text-purple-500">
               🇬🇧
             </button>

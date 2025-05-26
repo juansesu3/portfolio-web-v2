@@ -82,7 +82,7 @@
         "cta_btn": "Subscribe",
         "cta_input": "Enter your email",
         "sub_title_two": "Articles",
-        "read_art":"reading",
+        "read_art": "reading",
         "footer_bay": {
             "title_one": "Thank",
             "title_two": " you ",
@@ -154,6 +154,164 @@
             "shortDescription": "Specialist in customer service",
             "description": "Juan is a customer service agent specializing in customer support and information management.",
             "state": "Soon"
+        }
+    },
+    "profile": {
+        "username": "Juan Sebastian Suarez Ramirez",
+        "greeting": "Let me tell you something that has always driven me as a developer!",
+        "shortIntro": "Behind every line of code I write, there’s a story: a business looking to grow, someone trying to solve a problem, or an idea worth bringing to life.",
+        "introYourSelf": "I'm Juan Sebastián Suárez Ramírez, a Full Stack Developer with experience in modern frontend (React, Next.js, TypeScript) and solid backend (Node.js, Python). I help turn ideas into functional products by optimizing time, cost, and performance.\n//\nAs co-founder of PandorAI, I led applied AI solutions using techniques like RAG, significantly reducing operational costs and increasing real-world business impact.\n//\nIf your team needs to turn technical complexity into clarity and results, I can help you make it happen.\n//\nGot an idea ready to take the next step? Let's connect.",
+        "experinces":{
+           "makaia": {
+                "company": "Makaia",
+                "endDateExp": "2022-01-25T17:00:00.000Z",
+                "position": "Frontend Developer",
+                "roldescription": "Engaged as a Frontend Developer in a dynamic bootcamp, tackling real-world tech challenges. Crafted innovative digital solutions using React.js and TypeScript, while implementing CSS preprocessors for enhanced styling. Applied Agile methodologies and CI/CD practices for efficient project execution. Excited to leverage this experience and skill set in future opportunities.",
+                "urlCompany": "https://makaia.org/bootcamp-makaia/",
+                "startDateExp": "2021-07-01T10:00:00.000Z"
+            },
+            "talent":{
+                "company": "Talent.com",
+                "endDateExp": "2022-12-15T15:00:00.000Z",
+                "position": "JavaScript Developer",
+                "roldescription": "As a JavaScript Developer, I designed and executed sophisticated web scraping scripts, ensuring data quality and optimizing storage methodologies. Leveraged collaborative teamwork and advanced technologies, ultimately achieving a prominent position within my role. Excited to bring this expertise and success to new challenges.",
+                "urlCompany": "https://talent.com/",
+                "startDateExp": "2022-01-14T15:00:00.000Z"
+            },
+            "negiupp":{
+                "company": "negiupp.com - my own brand",
+                "endDateExp": "2023-10-10T18:00:00.000Z",
+                "position": "Freelancer FullStack Developer specializing in React.js and Node.js",
+                "roldescription": "As a fullstack developer I have developed amazing projects solving everyday problems through digital products with a powerful stack of technologies, among which React.js, Node.js, Next.js, JavaScript, Express.js, MongoDB, SQL, NoSQL stand out. You can visit the projects section in my website to learn more.",
+                "urlCompany": "Freelancer",
+                "startDateExp": "2023-01-30T21:00:00.000Z"
+            },
+            "pandorai":{
+                "company": "PandorAI.ch",
+                "endDateExp": "2028-02-14T22:00:00.000Z",
+                "position": "CEO & Co-Founder",
+                "roldescription": "As the CEO and co-founder of PandorAI, I led the creation of a clear vision, the formation of a talented team, and the structuring of our services. Drawing on my experience as a fullstack developer, we implemented the RAG (Retrieval-Augmented Generation) technique, which significantly reduced the operational costs of language models. This approach not only improved our offering to clients but also increased the company's profits, aligning technological innovation with business efficiency to democratize access to advanced artificial intelligence solutions.",
+                "urlCompany": "https://pandorai.ch",
+                "startDateExp": "2024-02-14T22:00:00.000Z"
+            }
+        },
+        "education": {
+            "frontend":{
+                "certificationName": "Frontend Developer With enfasis In React.js and desing thinkg tools",
+                "gotDate": "2021-12-05T17:00:00.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "Makaia"
+            },
+            "python":{
+                "certificationName": "Python & Django Developer",
+                "gotDate": "2023-01-10T19:00:00.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "Edutin"
+            },
+            "bigdata":{
+                "certificationName": "Big Data",
+                "gotDate": "2023-01-20T15:34:29.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "Edutin"
+            },
+            "anglais":{
+                "certificationName": "English B2 Upper Intermediate",
+                "gotDate": "2023-01-17T15:36:16.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "efset.org"
+            },
+            "javascript":{
+                "certificationName": "JavaScript Algorithms and Data Structures",
+                "gotDate": "2023-01-12T15:38:24.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "freecodecamp.org"
+            },
+            "python_2":{
+                "certificationName": "Python Developer",
+                "gotDate": "2023-01-28T15:42:11.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "Edutin.com"
+            }
+        },
+        "languages": {
+            "esp":{
+                "language": "Spanish",
+                "levelLang": "C2"
+            },
+            "eng":{
+                "language": "English",
+                "levelLang": "B2"
+            },
+            "fra":{
+                "language": "French",
+                "levelLang": "B1"
+            }
+        },
+        "skills": {
+            "00":{
+                "skill": "JavaScript",
+                "progress": "100"
+            },
+            "01":{
+                "skill": "React.js",
+                "progress": "100"
+            },
+            "02":{
+                "skill": "MongoDB",
+                "progress": "100"
+            },
+            "03":{
+                "skill": "Next.js",
+                "progress": "100"
+            },
+            "04":{
+                "skill": "Problem Solving",
+                "progress": "100"
+            },
+            "05":{
+                "skill": "SQL",
+                "progress": "75"
+            },
+            "06":{
+                "skill": "NoSQL",
+                "progress": "100"
+            },
+            "07":{
+                "skill": "DBMS",
+                "progress": "75"
+            },
+            "08":{
+                "skill": "HTML5",
+                "progress": "100"
+            },
+            "09":{
+                "skill": "CSS3",
+                "progress": "100"
+            },
+            "10":{
+                "skill": "Node.js ",
+                "progress": "100"
+            },
+            "11":{
+                "skill": "Express.js",
+                "progress": "75"
+            },
+            "12":{
+                "skill": "Python",
+                "progress": "80"
+            },
+            "13":{
+                "skill": "TypeScript",
+                "progress": "90"
+            },
+            "14":{
+                "skill": "LangChain",
+                "progress": "60"
+            },
+            "15":{
+                "skill": "N8N",
+                "progress": "90"
+            }
         }
     }
 }

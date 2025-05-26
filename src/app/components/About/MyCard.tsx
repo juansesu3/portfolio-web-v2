@@ -1,9 +1,37 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CircularProgressBar from './CircularProgressBar';
+import { ProfileType } from '@/types/profile';
+import { usePathname, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 const MyCard = () => {
+
+    const pathname = usePathname();
+    const localeFromPath = pathname.split("/")[1] || "en";
+    const [locale, setLocale] = useState(localeFromPath);
+    const router = useRouter();
+    const t = useTranslations("profile");
+
+    useEffect(() => {
+        setLocale(localeFromPath);
+    }, [localeFromPath]);
+
+
+    const introYourSelf = t('introYourSelf').split('//').map((item, index) => (
+        <p key={index}>{item}</p>
+    ));
+
+
+
+    const formatDate = (dateString: string): string => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+        }); // Ej: Jan 2024
+    };
     return (
         <div className='flex flex-col sm:flex-row gap-4 w-full sm:h-[550px] h-full'>
 
@@ -16,7 +44,7 @@ const MyCard = () => {
                     className='transform scale-x-[-1] w-96 object-cover '
                 />
                 <h1 className='text-center font-medium text-lg'>
-                    Juan Sebastian Suarez Ramirez
+                    {t('username')}
                 </h1>
                 <div className='flex flex-row justify-center gap-2'>
                     <div className='transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer hover:shadow-md  p-2 rounded-md border border-gray-100'>
@@ -36,18 +64,16 @@ const MyCard = () => {
                 <div className='flex flex-col gap-6'>
                     {/* about me */}
                     <div>
-                        <h2 className='text-purple-500 font-semibold text-lg mb-2 uppercase'>About Me</h2>
+                        <h2 className='text-purple-500 font-semibold text-lg mb-2 uppercase'>{t('greeting')}</h2>
                         <div className="text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify">
                             <p>
-                                Hi! I'm Juan Sebastian Suarez Ramirez, a passionate Full Stack Developer with over four years of experience delivering innovative and impactful web solutions. I specialize in frontend development using React.js, Next.js, and TypeScript, combined with backend development using Node.js, Express.js, and Python for crafting robust applications and implementing efficient business logic.
+                                {t('shortIntro')}
                             </p>
-                            <p>
-                                I have extensive experience working with language processing models and designing AI-powered agents, creating innovative, creative, and efficient solutions that leverage tools like OpenAI API, LangChain.js, LangChain.py, and FastAPI.
-                            </p>
-                            <p>As the CEO and Co-Founder of PandorAI, I led the implementation of Retrieval-Augmented Generation (RAG) techniques, significantly reducing operational costs and making advanced AI more accessible to businesses by aligning technology with business efficiency.</p>
-                            <p>
-                                I’m passionate about writing clean, modular, and maintainable code, solving real-world challenges through technology, and continuously learning to stay ahead of innovation. Let’s connect and build something amazing together! 🚀
-                            </p>
+                            {/* {profile?.introYourSelf} */}
+                            {introYourSelf ? introYourSelf[0] : null}
+                            {introYourSelf ? introYourSelf[1] : null}
+                            {introYourSelf ? introYourSelf[2] : null}
+                            {introYourSelf ? introYourSelf[3] : null}
                         </div>
                     </div>
                     {/* language */}
@@ -73,147 +99,251 @@ const MyCard = () => {
                     </div>
 
                     {/* Experiences */}
-                    <div>
-                        <h2 className='text-purple-500 font-semibold text-lg mb-4 uppercase'>Experiences</h2>
-                        <div className='flex flex-col gap-4'>
-                            <div>
-                                <p className='text-slate-500'>02/2024 - present</p>
-                                <h3 className='text-purple-500 font-semibold text-lg'>CEO & Co-Founder</h3>
-                                <h4 className='font-semibold '>Pandorai.ch</h4>
-                                <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>
-                                    As the CEO and co-founder of PandorAI, I led the
-                                    creation of a clear vision, the formation of a talented
-                                    team, and the structuring of our services. Drawing on
-                                    my experience as a fullstack developer, we
-                                    implemented the RAG (Retrieval-Augmented
-                                    Generation) technique, which significantly reduced
-                                    the operational costs of language models. This
-                                    approach not only improved our offering to clients but
-                                    also increased the company's profits, aligning
-                                    technological innovation with business efficiency to
-                                    democratize access to advanced artificial intelligence
-                                    solutions.
-                                </p>
-                            </div>
-                            <hr />
-                            <div>
-                                <p className='text-slate-500'>01/2023 - 02/2024</p>
-                                <h3 className='text-purple-500 font-semibold text-lg'>FullStack Developer</h3>
-                                <h4 className='font-semibold '>Freelancer</h4>
-                                <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>
-                                    As a fullstack developer I have developed amazing
-                                    projects solving everyday problems through digital
-                                    products with a powerful stack of technologies,
-                                    among which React.js, Node.js, Next.js, JavaScript,
-                                    Express.js, MongoDB, SQL, NoSQL stand out. You can
-                                    visit the projects section in my website to learn more.
-                                </p>
-                            </div>
-                            <hr />
-                            <div>
-                                <p className='text-slate-500'>01/2022 - 12/2022 </p>
-                                <h3 className='text-purple-500 font-semibold text-lg'>JavaScript Developer</h3>
-                                <h4 className='font-semibold '>Talent.com</h4>
-                                <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>As a JavaScript Developer, I designed and executed
-                                    sophisticated web scraping scripts, ensuring data
-                                    quality and optimizing storage methodologies.
-                                    Leveraged collaborative teamwork and advanced
-                                    technologies, ultimately achieving a prominent
-                                    position within my role. Excited to bring this expertise
-                                    and success to new challenges.</p>
-                            </div>
-                            <hr />
-                            <div>
-                                <p className='text-slate-500'>07/2021 - 01/2022</p>
-                                <h3 className='text-purple-500 font-semibold text-lg'>Frontend Developer</h3>
-                                <h4 className='font-semibold '>Makaia</h4>
-                                <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>Engaged as a Frontend Developer in a dynamic
-                                    bootcamp, tackling real-world tech challenges.
-                                    Crafted innovative digital solutions using React.js and
-                                    TypeScript, while implementing CSS preprocessors for
-                                    enhanced styling. Applied Agile methodologies and
-                                    CI/CD practices for efficient project execution. Excited
-                                    to leverage this experience and skill set in future
-                                    opportunities.</p>
-                            </div>
-                            <hr />
+                    <h2 className='text-purple-500 font-semibold text-lg mb-4 uppercase'>Experiences</h2>
+                    <div className='flex flex-col gap-4'>
+                        <div>
+                            <p className='text-slate-500'>   {formatDate(t('experinces.pandorai.startDateExp'))} -{' '}
+                                {new Date(t('experinces.pandorai.endDateExp')).getTime() > Date.now()
+                                    ? 'Present'
+                                    : formatDate(t('experinces.pandorai.endDateExp'))}</p>
+                            <h3 className='text-purple-500 font-semibold text-lg'>{t('experinces.pandorai.position')}</h3>
+                            <h4 className='font-semibold '>{t('experinces.pandorai.company')}</h4>
+                            <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>
+                                {t('experinces.pandorai.roldescription')}
+                            </p>
                         </div>
+                        <div>
+                            <p className='text-slate-500'>   {formatDate(t('experinces.negiupp.startDateExp'))} -{' '}
+                                {new Date(t('experinces.negiupp.endDateExp')).getTime() > Date.now()
+                                    ? 'Present'
+                                    : formatDate(t('experinces.negiupp.endDateExp'))}</p>
+                            <h3 className='text-purple-500 font-semibold text-lg'>{t('experinces.negiupp.position')}</h3>
+                            <h4 className='font-semibold '>{t('experinces.negiupp.company')}</h4>
+                            <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>
+                                {t('experinces.negiupp.roldescription')}
+                            </p>
+                        </div>
+                        <div>
+                            <p className='text-slate-500'>   {formatDate(t('experinces.talent.startDateExp'))} -{' '}
+                                {new Date(t('experinces.talent.endDateExp')).getTime() > Date.now()
+                                    ? 'Present'
+                                    : formatDate(t('experinces.talent.endDateExp'))}</p>
+                            <h3 className='text-purple-500 font-semibold text-lg'>{t('experinces.talent.position')}</h3>
+                            <h4 className='font-semibold '>{t('experinces.talent.company')}</h4>
+                            <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>
+                                {t('experinces.talent.roldescription')}
+                            </p>
+                        </div>
+                        <div>
+                            <p className='text-slate-500'>   {formatDate(t('experinces.makaia.startDateExp'))} -{' '}
+                                {new Date(t('experinces.makaia.endDateExp')).getTime() > Date.now()
+                                    ? 'Present'
+                                    : formatDate(t('experinces.makaia.endDateExp'))}</p>
+                            <h3 className='text-purple-500 font-semibold text-lg'>{t('experinces.makaia.position')}</h3>
+                            <h4 className='font-semibold '>{t('experinces.makaia.company')}</h4>
+                            <p className='text-gray-700 text-base leading-7 tracking-wide space-y-2 text-justify'>
+                                {t('experinces.makaia.roldescription')}
+                            </p>
+                        </div>
+
+
+
                     </div>
                     {/* Skills */}
                     <div>
                         <h2 className='text-purple-500 font-semibold text-lg mb-4 uppercase'>Skills</h2>
                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>React.js</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.00.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.00.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
-                                <h4>TypeScript</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.01.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.01.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
-                                <h4>Python</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.02.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.02.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={100} size={40} strokeWidth={6} /></div>
-                                <h4>Problem Solving</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.03.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.04.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>Next.js</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.05.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.05.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>Express.js</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.06.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.06.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>Tailwind CSS</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.07.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.07.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
-                                <h4>Node.js</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.08.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.08.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={80} size={40} strokeWidth={6} /></div>
-                                <h4>MongoDB</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.09.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.09.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={60} size={40} strokeWidth={6} /></div>
-                                <h4>Google Cloud</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.10.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.10.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>Docker</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.11.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.11.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>Git</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.12.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.12.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={90} size={40} strokeWidth={6} /></div>
-                                <h4>GitHub</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.13.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.13.skill')}</h4>
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <div>
-                                    <CircularProgressBar percentage={70} size={40} strokeWidth={6} /></div>
-                                <h4>Azure DevOps</h4>
+                                    <CircularProgressBar percentage={parseInt(t('skills.14.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.14.skill')}</h4>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <div>
+                                    <CircularProgressBar percentage={parseInt(t('skills.15.progress'))} size={40} strokeWidth={6} /></div>
+                                <h4>{t('skills.15.skill')}</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* Education */}
+                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center items-center'>
+                        <div>
+                            <div className="border border-gray-200 shadow-md rounded-md p-4 flex flex-col sm:flex-row items-start gap-4 bg-white hover:shadow-lg transition duration-300">
+                                <div className="w-full sm:w-32 h-24 relative">
+                                    <Image
+                                        src={t('education.frontend.imageCertification')}
+                                        alt={`Certificado de ${t('education.frontend.institutionName')}`}
+                                        fill
+                                        className="object-contain rounded-md"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-purple-600 font-semibold text-lg mb-1">{t('education.frontend.certificationName')}</h3>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="font-medium">{t('education.frontend.institutionName')}</span> · {formatDate(t('education.frontend.gotDate'))}
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <div>
+                            <div className="border border-gray-200 shadow-md rounded-md p-4 flex flex-col sm:flex-row items-start gap-4 bg-white hover:shadow-lg transition duration-300">
+                                <div className="w-full sm:w-32 h-24 relative">
+                                    <Image
+                                        src={t('education.python.imageCertification')}
+                                        alt={`Certificado de ${t('education.python.institutionName')}`}
+                                        fill
+                                        className="object-contain rounded-md"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-purple-600 font-semibold text-lg mb-1">{t('education.python.certificationName')}</h3>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="font-medium">{t('education.python.institutionName')}</span> · {formatDate(t('education.python.gotDate'))}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="border border-gray-200 shadow-md rounded-md p-4 flex flex-col sm:flex-row items-start gap-4 bg-white hover:shadow-lg transition duration-300">
+                                <div className="w-full sm:w-32 h-24 relative">
+                                    <Image
+                                        src={t('education.bigdata.imageCertification')}
+                                        alt={`Certificado de ${t('education.bigdata.institutionName')}`}
+                                        fill
+                                        className="object-contain rounded-md"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-purple-600 font-semibold text-lg mb-1">{t('education.bigdata.certificationName')}</h3>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="font-medium">{t('education.bigdata.institutionName')}</span> · {formatDate(t('education.bigdata.gotDate'))}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="border border-gray-200 shadow-md rounded-md p-4 flex flex-col sm:flex-row items-start gap-4 bg-white hover:shadow-lg transition duration-300">
+                                <div className="w-full sm:w-32 h-24 relative">
+                                    <Image
+                                        src={t('education.anglais.imageCertification')}
+                                        alt={`Certificado de ${t('education.anglais.institutionName')}`}
+                                        fill
+                                        className="object-contain rounded-md"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-purple-600 font-semibold text-lg mb-1">{t('education.anglais.certificationName')}</h3>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="font-medium">{t('education.anglais.institutionName')}</span> · {formatDate(t('education.anglais.gotDate'))}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="border border-gray-200 shadow-md rounded-md p-4 flex flex-col sm:flex-row items-start gap-4 bg-white hover:shadow-lg transition duration-300">
+                                <div className="w-full sm:w-32 h-24 relative">
+                                    <Image
+                                        src={t('education.javascript.imageCertification')}
+                                        alt={`Certificado de ${t('education.javascript.institutionName')}`}
+                                        fill
+                                        className="object-contain rounded-md"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-purple-600 font-semibold text-lg mb-1">{t('education.javascript.certificationName')}</h3>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="font-medium">{t('education.javascript.institutionName')}</span> · {formatDate(t('education.javascript.gotDate'))}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="border border-gray-200 shadow-md rounded-md p-4 flex flex-col sm:flex-row items-start gap-4 bg-white hover:shadow-lg transition duration-300">
+                                <div className="w-full sm:w-32 h-24 relative">
+                                    <Image
+                                        src={t('education.python_2.imageCertification')}
+                                        alt={`Certificado de ${t('education.python_2.institutionName')}`}
+                                        fill
+                                        className="object-contain rounded-md"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-purple-600 font-semibold text-lg mb-1">{t('education.python_2.certificationName')}</h3>
+                                    <p className="text-sm text-gray-500">
+                                        <span className="font-medium">{t('education.python_2.institutionName')}</span> · {formatDate(t('education.python_2.gotDate'))}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
