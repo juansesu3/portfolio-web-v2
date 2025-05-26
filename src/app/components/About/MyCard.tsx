@@ -32,7 +32,7 @@ const MyCard = () => {
                 <button className='bg-purple-500 text-white rounded-md p-2 text-lg font-medium transition-all duration-300 ease-in-out  hover:shadow-md  hover:bg-purple-600 '>Contact Me</button>
             </div>
 
-            <div className='w-full overflow-y-scroll'>
+            <div className='w-full overflow-y-scroll p-2'>
                 <div className='flex flex-col gap-6'>
                     {/* about me */}
                     <div>

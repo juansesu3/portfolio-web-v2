@@ -6,10 +6,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import { MdOutlineGTranslate } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
-
-
-
-
 import React, { useEffect, useState, useRef } from 'react';
 
 const NavBar = () => {
@@ -128,7 +124,7 @@ const NavBar = () => {
       </div>
       {/* Links del navbar */}
       <div className={`flex-col md:flex md:flex-row justify-center shadow-md md:shadow-none items-center lg:gap-6 gap-1 absolute md:static top-16 right-0 md:right-auto bg-white md:bg-transparent w-full md:w-auto ${isOpen ? 'visible translate-x-0' : 'invisible -translate-x-96'} md:visible md:translate-x-0 transition-all duration-300 ease-in-out`}>
-        <Link href="/" onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('home')}</Link>
+        <Link href={`/${locale}/`}  onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('home')}</Link>
         <Link href={`/${locale}/about`} onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('about')}</Link>
         <Link href={`/${locale}/projects`} onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('projects')}</Link>
         {/* Dropdown de Servicios */}
