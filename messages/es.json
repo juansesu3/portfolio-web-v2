@@ -72,7 +72,28 @@
         "title_two": "Proyectos",
         "sub_title": "Aquí encontrarás una colección de mis mejores creaciones, donde la innovación y la creatividad se fusionan. Descubre cómo he ayudado a mis clientes a alcanzar sus objetivos con soluciones únicas.",
         "cta_btn": "¡Hablemos de tu Proyecto!",
-        "sub_title_two": "Mis Proyectos"
+        "sub_title_two": "Mis Proyectos",
+        "end_section": {
+            "title": {
+                "one":"Gracias",
+                "two":"por",
+                "three":"visitar",
+                "four":"nuestros",
+                "five":"proyectos"
+            },
+            "paragrah_1": "Tu tiempo y tu interés significan mucho para mi. Estos proyectos han sido desarrollados con pasión, innovación y un enfoque en crear soluciones escalables y centradas en el usuario. ",
+            "paragrah_2":"      Si te ha gustado lo que ves, te invito a explorar más sobre mis soluciones. Como desarrollador full stack, me encanta convertir ideas complejas en experiencias simples y efectivas. ",
+            "paragrah_3":"¿Te gustaría trabajar juntos? Estoy abierto a nuevas colaboraciones y desafíos emocionantes.",
+            "cta": "Contáctame"
+        },
+        
+            "end_section_inside": {
+              "title": "¿Encontraste algo que te inspira?",
+              "paragrah_1": "✨ Y si alguna chispa se encendió en ti… ✨",
+              "paragrah_2": "Hablemos. Podríamos construir algo increíble juntos",
+              "cta": "Contáctame"
+            }
+          
     },
     "blog": {
         "title": "Aprender ",
@@ -157,7 +178,7 @@
         }
     },
     "profile": {
-        "cta_button":"Conversemos",
+        "cta_button": "Conversemos",
         "username": "Juan Sebastian Suarez Ramirez",
         "greeting": "¡Te contaré algo que siempre me ha movido como desarrollador.!",
         "shortIntro": "Detrás de cada línea de código que escribo hay una historia: un negocio que quiere crecer, una persona que quiere resolver un problema, una idea que merece funcionar.",
@@ -313,7 +334,7 @@
             },
             "14": {
                 "skill": "LangChain",
-                 "progress": "70"
+                "progress": "70"
             },
             "15": {
                 "skill": "N8N",

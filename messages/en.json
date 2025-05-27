@@ -72,7 +72,29 @@
         "title_two": "Projects",
         "sub_title": "Here you'll find a collection of my best creations, where innovation and creativity come together. Discover how I have helped my clients achieve their goals with unique solutions.",
         "cta_btn": "Let's Talk About Your Project!",
-        "sub_title_two": "My Projects"
+        "sub_title_two": "My Projects",
+        "end_section": {
+            "title": {
+                "one": "Thank",
+                "two": "you",
+                "three": "for",
+                "four": "visiting",
+                "five": "our projects"
+            },
+            "paragrah_1": "Your time and interest mean a lot to me. These projects were developed with passion, innovation, and a focus on building scalable, user-centered solutions.",
+            "paragrah_2": "If you liked what you saw, I invite you to explore more of my solutions. As a full-stack developer, I love turning complex ideas into simple and effective experiences.",
+            "paragrah_3": "Would you like to work together? I’m open to new collaborations and exciting challenges.",
+            "cta": "Contact me"
+        },
+        
+         "end_section_inside": {
+              "title": "Did you find something that inspires you?",
+              "paragrah_1": "✨ And if some spark was ignited in you… ✨",
+              "paragrah_2": "Let's talk. We could build something amazing together",
+              "cta": "Contact me"
+            }
+          
+          
     },
     "blog": {
         "title": "Learning ",
@@ -157,13 +179,13 @@
         }
     },
     "profile": {
-        "cta_button":"Let’s talk",
+        "cta_button": "Let’s talk",
         "username": "Juan Sebastian Suarez Ramirez",
         "greeting": "Let me tell you something that has always driven me as a developer!",
         "shortIntro": "Behind every line of code I write, there’s a story: a business looking to grow, someone trying to solve a problem, or an idea worth bringing to life.",
         "introYourSelf": "I'm Juan Sebastián Suárez Ramírez, a Full Stack Developer with experience in modern frontend (React, Next.js, TypeScript) and solid backend (Node.js, Python). I help turn ideas into functional products by optimizing time, cost, and performance.\n//\nAs co-founder of PandorAI, I led applied AI solutions using techniques like RAG, significantly reducing operational costs and increasing real-world business impact.\n//\nIf your team needs to turn technical complexity into clarity and results, I can help you make it happen.\n//\nGot an idea ready to take the next step? Let's connect.",
-        "experinces":{
-           "makaia": {
+        "experinces": {
+            "makaia": {
                 "company": "Makaia",
                 "endDateExp": "2022-01-25T17:00:00.000Z",
                 "position": "Frontend Developer",
@@ -171,7 +193,7 @@
                 "urlCompany": "https://makaia.org/bootcamp-makaia/",
                 "startDateExp": "2021-07-01T10:00:00.000Z"
             },
-            "talent":{
+            "talent": {
                 "company": "Talent.com",
                 "endDateExp": "2022-12-15T15:00:00.000Z",
                 "position": "JavaScript Developer",
@@ -179,7 +201,7 @@
                 "urlCompany": "https://talent.com/",
                 "startDateExp": "2022-01-14T15:00:00.000Z"
             },
-            "negiupp":{
+            "negiupp": {
                 "company": "negiupp.com - my own brand",
                 "endDateExp": "2023-10-10T18:00:00.000Z",
                 "position": "Freelancer FullStack Developer specializing in React.js and Node.js",
@@ -187,7 +209,7 @@
                 "urlCompany": "Freelancer",
                 "startDateExp": "2023-01-30T21:00:00.000Z"
             },
-            "pandorai":{
+            "pandorai": {
                 "company": "PandorAI.ch",
                 "endDateExp": "2028-02-14T22:00:00.000Z",
                 "position": "CEO & Co-Founder",
@@ -197,44 +219,43 @@
             }
         },
         "education": {
-
-            "frontend-libraries":{
+            "frontend-libraries": {
                 "certificationName": "Frontend Development Libraries",
                 "gotDate": "2025-05-23T17:00:00.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
                 "institutionName": "FreeCodeCamp"
             },
-            "frontend":{
+            "frontend": {
                 "certificationName": "Frontend Developer With enfasis In React.js and desing thinkg tools",
                 "gotDate": "2021-12-05T17:00:00.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
                 "institutionName": "Makaia"
             },
-            "python":{
+            "python": {
                 "certificationName": "Python & Django Developer",
                 "gotDate": "2023-01-10T19:00:00.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
                 "institutionName": "Edutin"
             },
-            "bigdata":{
+            "bigdata": {
                 "certificationName": "Big Data",
                 "gotDate": "2023-01-20T15:34:29.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
                 "institutionName": "Edutin"
             },
-            "anglais":{
+            "anglais": {
                 "certificationName": "English B2 Upper Intermediate",
                 "gotDate": "2023-01-17T15:36:16.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
                 "institutionName": "efset.org"
             },
-            "javascript":{
+            "javascript": {
                 "certificationName": "JavaScript Algorithms and Data Structures",
                 "gotDate": "2023-01-12T15:38:24.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
                 "institutionName": "freecodecamp.org"
             },
-            "python_2":{
+            "python_2": {
                 "certificationName": "Python Developer",
                 "gotDate": "2023-01-28T15:42:11.000Z",
                 "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
@@ -242,81 +263,81 @@
             }
         },
         "languages": {
-            "esp":{
+            "esp": {
                 "language": "Spanish",
                 "levelLang": "C2"
             },
-            "eng":{
+            "eng": {
                 "language": "English",
                 "levelLang": "B2"
             },
-            "fra":{
+            "fra": {
                 "language": "French",
                 "levelLang": "B1"
             }
         },
         "skills": {
-            "00":{
+            "00": {
                 "skill": "JavaScript",
                 "progress": "100"
             },
-            "01":{
+            "01": {
                 "skill": "React.js",
                 "progress": "100"
             },
-            "02":{
+            "02": {
                 "skill": "MongoDB",
                 "progress": "100"
             },
-            "03":{
+            "03": {
                 "skill": "Next.js",
                 "progress": "100"
             },
-            "04":{
+            "04": {
                 "skill": "Problem Solving",
                 "progress": "100"
             },
-            "05":{
+            "05": {
                 "skill": "SQL",
                 "progress": "75"
             },
-            "06":{
+            "06": {
                 "skill": "NoSQL",
                 "progress": "100"
             },
-            "07":{
+            "07": {
                 "skill": "DBMS",
                 "progress": "75"
             },
-            "08":{
+            "08": {
                 "skill": "HTML5",
                 "progress": "100"
             },
-            "09":{
+            "09": {
                 "skill": "CSS3",
                 "progress": "100"
             },
-            "10":{
+            "10": {
                 "skill": "Node.js ",
                 "progress": "100"
             },
-            "11":{
+            "11": {
                 "skill": "Express.js",
                 "progress": "75"
             },
-            "12":{
+            "12": {
                 "skill": "Python",
                 "progress": "80"
             },
-            "13":{
+            "13": {
                 "skill": "TypeScript",
                 "progress": "90"
             },
-            "14":{
+            "14": {
                 "skill": "LangChain",
                 "progress": "60"
             },
-            "15":{
+            "15": {
                 "skill": "N8N",
                 "progress": "90"
             }
