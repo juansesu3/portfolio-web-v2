@@ -157,6 +157,7 @@
         }
     },
     "profile": {
+        "cta_button":"Contactez-moi",
         "username": "Juan Sebastian Suarez Ramirez",
         "greeting": "Je vais te raconter quelque chose qui m’a toujours motivé en tant que développeur !",
         "shortIntro": "Derrière chaque ligne de code que j’écris, il y a une histoire : une entreprise qui souhaite se développer, une personne qui cherche à résoudre un problème, une idée qui mérite de se concrétiser.",
@@ -196,6 +197,12 @@
             }
         },
         "education": {
+            "frontend-libraries": {
+                "certificationName": "Bibliothèques de Développement Frontend",
+                "gotDate": "2025-05-23T17:00:00.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "FreeCodeCamp"
+            },
             "frontend":{
                 "certificationName": "Développeur Frontend avec spécialisation en React.js et outils de design thinking",
                 "gotDate": "2021-12-05T17:00:00.000Z",
@@ -305,7 +312,8 @@
                 "progress": "90"
             },
             "14":{
-                "skill": "LangChain"
+                "skill": "LangChain",
+                   "progress": "70"
             },
             "15":{
                 "skill": "N8N",

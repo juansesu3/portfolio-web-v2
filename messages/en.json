@@ -157,6 +157,7 @@
         }
     },
     "profile": {
+        "cta_button":"Let’s talk",
         "username": "Juan Sebastian Suarez Ramirez",
         "greeting": "Let me tell you something that has always driven me as a developer!",
         "shortIntro": "Behind every line of code I write, there’s a story: a business looking to grow, someone trying to solve a problem, or an idea worth bringing to life.",
@@ -196,6 +197,13 @@
             }
         },
         "education": {
+
+            "frontend-libraries":{
+                "certificationName": "Frontend Development Libraries",
+                "gotDate": "2025-05-23T17:00:00.000Z",
+                "imageCertification": "https://my-page-negiupp.s3.amazonaws.com/1748254331491.png",
+                "institutionName": "FreeCodeCamp"
+            },
             "frontend":{
                 "certificationName": "Frontend Developer With enfasis In React.js and desing thinkg tools",
                 "gotDate": "2021-12-05T17:00:00.000Z",
