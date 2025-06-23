@@ -4,7 +4,20 @@ import Image from 'next/image';
 import { FaCalendarAlt, FaClock, FaTwitter, FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 
-const SingleArticle = ({ title, image, date, readTime, content, author, authorBio, authorImage, slug, intro }) => {
+interface SingleArticleProps {
+  title: string;
+  image: string;
+  date: string;
+  readTime: string;
+  content: string;
+  author: string;
+  authorBio: string;
+  authorImage: string;
+  slug: string;
+  intro: string;
+}
+
+const SingleArticle = ({ title, image, date, readTime, content, author, authorBio, authorImage, slug, intro }: SingleArticleProps) => {
   const shareUrl = `https://yourwebsite.com/blog/${slug}`;
   const shareText = `Lee este artículo: "${title}" en nuestro blog y descubre más contenido interesante.`;
   const t = useTranslations('blog');
@@ -25,7 +38,7 @@ const SingleArticle = ({ title, image, date, readTime, content, author, authorBi
 
         <div className="flex items-center mb-2 sm:mb-0">
           <FaClock className="mr-2 text-purple-500" />
-          <span>{readTime} min de lectura</span>
+          <span>{readTime} {t('inside_article.reading_time')}</span>
         </div>
         <div className="flex items-center mb-2 sm:mb-0">
           <FaCalendarAlt className="mr-2 text-blue-500" />
@@ -76,7 +89,7 @@ const SingleArticle = ({ title, image, date, readTime, content, author, authorBi
 
       {/* Botones para compartir en redes sociales */}
       <div className="mt-10">
-        <h3 className="text-xl font-bold text-gray-800 mb-4">¡Comparte este artículo!</h3>
+        <h3 className="text-xl font-bold text-gray-800 mb-4">{t('inside_article.share')}</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center items-center">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
@@ -120,9 +133,9 @@ const SingleArticle = ({ title, image, date, readTime, content, author, authorBi
 
       {/* Call to action para suscribirse */}
       <div className="mt-16 bg-white p-4 rounded-lg border border-gray-100 shadow-md text-center">
-        <h2 className="text-2xl font-bold text-purple-600 mb-4">¿Disfrutaste este artículo?</h2>
+        <h2 className="text-2xl font-bold text-purple-600 mb-4">{t('inside_article.end_section.title')}</h2>
         <p className="text-gray-700 mb-6">
-          Suscríbete a nuestro blog para recibir contenido exclusivo y mantenerte actualizado con las últimas tendencias.
+        {t('inside_article.end_section.description')}
         </p>
         <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:space-x-4 w-full sm:w-auto mx-auto justify-center">
                         {/* Input estilizado */}

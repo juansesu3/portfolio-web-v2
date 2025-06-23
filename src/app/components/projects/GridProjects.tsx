@@ -14,7 +14,7 @@ const projects = [
     image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1713345137122.png&w=640&q=75',
     technologies: ['react', 'nextjs', 'tailwindcss'],
     link: '/projects/ecommerce',
-    slug: 'e-commerce-web-App'
+    slug: 'ecommerce-ai'
   },
   {
     id: 2,
@@ -69,7 +69,6 @@ const GridProjects = () => {
   const pathname = usePathname();
   const localeFromPath = pathname.split("/")[1] || "en";
   const [locale, setLocale] = useState(localeFromPath);
-  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     setLocale(localeFromPath);

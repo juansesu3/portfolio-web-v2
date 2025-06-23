@@ -71,7 +71,7 @@ const UiChatBot = () => {
         }, 5 * 60 * 1000);
 
         return () => clearInterval(intervalId);
-    }, []);
+    }, [t]);
 
     return (
         <div>

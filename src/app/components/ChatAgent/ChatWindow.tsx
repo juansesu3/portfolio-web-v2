@@ -8,7 +8,6 @@ import { SyncLoader } from "react-spinners";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  startChatR,
   addMessage,
   closeChatWindow,
   goToMenu,
@@ -16,10 +15,9 @@ import {
 } from "@/redux/chatbotSlice";
 import { RootState } from "@/redux/store";
 import Image from "next/image";
-
 import { FaBrain } from "react-icons/fa";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import ChatMenuStart from "./ChatMenuStart";
 import PerfilAgent from "./PerfilAgent";
 
@@ -27,31 +25,19 @@ interface ChatWindowProps {
   onClose: () => void;
 }
 
-interface Product {
-  lang: any;
-  slug: string;
-  name: string;
-  price?: number;
-  image_url: string[];
-}
 
 const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
-  const t = useTranslations("chtabot");
-  const { isChatWindowOpen, userUUID } = useSelector((state: any) => state.chatbot);
+  // const t = useTranslations("chtabot");
+  const { isChatWindowOpen, userUUID } = useSelector((state: RootState) => state.chatbot);
   const currentView = useSelector(
     (state: RootState) => state.chatbot.currentView
   );
   const messages = useSelector((state: RootState) => state.chatbot.messages);
   const [input, setInput] = useState("");
-  const [secondary, setSecondary] = useState<Product[]>([]);
-  const isChatStarted = useSelector(
-    (state: RootState) => state.chatbot.isChatStarted
-  );
   const [isTyping, setIsTyping] = useState(false);
   const [botTypingMessage, setBotTypingMessage] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const dispatch = useDispatch();
-  const carouselRef = useRef<HTMLDivElement | null>(null);
   // Nuevo estado para manejar la cancelación
   const [abortController, setAbortController] = useState<AbortController | null>(null);
   const getCurrentTime = () => {
@@ -59,16 +45,6 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
     return now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
 
-  // CAMBIO: Definición de la función startChat
-  const startChatF = () => {
-    dispatch(startChatR());
-    const welcomeMessage = {
-      sender: "bot" as const,
-      text: t("welcome_message"),
-      time: getCurrentTime(),
-    };
-    dispatch(addMessage(welcomeMessage));
-  };
 
   const handleSendMessage = async () => {
     if (input.trim()) {

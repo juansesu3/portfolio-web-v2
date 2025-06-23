@@ -86,15 +86,149 @@
             "paragrah_3": "Would you like to work together? I’m open to new collaborations and exciting challenges.",
             "cta": "Contact me"
         },
-        
-         "end_section_inside": {
-              "title": "Did you find something that inspires you?",
-              "paragrah_1": "✨ And if some spark was ignited in you… ✨",
-              "paragrah_2": "Let's talk. We could build something amazing together",
-              "cta": "Contact me"
+        "end_section_inside": {
+            "title": "Did you find something that inspires you?",
+            "paragrah_1": "✨ And if some spark was ignited in you… ✨",
+            "paragrah_2": "Let's talk. We could build something amazing together",
+            "cta": "Contact me"
+        }
+    },
+    "services": {
+        "ai_agents_development": {
+            "title": "AI Agent Development",
+            "sections": {
+                "ecommerce": {
+                    "title": "E-Commerce",
+                    "content": {
+                        "introduction": "AI agents are revolutionizing e-commerce by transforming how businesses interact with customers and optimize operations. We offer advanced solutions that drive personalization, automation, and predictive analytics to help companies stand out in a competitive market.",
+                        "key_aplications": {
+                            "title": "Key Applications",
+                            "list": {
+                                "one": {
+                                    "title": "Personalized Recommendations",
+                                    "description": "AI-powered recommendation algorithms suggest products based on customer behavior and preferences, enhancing the shopping experience."
+                                },
+                                "two": {
+                                    "title": "Virtual Customer Support Assistants",
+                                    "description": "Conversational bots that provide 24/7 support, answering queries, providing order information, and reducing wait times."
+                                },
+                                "three": {
+                                    "title": "Smart Inventory Management",
+                                    "description": "Predictive agents anticipate product demand, helping reduce overstock or stockouts and optimizing the supply chain."
+                                },
+                                "four": {
+                                    "title": "Dynamic Price Optimization",
+                                    "description": "Automated price adjustments based on competitor data, demand, and market trends to maximize profits."
+                                }
+                            }
+                        },
+                        "key_benefit": {
+                            "title": "Key Benefits",
+                            "list": {
+                                "one": "Increased conversions through personalized shopping experiences that influence customer decisions.",
+                                "two": "Improved customer satisfaction through fast, accurate, and always-available responses.",
+                                "three": "Reduced operational costs by automating repetitive tasks and support processes.",
+                                "four": "Improved accuracy in inventory and sales forecasting for better strategic decision-making."
+                            }
+                        }
+                    }
+                },
+                "development": {
+                    "title": "Development",
+                    "description": "I create advanced AI agents using natural language processing, machine learning, and modern techniques to automate tasks and improve processes.",
+                    "avanced_techniques": {
+                        "title": "Advanced Development Techniques",
+                        "list": {
+                            "one": {
+                                "title": "Retrieval-Augmented Generation (RAG)",
+                                "description": "Combines language generation models with real-time information retrieval from external sources to provide up-to-date and accurate answers."
+                            },
+                            "two": {
+                                "title": "Tool and Multi-Tool Systems",
+                                "description": "Agents can integrate with various tools (like search engines, calculators, and specialized APIs) to handle complex tasks efficiently. They can select tools based on the context of the query."
+                            },
+                            "three": {
+                                "title": "Multi-Agent Systems",
+                                "description": "Designs architectures where multiple AI agents collaborate to solve large or distributed problems, communicating and coordinating tasks for optimal decision-making."
+                            }
+                        }
+                    },
+                    "key_features": {
+                        "title": "Key Features",
+                        "one": "Continuous adaptation through dynamic learning.",
+                        "two": "Reasoning and acting using up-to-date knowledge.",
+                        "three": "Scalability to handle simple to highly complex tasks."
+                    }
+                },
+                "benefits": {
+                    "title": "Benefits",
+                    "description": "Implementing AI agents offers numerous advantages that transform business processes, improve operational efficiency, and personalize the customer experience.",
+                    "highlighted_benefits": {
+                        "title": "Highlighted Benefits",
+                        "list": {
+                            "one": {
+                                "title": "Cost Reduction",
+                                "description": "Automates repetitive tasks, minimizes human errors, and reduces manual resource needs, optimizing operational budgets."
+                            },
+                            "two": {
+                                "title": "Improved Operational Efficiency",
+                                "description": "AI agents speed up key processes, enable real-time data-driven decisions, and improve overall workflow."
+                            },
+                            "three": {
+                                "title": "Real-Time Personalization",
+                                "description": "Delivers recommendations, responses, and solutions tailored to user behavior and preferences to enhance customer experience."
+                            },
+                            "four": {
+                                "title": "Scalability",
+                                "description": "Handles increasing data and request volumes without compromising performance or service quality."
+                            },
+                            "five": {
+                                "title": "Better Decision-Making",
+                                "description": "Uses predictive analytics and machine learning to forecast trends, assess risks, and make more informed decisions."
+                            }
+                        }
+                    }
+                }
             }
-          
-          
+        },
+        "web_development": {
+            "title": "Fullstack Web Development",
+            "description": "I provide fullstack web development services using modern technologies and agile practices. I specialize in building robust, scalable, and customized applications that enhance business efficiency, focusing on performance, user experience, and security.",
+            "metodologies": {
+                "title": "Agile Methodologies & CI/CD",
+                "descrition": "I apply agile methodologies to work iteratively, improve communication, and deliver results quickly. I also implement CI/CD (Continuous Integration/Continuous Deployment) to automate processes, ensure code quality, and perform safe and frequent deployments."
+            }
+        },
+        "ux-ui": {
+            "title": "UX/UI Design",
+            "description": "I offer user-centered design solutions that combine aesthetics, functionality, and usability to create memorable and effective experiences.",
+            "list": {
+                "one": {
+                    "title": "Responsive Design",
+                    "description": "Adaptive design that ensures an optimal experience across mobile, tablet, and desktop devices."
+                },
+                "two": {
+                    "title": "Attractive Visual Interface",
+                    "description": "Creation of modern and elegant visual interfaces that enhance perception and user experience."
+                },
+                "three": {
+                    "title": "Prototypes and Wireframes",
+                    "description": "Design of wireframes and interactive prototypes to test and validate ideas before final implementation."
+                },
+                "four": {
+                    "title": "User-Centered Design",
+                    "description": "Design methodologies focused on user needs to create intuitive solutions aligned with their goals."
+                },
+                "five": {
+                    "title": "Cross-Platform Experience",
+                    "description": "Consistent design across different platforms to ensure a seamless and uniform user experience."
+                },
+                "six": {
+                    "title": "Enhanced Accessibility",
+                    "description": "Application of accessibility standards to ensure all users can interact with your products."
+                }
+            }
+        }
     },
     "blog": {
         "title": "Learning ",
@@ -116,7 +250,15 @@
             "cta_btn": "Contact Us",
             "end": "Interested in working with us? Check out our",
             "end_two": "services."
-        }
+        },
+        "inside_article": {
+    "reading_time": "min read",
+    "share": "Share this article!",
+    "end_section": {
+      "title": "Did you enjoy this article?",
+      "description": "Subscribe to our blog to receive exclusive content and stay up-to-date with the latest trends."
+    }
+  }
     },
     "contact": {
         "title": "Contact Us",

@@ -5,7 +5,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
-const CardArticle = ({ image, title, intro, date, readTime, slug }) => {
+interface CardArticleProps {
+    image: string;
+    title: string;
+    intro: string;
+    date: string;
+    readTime: string;
+    slug: string;
+}
+
+const CardArticle = ({ image, title, intro, date, readTime, slug }: CardArticleProps) => {
 
     const t = useTranslations('blog')
     const pathname = usePathname();

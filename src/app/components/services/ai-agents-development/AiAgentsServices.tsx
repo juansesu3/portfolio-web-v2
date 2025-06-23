@@ -1,92 +1,61 @@
 'use client'
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FaBrain, FaRobot, FaIndustry, FaSearch, FaChartLine, FaShoppingCart, FaUserTie } from 'react-icons/fa';
+import { FaRobot, FaIndustry, FaChartLine, FaShoppingCart, FaUserTie } from 'react-icons/fa';
 
 const AiAgentsServices = () => {
-  const [activeTab, setActiveTab] = useState('development');
-
+  type ServiceTabs = 'development' | 'benefits' | 'ecommerce';
+  const [activeTab, setActiveTab] = useState<ServiceTabs>('development');
+const t = useTranslations("services.ai_agents_development");
   const services = {
     development: {
       title: "Desarrollo de Agentes de IA",
       description: `
-      <p>Creo agentes de IA avanzados que utilizan procesamiento de lenguaje natural, machine learning y técnicas modernas para automatizar tareas y mejorar procesos.</p>
+      <p>${t('sections.development.description')}</p>
       
-      <h3 class="text-lg font-semibold mt-4">Técnicas Avanzadas de Desarrollo:</h3>
+      <h3 class="text-lg font-semibold mt-4">${t('sections.development.avanced_techniques.title')}:</h3>
       <ul class="list-disc list-inside ml-4">
         <li>
-          <strong>Retrieval-Augmented Generation (RAG):</strong> Combino modelos generativos de lenguaje con capacidades de recuperación de información, permitiendo que los agentes accedan a bases de conocimiento externas en tiempo real para proporcionar respuestas actualizadas y precisas.
+          <strong>${t('sections.development.avanced_techniques.list.one.title')}:</strong> ${t('sections.development.avanced_techniques.list.one.description')}
         </li>
         <li>
-          <strong>Sistemas de Tool y Multi-Tool:</strong> Mis agentes pueden integrarse con múltiples herramientas (como buscadores, calculadoras, y APIs especializadas) para realizar tareas complejas de manera eficiente. Esto permite que un agente seleccione y utilice herramientas específicas según el contexto de la consulta o problema.
+          <strong>${t('sections.development.avanced_techniques.list.two.title')}:</strong> ${t('sections.development.avanced_techniques.list.two.description')}
         </li>
         <li>
-          <strong>Multi-Agent Systems (Sistemas Multi-Agentes):</strong> Diseño arquitecturas en las que múltiples agentes de IA colaboran para resolver problemas grandes o distribuidos. Estos agentes pueden comunicarse entre sí para coordinar tareas, optimizar decisiones, y manejar procesos de manera paralela.
+          <strong>${t('sections.development.avanced_techniques.list.three.title')}:</strong> ${t('sections.development.avanced_techniques.list.three.description')}
         </li>
       </ul>
   
-      <h3 class="text-lg font-semibold mt-4">Características Clave:</h3>
+      <h3 class="text-lg font-semibold mt-4">${t('sections.development.key_features.title')}:</h3>
       <ul class="list-disc list-inside ml-4">
-        <li>Adaptación continua mediante aprendizaje dinámico.</li>
-        <li>Capacidad de razonar y actuar usando conocimiento actualizado.</li>
-        <li>Escalabilidad para manejar tareas simples o altamente complejas.</li>
+        <li>${t('sections.development.key_features.one')}</li>
+        <li>${t('sections.development.key_features.two')}</li>
+        <li>${t('sections.development.key_features.three')}</li>
       </ul>
     `,
-    },
-    industries: {
-      title: "Aplicaciones en Industrias",
-      description: `
-        <p>Nuestros agentes de IA son indispensables en diversas industrias, proporcionando soluciones inteligentes que optimizan procesos, mejoran la experiencia del cliente y generan ventajas competitivas.</p>
-        
-        <h3 class="text-lg font-semibold mt-4">Industrias Clave:</h3>
-        <ul class="list-disc list-inside ml-4">
-          <li>
-            <strong>Salud:</strong> Automatización de diagnósticos, asistentes virtuales para pacientes, y análisis predictivo para mejorar la atención médica y la gestión de recursos.
-          </li>
-          <li>
-            <strong>Finanzas:</strong> Detección de fraudes, asistentes financieros personalizados, y análisis automatizados para la toma de decisiones basadas en datos.
-          </li>
-          <li>
-            <strong>Comercio Electrónico:</strong> Personalización de recomendaciones de productos, asistentes de atención al cliente 24/7, y optimización de precios dinámicos.
-          </li>
-          <li>
-            <strong>Atención al Cliente:</strong> Bots de IA que responden preguntas frecuentes, manejan consultas complejas y mejoran la experiencia de soporte en tiempo real.
-          </li>
-          <li>
-            <strong>Manufactura:</strong> Optimización de procesos de producción, mantenimiento predictivo y automatización de líneas de ensamblaje con agentes inteligentes.
-          </li>
-        </ul>
-    
-        <h3 class="text-lg font-semibold mt-4">Beneficios Generales:</h3>
-        <ul class="list-disc list-inside ml-4">
-          <li>Reducción de costos operativos mediante automatización de tareas repetitivas.</li>
-          <li>Mejora de la eficiencia y precisión en procesos críticos.</li>
-          <li>Incremento en la satisfacción del cliente con respuestas rápidas y personalizadas.</li>
-          <li>Toma de decisiones más informadas utilizando análisis predictivos.</li>
-        </ul>
-      `,
     },
     benefits: {
       title: "Beneficios Clave",
       description: `
-        <p>La implementación de agentes de IA ofrece múltiples beneficios que transforman los procesos empresariales, mejoran la eficiencia operativa y personalizan la experiencia del cliente.</p>
+        <p>${t('sections.benefits.description')}</p>
     
-        <h3 class="text-lg font-semibold mt-4">Beneficios Destacados:</h3>
+        <h3 class="text-lg font-semibold mt-4">${t('sections.benefits.highlighted_benefits.title')}:</h3>
         <ul class="list-disc list-inside ml-4">
           <li>
-            <strong>Reducción de Costos:</strong> Automatiza tareas repetitivas, disminuye errores humanos y reduce la necesidad de recursos manuales, logrando optimizar el presupuesto operativo.
+            <strong>${t('sections.benefits.highlighted_benefits.list.one.title')}:</strong> ${t('sections.benefits.highlighted_benefits.list.one.description')}
           </li>
           <li>
-            <strong>Mejora en la Eficiencia Operativa:</strong> Los agentes de IA aceleran procesos clave, permiten decisiones basadas en datos en tiempo real y mejoran el flujo de trabajo general.
+            <strong>${t('sections.benefits.highlighted_benefits.list.two.title')}:</strong> ${t('sections.benefits.highlighted_benefits.list.two.description')}
           </li>
           <li>
-            <strong>Personalización en Tiempo Real:</strong> Ofrece recomendaciones, respuestas y soluciones adaptadas al comportamiento y las preferencias del usuario para mejorar la experiencia del cliente.
+            <strong>${t('sections.benefits.highlighted_benefits.list.three.title')}:</strong> ${t('sections.benefits.highlighted_benefits.list.three.description')}
           </li>
           <li>
-            <strong>Escalabilidad:</strong> Permite manejar un volumen creciente de datos y solicitudes sin comprometer el rendimiento o la calidad del servicio.
+            <strong>${t('sections.benefits.highlighted_benefits.list.four.title')}:</strong> ${t('sections.benefits.highlighted_benefits.list.four.description')}
           </li>
           <li>
-            <strong>Mejora en la Toma de Decisiones:</strong> Utiliza analítica predictiva y aprendizaje automático para prever tendencias, evaluar riesgos y tomar decisiones más informadas.
+            <strong>${t('sections.benefits.highlighted_benefits.list.five.title')}:</strong> ${t('sections.benefits.highlighted_benefits.list.five.description')}
           </li>
         </ul>
       `,
@@ -94,30 +63,30 @@ const AiAgentsServices = () => {
     ecommerce: {
       title: "Agentes de IA para Comercio Electrónico",
       description: `
-        <p>Los agentes de IA están revolucionando el comercio electrónico al transformar la manera en que las empresas interactúan con sus clientes y optimizan sus operaciones. Ofrecemos soluciones avanzadas que impulsan la personalización, automatización y análisis predictivo para ayudar a las empresas a destacar en un mercado competitivo.</p>
+        <p>${t('sections.ecommerce.content.introduction')}</p>
         
-        <h3 class="text-lg font-semibold mt-4">Aplicaciones Clave:</h3>
+        <h3 class="text-lg font-semibold mt-4">${t('sections.ecommerce.content.key_aplications.title')}:</h3>
         <ul class="list-disc list-inside ml-4">
           <li>
-            <strong>Recomendaciones Personalizadas:</strong> Algoritmos de recomendación impulsados por IA que sugieren productos basados en el comportamiento y las preferencias de los clientes, mejorando la experiencia de compra.
+            <strong>${t('sections.ecommerce.content.key_aplications.list.one.title')}:</strong> ${t('sections.ecommerce.content.key_aplications.list.one.description')}
           </li>
           <li>
-            <strong>Asistentes Virtuales para Atención al Cliente:</strong> Bots conversacionales que proporcionan soporte 24/7, resolviendo consultas, ofreciendo información de pedidos y reduciendo los tiempos de espera.
+            <strong>${t('sections.ecommerce.content.key_aplications.list.two.title')}:</strong> ${t('sections.ecommerce.content.key_aplications.list.two.description')}
           </li>
           <li>
-            <strong>Gestión Inteligente de Inventario:</strong> Agentes predictivos que anticipan la demanda de productos, ayudando a reducir costos por sobrestock o faltantes, y optimizando la cadena de suministro.
+            <strong>G${t('sections.ecommerce.content.key_aplications.list.three.title')}:</strong> ${t('sections.ecommerce.content.key_aplications.list.three.description')}
           </li>
           <li>
-            <strong>Optimización de Precios Dinámicos:</strong> Ajuste automatizado de precios basado en datos de competencia, demanda y tendencias de mercado, maximizando las ganancias.
+            <strong>${t('sections.ecommerce.content.key_aplications.list.four.title')}:</strong> ${t('sections.ecommerce.content.key_aplications.list.four.description')}
           </li>
         </ul>
         
-        <h3 class="text-lg font-semibold mt-4">Beneficios Clave:</h3>
+        <h3 class="text-lg font-semibold mt-4">${t('sections.ecommerce.content.key_benefit.title')}:</h3>
         <ul class="list-disc list-inside ml-4">
-          <li>Aumento de conversiones gracias a experiencias de compra personalizadas que impulsan las decisiones de los clientes.</li>
-          <li>Mejora de la satisfacción del cliente mediante respuestas rápidas, precisas y disponibles las 24 horas del día.</li>
-          <li>Reducción de costos operativos al automatizar tareas repetitivas y procesos de soporte al cliente.</li>
-          <li>Incremento en la precisión de las predicciones de inventario y ventas, ayudando a tomar decisiones estratégicas más informadas.</li>
+          <li>${t('sections.ecommerce.content.key_benefit.list.one')}</li>
+          <li>${t('sections.ecommerce.content.key_benefit.list.two')}</li>
+          <li>${t('sections.ecommerce.content.key_benefit.list.three')}</li>
+          <li>${t('sections.ecommerce.content.key_benefit.list.four')}</li>
         </ul>
       `,
     },
@@ -127,7 +96,7 @@ const AiAgentsServices = () => {
   return (
     <div className="max-w-5xl mx-auto  py-10 ">
       <h1 className="text-4xl font-bold text-center mb-8 text-purple-500">
-        Desarrollo de Agentes de IA
+        {t('title')}
       </h1>
       <div className='flex justify-center items-center w-20 h-20 mx-auto mb-8'>
     <Image src={'https://my-page-negiupp.s3.amazonaws.com/1737368910098.png'} width={500} height={500 } alt='ai-chip'></Image>
@@ -139,14 +108,14 @@ const AiAgentsServices = () => {
             }`}
           onClick={() => setActiveTab('ecommerce')}
         >
-          E-Commerce
+         {t('sections.ecommerce.title')}
         </button>
         <button
           className={`px-4 py-2 rounded-lg text-sm font-medium border border-gray-100 ${activeTab === 'development' ? 'bg-purple-500 text-white' : 'bg-white shadow-md border border-gray-100 text-gray-700'
             }`}
           onClick={() => setActiveTab('development')}
         >
-          Desarrollo
+         {t('sections.development.title')}
         </button>
 
         <button
@@ -154,15 +123,14 @@ const AiAgentsServices = () => {
             }`}
           onClick={() => setActiveTab('benefits')}
         >
-          Beneficios
+           {t('sections.benefits.title')}
         </button>
 
       </div>
 
       <div className="bg-white rounded-lg py-6">
         <div
-            className="prose-custom  max-w-none leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: services[activeTab].description }}
+          dangerouslySetInnerHTML={{ __html: services[activeTab]?.description }}
         />
       </div>
 

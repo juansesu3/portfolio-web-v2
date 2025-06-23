@@ -1,10 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5 } from 'react-icons/fa'; // Importa iconos de react-icons
+import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa'; // Importa iconos de react-icons
 import { SiTailwindcss, SiMongodb, SiTypescript } from 'react-icons/si';
 
-const SingleProject = ({ project }) => {
-    const { title, description, approach, desktopImage, mobileImage } = project;
+interface Project {
+    title: string;
+    description: string;
+    approach: string;
+    desktopImage: string;
+}
+
+const SingleProject = ({ project }: { project: Project }) => {
+    const { title, description, approach, desktopImage} = project;
 
     return (
         <div className="flex flex-col gap-6 ">

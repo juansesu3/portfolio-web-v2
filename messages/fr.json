@@ -86,15 +86,149 @@
             "paragrah_3": "Souhaites-tu que nous travaillions ensemble ? Je suis ouvert à de nouvelles collaborations et à des défis passionnants.",
             "cta": "Contacte-moi"
         },
-        
-            "end_section_inside": {
-              "title": "Avez-vous trouvé quelque chose qui vous inspire ?",
-              "paragrah_1": "✨ Et si une étincelle s'est allumée en vous… ✨",
-              "paragrah_2": "Parlons-en. Nous pourrions construire quelque chose d'incroyable ensemble",
-              "cta": "Contactez-moi"
+        "end_section_inside": {
+            "title": "Avez-vous trouvé quelque chose qui vous inspire ?",
+            "paragrah_1": "✨ Et si une étincelle s'est allumée en vous… ✨",
+            "paragrah_2": "Parlons-en. Nous pourrions construire quelque chose d'incroyable ensemble",
+            "cta": "Contactez-moi"
+        }
+    },
+    "services": {
+        "ai_agents_development": {
+            "title": "Développement d'Agents IA",
+            "sections": {
+                "ecommerce": {
+                    "title": "E-Commerce",
+                    "content": {
+                        "introduction": "Les agents IA révolutionnent le commerce électronique en transformant la manière dont les entreprises interagissent avec leurs clients et optimisent leurs opérations. Nous proposons des solutions avancées qui favorisent la personnalisation, l'automatisation et l'analyse prédictive pour aider les entreprises à se démarquer dans un marché concurrentiel.",
+                        "key_aplications": {
+                            "title": "Applications Clés",
+                            "list": {
+                                "one": {
+                                    "title": "Recommandations Personnalisées",
+                                    "description": "Des algorithmes de recommandation basés sur l’IA suggèrent des produits en fonction du comportement et des préférences des clients, améliorant ainsi l’expérience d’achat."
+                                },
+                                "two": {
+                                    "title": "Assistants Virtuels pour le Service Client",
+                                    "description": "Des bots conversationnels disponibles 24h/24 et 7j/7 répondent aux questions, fournissent des informations sur les commandes et réduisent les temps d’attente."
+                                },
+                                "three": {
+                                    "title": "Gestion Intelligente des Stocks",
+                                    "description": "Des agents prédictifs anticipent la demande de produits pour réduire les excédents ou les ruptures et optimiser la chaîne d’approvisionnement."
+                                },
+                                "four": {
+                                    "title": "Optimisation Dynamique des Prix",
+                                    "description": "Ajustement automatique des prix en fonction des données concurrentielles, de la demande et des tendances du marché afin de maximiser les profits."
+                                }
+                            }
+                        },
+                        "key_benefit": {
+                            "title": "Avantages Clés",
+                            "list": {
+                                "one": "Augmentation des conversions grâce à des expériences d’achat personnalisées qui influencent les décisions des clients.",
+                                "two": "Amélioration de la satisfaction client grâce à des réponses rapides, précises et disponibles à tout moment.",
+                                "three": "Réduction des coûts opérationnels grâce à l’automatisation des tâches répétitives et des processus de support.",
+                                "four": "Amélioration de la précision des prévisions de stocks et de ventes pour des décisions stratégiques mieux informées."
+                            }
+                        }
+                    }
+                },
+                "development": {
+                    "title": "Développement",
+                    "description": "Je crée des agents IA avancés utilisant le traitement du langage naturel, l’apprentissage automatique et des techniques modernes pour automatiser les tâches et améliorer les processus.",
+                    "avanced_techniques": {
+                        "title": "Techniques de Développement Avancées",
+                        "list": {
+                            "one": {
+                                "title": "Génération Augmentée par Récupération (RAG)",
+                                "description": "Combine des modèles génératifs avec des capacités de récupération d’information pour fournir des réponses précises et à jour en temps réel."
+                            },
+                            "two": {
+                                "title": "Systèmes Multi-Outils",
+                                "description": "Les agents peuvent s’intégrer à divers outils (moteurs de recherche, calculatrices, API spécialisées) pour accomplir efficacement des tâches complexes en choisissant l’outil le plus adapté selon le contexte."
+                            },
+                            "three": {
+                                "title": "Systèmes Multi-Agents",
+                                "description": "Conception d’architectures où plusieurs agents IA collaborent pour résoudre des problèmes distribués ou complexes, coordonnant leurs tâches pour optimiser les décisions."
+                            }
+                        }
+                    },
+                    "key_features": {
+                        "title": "Caractéristiques Clés",
+                        "one": "Adaptation continue via apprentissage dynamique.",
+                        "two": "Capacité à raisonner et agir avec des connaissances actualisées.",
+                        "three": "Scalabilité pour gérer des tâches simples ou très complexes."
+                    }
+                },
+                "benefits": {
+                    "title": "Avantages",
+                    "description": "L’implémentation d’agents IA transforme les processus métiers, améliore l’efficacité opérationnelle et personnalise l’expérience client.",
+                    "highlighted_benefits": {
+                        "title": "Avantages Mis en Avant",
+                        "list": {
+                            "one": {
+                                "title": "Réduction des Coûts",
+                                "description": "Automatise les tâches répétitives, réduit les erreurs humaines et limite les ressources manuelles, optimisant ainsi le budget opérationnel."
+                            },
+                            "two": {
+                                "title": "Efficacité Opérationnelle Améliorée",
+                                "description": "Les agents IA accélèrent les processus, permettent des décisions en temps réel et améliorent les flux de travail."
+                            },
+                            "three": {
+                                "title": "Personnalisation en Temps Réel",
+                                "description": "Fournit des recommandations et des réponses adaptées au comportement et aux préférences de l’utilisateur pour une meilleure expérience."
+                            },
+                            "four": {
+                                "title": "Scalabilité",
+                                "description": "Gère un volume croissant de données et de demandes sans compromettre la qualité du service."
+                            },
+                            "five": {
+                                "title": "Meilleure Prise de Décision",
+                                "description": "Utilise l’analyse prédictive et l’apprentissage automatique pour anticiper les tendances, évaluer les risques et prendre des décisions éclairées."
+                            }
+                        }
+                    }
+                }
             }
-          
-          
+        },
+        "web_development": {
+            "title": "Développement Web Fullstack",
+            "description": "Je propose des services de développement web Fullstack avec des technologies modernes et des méthodes agiles. Je conçois des applications robustes, évolutives et personnalisées axées sur la performance, l’expérience utilisateur et la sécurité.",
+            "metodologies": {
+                "title": "Méthodologies Agiles & CI/CD",
+                "descrition": "J’utilise des méthodologies agiles pour travailler de manière itérative, améliorer la communication et livrer rapidement. J’implémente également CI/CD (Intégration et Déploiement Continus) pour automatiser les processus, garantir la qualité du code et réaliser des déploiements sûrs et fréquents."
+            }
+        },
+        "ux-ui": {
+            "title": "Design UX/UI",
+            "description": "Je propose des solutions de design centrées sur l’utilisateur alliant esthétique, fonctionnalité et ergonomie pour créer des expériences efficaces et mémorables.",
+            "list": {
+                "one": {
+                    "title": "Design Responsive",
+                    "description": "Un design adaptatif garantissant une expérience optimale sur mobile, tablette et ordinateur."
+                },
+                "two": {
+                    "title": "Interface Visuelle Attrayante",
+                    "description": "Création d’interfaces modernes et élégantes qui améliorent la perception et l’expérience utilisateur."
+                },
+                "three": {
+                    "title": "Prototypes et Maquettes",
+                    "description": "Conception de maquettes interactives pour tester et valider les idées avant la mise en œuvre finale."
+                },
+                "four": {
+                    "title": "Design Centré Utilisateur",
+                    "description": "Méthodologies de design centrées sur les besoins des utilisateurs pour créer des solutions intuitives."
+                },
+                "five": {
+                    "title": "Expérience Multiplateforme",
+                    "description": "Design cohérent sur toutes les plateformes pour assurer une expérience fluide et homogène."
+                },
+                "six": {
+                    "title": "Accessibilité Améliorée",
+                    "description": "Application des normes d’accessibilité pour que tous les utilisateurs puissent interagir avec vos produits."
+                }
+            }
+        }
     },
     "blog": {
         "title": "Apprendre ",
@@ -116,7 +250,15 @@
             "cta_btn": "Contactez-nous",
             "end": "Intéressé à travailler avec nous ? Consultez nos",
             "end_two": "services."
-        }
+        },
+        "inside_article": {
+    "reading_time": "min de lecture",
+    "share": "Partagez cet article !",
+    "end_section": {
+      "title": "Vous avez apprécié cet article ?",
+      "description": "Abonnez-vous à notre blog pour recevoir du contenu exclusif et rester à jour sur les dernières tendances."
+    }
+  }
     },
     "contact": {
         "title": "Contactez-nous",

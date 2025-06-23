@@ -75,25 +75,160 @@
         "sub_title_two": "Mis Proyectos",
         "end_section": {
             "title": {
-                "one":"Gracias",
-                "two":"por",
-                "three":"visitar",
-                "four":"nuestros",
-                "five":"proyectos"
+                "one": "Gracias",
+                "two": "por",
+                "three": "visitar",
+                "four": "nuestros",
+                "five": "proyectos"
             },
             "paragrah_1": "Tu tiempo y tu interés significan mucho para mi. Estos proyectos han sido desarrollados con pasión, innovación y un enfoque en crear soluciones escalables y centradas en el usuario. ",
-            "paragrah_2":"      Si te ha gustado lo que ves, te invito a explorar más sobre mis soluciones. Como desarrollador full stack, me encanta convertir ideas complejas en experiencias simples y efectivas. ",
-            "paragrah_3":"¿Te gustaría trabajar juntos? Estoy abierto a nuevas colaboraciones y desafíos emocionantes.",
+            "paragrah_2": "      Si te ha gustado lo que ves, te invito a explorar más sobre mis soluciones. Como desarrollador full stack, me encanta convertir ideas complejas en experiencias simples y efectivas. ",
+            "paragrah_3": "¿Te gustaría trabajar juntos? Estoy abierto a nuevas colaboraciones y desafíos emocionantes.",
             "cta": "Contáctame"
         },
-        
-            "end_section_inside": {
-              "title": "¿Encontraste algo que te inspira?",
-              "paragrah_1": "✨ Y si alguna chispa se encendió en ti… ✨",
-              "paragrah_2": "Hablemos. Podríamos construir algo increíble juntos",
-              "cta": "Contáctame"
+        "end_section_inside": {
+            "title": "¿Encontraste algo que te inspira?",
+            "paragrah_1": "✨ Y si alguna chispa se encendió en ti… ✨",
+            "paragrah_2": "Hablemos. Podríamos construir algo increíble juntos",
+            "cta": "Contáctame"
+        }
+    },
+    "services": {
+        "ai_agents_development": {
+            "title": "Desarrollo de Agentes de IA",
+            "sections": {
+                "ecommerce": {
+                    "title": "E-Commerce",
+                    "content": {
+                        "introduction": "Los agentes de IA están revolucionando el comercio electrónico al transformar la manera en que las empresas interactúan con sus clientes y optimizan sus operaciones. Ofrecemos soluciones avanzadas que impulsan la personalización, automatización y análisis predictivo para ayudar a las empresas a destacar en un mercado competitivo.",
+                        "key_aplications": {
+                            "title": "Aplicaciones clave",
+                            "list": {
+                                "one": {
+                                    "title": "Recomendaciones Personalizadas",
+                                    "description": "Algoritmos de recomendación impulsados por IA que sugieren productos basados en el comportamiento y las preferencias de los clientes, mejorando la experiencia de compra."
+                                },
+                                "two": {
+                                    "title": "Asistentes Virtuales para Atención al Cliente",
+                                    "description": "Bots conversacionales que proporcionan soporte 24/7, resolviendo consultas, ofreciendo información de pedidos y reduciendo los tiempos de espera."
+                                },
+                                "three": {
+                                    "title": "Gestión Inteligente de Inventario",
+                                    "description": "Agentes predictivos que anticipan la demanda de productos, ayudando a reducir costos por sobrestock o faltantes, y optimizando la cadena de suministro."
+                                },
+                                "four": {
+                                    "title": "Optimización de Precios Dinámicos",
+                                    "description": "Ajuste automatizado de precios basado en datos de competencia, demanda y tendencias de mercado, maximizando las ganancias."
+                                }
+                            }
+                        },
+                        "key_benefit": {
+                            "title": "Beneficios Clave",
+                            "list": {
+                                "one": "Aumento de conversiones gracias a experiencias de compra personalizadas que impulsan las decisiones de los clientes.",
+                                "two": "Mejora de la satisfacción del cliente mediante respuestas rápidas, precisas y disponibles las 24 horas del día.",
+                                "three": "Reducción de costos operativos al automatizar tareas repetitivas y procesos de soporte al cliente.",
+                                "four": "Incremento en la precisión de las predicciones de inventario y ventas, ayudando a tomar decisiones estratégicas más informadas."
+                            }
+                        }
+                    }
+                },
+                "development": {
+                    "title": "Desarrollo",
+                    "description": "Creo agentes de IA avanzados que utilizan procesamiento de lenguaje natural, machine learning y técnicas modernas para automatizar tareas y mejorar procesos.",
+                    "avanced_techniques": {
+                        "title": "Técnicas Avanzadas de Desarrollo",
+                        "list": {
+                            "one": {
+                                "title": "Retrieval-Augmented Generation (RAG)",
+                                "description": "Combino modelos generativos de lenguaje con capacidades de recuperación de información, permitiendo que los agentes accedan a bases de conocimiento externas en tiempo real para proporcionar respuestas actualizadas y precisas."
+                            },
+                            "two": {
+                                "title": "Sistemas de Tool y Multi-Tool",
+                                "description": "Mis agentes pueden integrarse con múltiples herramientas (como buscadores, calculadoras, y APIs especializadas) para realizar tareas complejas de manera eficiente. Esto permite que un agente seleccione y utilice herramientas específicas según el contexto de la consulta o problema."
+                            },
+                            "three": {
+                                "title": "Multi-Agent Systems (Sistemas Multi-Agentes)",
+                                "description": "Diseño arquitecturas en las que múltiples agentes de IA colaboran para resolver problemas grandes o distribuidos. Estos agentes pueden comunicarse entre sí para coordinar tareas, optimizar decisiones, y manejar procesos de manera paralela."
+                            }
+                        }
+                    },
+                    "key_features": {
+                        "title": "Características Clave",
+                        "one": "Adaptación continua mediante aprendizaje dinámico.",
+                        "two": "Capacidad de razonar y actuar usando conocimiento actualizado.",
+                        "three": "Escalabilidad para manejar tareas simples o altamente complejas."
+                    }
+                },
+                "benefits": {
+                    "title": "Beneficios",
+                    "description": "La implementación de agentes de IA ofrece múltiples beneficios que transforman los procesos empresariales, mejoran la eficiencia operativa y personalizan la experiencia del cliente.",
+                    "highlighted_benefits": {
+                        "title": "Beneficios Destacados",
+                        "list": {
+                            "one": {
+                                "title": "Reducción de Costos",
+                                "description": "Automatiza tareas repetitivas, disminuye errores humanos y reduce la necesidad de recursos manuales, logrando optimizar el presupuesto operativo."
+                            },
+                            "two": {
+                                "title": "Mejora en la Eficiencia Operativa",
+                                "description": "Los agentes de IA aceleran procesos clave, permiten decisiones basadas en datos en tiempo real y mejoran el flujo de trabajo general."
+                            },
+                            "three": {
+                                "title": "Personalización en Tiempo Real",
+                                "description": "Ofrece recomendaciones, respuestas y soluciones adaptadas al comportamiento y las preferencias del usuario para mejorar la experiencia del cliente."
+                            },
+                            "four": {
+                                "title": "Escalabilidad",
+                                "description": "Permite manejar un volumen creciente de datos y solicitudes sin comprometer el rendimiento o la calidad del servicio."
+                            },
+                            "five": {
+                                "title": "Mejora en la Toma de Decisiones",
+                                "description": "Utiliza analítica predictiva y aprendizaje automático para prever tendencias, evaluar riesgos y tomar decisiones más informadas."
+                            }
+                        }
+                    }
+                }
             }
-          
+        },
+        "web_development": {
+            "title": "Desarrollo Web Fullstack",
+            "description": "Brindo servicios de desarrollo web Fullstack utilizando tecnologías modernas y prácticas de desarrollo ágil. Me especializo en crear aplicaciones robustas, escalables y personalizadas que mejoran la eficiencia de tu negocio, con un enfoque en rendimiento, experiencia del usuario y seguridad.",
+            "metodologies": {
+                "title": "Metodologías Ágiles & CI/CD",
+                "descrition": "Utilizo metodologías ágiles para trabajar de manera iterativa, mejorando la comunicación y entregando resultados rápidamente. También implemento CI/CD (Integración Continua/Despliegue Continuo) para automatizar procesos, garantizar la calidad del código, y realizar implementaciones frecuentes y seguras."
+            }
+        },
+        "ux-ui": {
+            "title": "Diseño UX/UI",
+            "description": "Ofrezco soluciones de diseño centradas en el usuario que combinan estética, funcionalidad y usabilidad para crear experiencias memorables y eficaces.",
+            "list": {
+                "one": {
+                    "title": "Diseño Responsivo",
+                    "description": "Diseño adaptativo que garantiza una experiencia óptima en dispositivos móviles, tabletas y computadoras de escritorio."
+                },
+                "two": {
+                    "title": "Interfaz Visual Atractiva",
+                    "description": "Creación de interfaces visuales modernas y elegantes que mejoran la percepción y la experiencia del usuario."
+                },
+                "three": {
+                    "title": "Prototipos y Wireframes",
+                    "description": "Diseño de wireframes y prototipos interactivos para probar y validar ideas antes de la implementación final."
+                },
+                "four": {
+                    "title": "Diseño Centrado en el Usuario",
+                    "description": "Metodologías de diseño centrado en el usuario para crear soluciones intuitivas que se alinean con sus necesidades."
+                },
+                "five": {
+                    "title": "Experiencia Multiplataforma",
+                    "description": "Diseño consistente y coherente en diferentes plataformas para asegurar una experiencia fluida y uniforme."
+                },
+                "six": {
+                    "title": "Accesibilidad Mejorada",
+                    "description": "Aplicación de estándares de accesibilidad para garantizar que todos los usuarios puedan interactuar con tus productos."
+                }
+            }
+        }
     },
     "blog": {
         "title": "Aprender ",
@@ -115,6 +250,15 @@
             "cta_btn": "Contáctanos",
             "end": "¿Interesado en trabajar con nosotros? Revisa nuestros",
             "end_two": "servicios."
+        },
+        "inside_article":{
+            "reading_time":"min de lectura",
+            "share":"¡Comparte este artículo!",
+            "end_section":{
+                "title":"¿Disfrutaste este artículo?",
+                "description":"Suscríbete a nuestro blog para recibir contenido exclusivo y mantenerte actualizado con las últimas tendencias."
+            }
+
         }
     },
     "contact": {

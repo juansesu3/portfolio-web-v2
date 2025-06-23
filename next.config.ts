@@ -7,29 +7,29 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: "https" as const,
         hostname: 'my-page-negiupp.s3.amazonaws.com',
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: "https" as const,
         hostname: 'pandorai.s3.amazonaws.com',
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: "https" as const,
         hostname: 'pandorai.ch',
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: "https" as const,
         hostname: 'negiupp.com',
         pathname: '/**',
       },
   
       
       {
-        protocol: 'https',
+        protocol: "https" as const,
         hostname: 'img.daisyui.com',
         pathname: '/**',
       },

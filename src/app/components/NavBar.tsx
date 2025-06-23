@@ -13,8 +13,8 @@ const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false); // Estado para dropdown de idioma
 
-  const dropdownRef = useRef(null); // Referencia para el dropdown de servicios
-  const langDropdownRef = useRef(null); // Referencia para el dropdown de idioma
+  const dropdownRef = useRef<HTMLDivElement>(null); // Referencia para el dropdown de servicios
+  const langDropdownRef = useRef<HTMLDivElement>(null); // Referencia para el dropdown de idioma
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen); // Alternar estado del dropdown de servicios
@@ -33,12 +33,12 @@ const NavBar = () => {
     setIsLangDropdownOpen(false); // Cerrar dropdown de idioma
   };
 
-  const handleClickOutside = (event: { target: any }) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false); // Cerrar dropdown de servicios
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setIsDropdownOpen(false);
     }
-    if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
-      setIsLangDropdownOpen(false); // Cerrar dropdown de idioma
+    if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node)) {
+      setIsLangDropdownOpen(false);
     }
   };
 

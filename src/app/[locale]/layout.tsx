@@ -4,7 +4,6 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import UiChatBot from "../components/ChatAgent/UiChatBot";
 import Layout from "../components/Layout";
 
 

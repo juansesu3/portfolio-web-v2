@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import CircularProgressBar from './CircularProgressBar';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import EducationSection from './EducationSection';
 
@@ -11,14 +11,13 @@ const MyCard = () => {
     const pathname = usePathname();
     const localeFromPath = pathname.split("/")[1] || "en";
     const [locale, setLocale] = useState(localeFromPath);
-    const router = useRouter();
+
     const t = useTranslations("profile");
-    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         setLocale(localeFromPath);
     }, [localeFromPath]);
-
+console.log(locale)
 
     const introYourSelf = t('introYourSelf').split('//').map((item, index) => (
         <p key={index}>{item}</p>

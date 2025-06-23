@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
 
 interface Product {
-  lang: any;
+  lang: string;
   slug: string;
   name: string;
   price?: number;
@@ -21,7 +21,6 @@ interface ChatMessage {
   };
   secondaryProducts?: Product[];
 }
-type ChatView = "menu" | "chatStarted";
 
 interface ChatState {
   currentView: string;
