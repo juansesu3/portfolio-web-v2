@@ -9,10 +9,10 @@ import { usePathname } from 'next/navigation'
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Web App',
-    description: 'Plataforma moderna de comercio electrónico para una experiencia de compra fluida.',
-    image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1713345137122.png&w=640&q=75',
-    technologies: ['react', 'nextjs', 'tailwindcss'],
+    title: 'Recommender AI Agent For E-commerce',
+    description: 'El sistema de recomendación inteligente de PandorAI. Personalización profunda, búsqueda semántica y automatización lista para escalar tu tienda.',
+    image: 'https://my-page-negiupp.s3.amazonaws.com/1750682608352.jpg',//https://my-page-negiupp.s3.amazonaws.com/1750681232857.png
+    technologies: ['openai ', 'nextjs', 'python','langchain'],
     link: '/projects/ecommerce',
     slug: 'ecommerce-ai'
   },
@@ -20,10 +20,10 @@ const projects = [
     id: 2,
     title: 'Sistema de Gestión de Tareas',
     description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
-    image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1697543716503.png&w=640&q=75',
-    technologies: ['vue', 'firebase', 'sass'],
+    image: 'https://my-page-negiupp.s3.amazonaws.com/1750684889719.png',
+    technologies: ['n8n', 'google', 'whatsapp', 'supabase'],
     link: '/projects/task-manager',
-    slug: 'sistema-de-gestión-de-tareas'
+    slug: 'google-calendar-agent'
   },
   {
     id: 3,
@@ -99,7 +99,7 @@ const GridProjects = () => {
 
               {/* Tecnologías en el pie */}
               <div className="p-4 border-t bg-gray-50">
-                <div className="flex space-x-2">
+                <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span key={tech} className="inline-block bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">
                       {tech}

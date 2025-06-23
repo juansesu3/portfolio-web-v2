@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { img } from 'framer-motion/client';
+import { IoIosSend } from "react-icons/io";
 const page = () => {
 
 
@@ -22,9 +23,18 @@ const page = () => {
             reverse: true,
         },
     ];
+
+    const stepshow = [
+        'Explora Productos',
+        'Agente recomienda',
+        'Carrito de compras',
+        'Pago automático',
+        'Soporte postventa',
+    ]
+
     return (
         <div>
-            <section className="bg-white text-gray-800 py-20 px-6">
+            <section className="bg-white text-gray-800 py-10  ">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
                     {/* Texto descriptivo */}
@@ -79,26 +89,35 @@ const page = () => {
                 </div>
             </section>
 
-
-            <section id="overview" className="py-24 bg-white text-gray-800">
+            <section id="overview" className="py-20 bg-white text-gray-800">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-12 text-center">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-4xl font-extrabold mb-16 text-center text-[#a855f7]"
+                    >
                         ¿Cómo funciona el Ecommerce?
-                    </h2>
-                    <div className="grid md:grid-cols-5 gap-6 text-center">
-                        {[
-                            'Explora Productos',
-                            'Agente recomienda',
-                            'Carrito de compras',
-                            'Pago automático',
-                            'Soporte postventa',
-                        ].map((step, i) => (
-                            <div key={i} className="flex flex-col items-center">
-                                <div className="w-16 h-16 mb-4 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xl">
+                    </motion.h2>
+
+                    <div className="grid md:grid-cols-5 gap-8 text-center">
+                        {stepshow.map((step, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                viewport={{ once: true }}
+                                className="flex flex-col items-center group hover:scale-105 transition-transform duration-300"
+                            >
+                                <div className="w-16 h-16 mb-4 bg-[#f3e8ff] text-[#a855f7] rounded-full flex items-center justify-center font-bold text-xl shadow-md group-hover:shadow-lg transition-shadow">
                                     {i + 1}
                                 </div>
-                                <p className="font-semibold">{step}</p>
-                            </div>
+                                <p className="font-semibold text-gray-700 group-hover:text-[#a855f7] transition-colors duration-300">
+                                    {step}
+                                </p>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -122,7 +141,7 @@ const page = () => {
                 </div>
             </section>
             <section className=" py-20">
-                <div className="max-w-5xl mx-auto px-4">
+                <div className="max-w-5xl mx-auto ">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -170,58 +189,78 @@ const page = () => {
                 </div>
             </section>
             <section className="bg-white py-20">
-  <div className="max-w-6xl mx-auto text-center">
-    <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
-      Tecnologías utilizadas
-    </h3>
-
-    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 items-center justify-center">
-      {[
-        { name: "Next.js", src: "https://my-page-negiupp.s3.amazonaws.com/1750673075840.webp" },
-        { name: "Tailwind CSS", src: "https://my-page-negiupp.s3.amazonaws.com/1750674643422.png" },
-        { name: "TypeScript", src: "https://my-page-negiupp.s3.amazonaws.com/1750673498841.webp" },
-        { name: "python", src: "https://my-page-negiupp.s3.amazonaws.com/1750674739722.jpg" },
-        { name: "OpenAI", src: "https://my-page-negiupp.s3.amazonaws.com/1750673725972.webp" },
-        { name: "MongoDb", src: "https://my-page-negiupp.s3.amazonaws.com/1750674094602.png" },
-        { name: "Pinecone", src: "https://my-page-negiupp.s3.amazonaws.com/1750674173478.webp" },// 
-        { name: "Stripe", src: "https://my-page-negiupp.s3.amazonaws.com/1750674558123.png" },
-        { name: "Google Cloud", src: "https://my-page-negiupp.s3.amazonaws.com/1750674676840.png" },
-        {   name: "LangChain", src: "https://my-page-negiupp.s3.amazonaws.com/1750674827283.png" },
-      ].map(({ name, src }, idx) => (
-        <div
-          key={idx}
-          className=" rounded-xl flex items-center justify-center"
-        >
-          <img
-            src={src}
-            alt={name}
-            className="h-12 w-auto max-w-[120px] object-contain "
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-            <section className="bg-[#a855f7] text-white py-24 text-center relative overflow-hidden">
-                <div className="max-w-3xl mx-auto px-6 relative z-10">
-                    <h3 className="text-3xl md:text-4xl font-extrabold mb-6">
-                        ¿Te interesa un proyecto así?
+                <div className="max-w-6xl mx-auto text-center">
+                    <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
+                        Tecnologías utilizadas
                     </h3>
-                    <p className="text-lg md:text-xl mb-8 text-white/90">
-                        Estoy disponible para nuevas oportunidades y colaboraciones.
-                    </p>
-                    <a
-                        href="/contacto"
-                        className="inline-block bg-white text-[#a855f7] px-8 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 transition"
-                    >
-                        Contactar
-                    </a>
-                </div>
 
-                {/* Fondo decorativo animado suave */}
-                <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-white/20 to-transparent pointer-events-none animate-pulse" />
+                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 items-center justify-center">
+                        {[
+                            { name: "Next.js", src: "https://my-page-negiupp.s3.amazonaws.com/1750673075840.webp" },
+                            { name: "Tailwind CSS", src: "https://my-page-negiupp.s3.amazonaws.com/1750674643422.png" },
+                            { name: "TypeScript", src: "https://my-page-negiupp.s3.amazonaws.com/1750673498841.webp" },
+                            { name: "python", src: "https://my-page-negiupp.s3.amazonaws.com/1750674739722.jpg" },
+                            { name: "OpenAI", src: "https://my-page-negiupp.s3.amazonaws.com/1750673725972.webp" },
+                            { name: "MongoDb", src: "https://my-page-negiupp.s3.amazonaws.com/1750674094602.png" },
+                            { name: "Pinecone", src: "https://my-page-negiupp.s3.amazonaws.com/1750674173478.webp" },//
+                            { name: "LangChain", src: "https://my-page-negiupp.s3.amazonaws.com/1750674827283.png" }, 
+                            { name: "Stripe", src: "https://my-page-negiupp.s3.amazonaws.com/1750674558123.png" },
+                            { name: "Google Cloud", src: "https://my-page-negiupp.s3.amazonaws.com/1750674676840.png" },
+                            
+                        ].map(({ name, src }, idx) => (
+                            <div
+                                key={idx}
+                                className=" rounded-xl flex items-center justify-center"
+                            >
+                                <img
+                                    src={src}
+                                    alt={name}
+                                    className="h-12 w-auto max-w-[120px] object-contain "
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
+
+            
+    <section className="relative overflow-hidden bg-white text-gray-900 py-20">
+      {/* Fondo decorativo animado muy sutil */}
+      <div className="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#a855f7]/20 via-transparent to-transparent pointer-events-none animate-pulse" />
+
+      <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-extrabold mb-6"
+        >
+          <span className="text-[#a855f7]">¿Te interesa</span>{' '}
+          <span className="text-gray-900">un proyecto así?</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-lg md:text-xl mb-10 text-gray-700"
+        >
+          Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.
+        </motion.p>
+
+        <motion.a
+          href="/contacto"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
+        >
+          {/* <IoIosSend size={20} className="text-white" /> */}
+          Contactar ahora
+        </motion.a>
+      </div>
+    </section>
 
         </div>
     )
