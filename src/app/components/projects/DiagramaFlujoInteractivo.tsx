@@ -13,15 +13,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 const nodeStyle = {
   border: '1px solid #ccc',
   borderRadius: '8px',
-  padding: 10,
+  padding: 20,
   fontSize: 14,
   backgroundColor: 'white',
   width: 180,
   textAlign: 'center',
 };
 
+
+
 const initialNodes = [
-  { id: '1', data: { label: '💬 WhatsApp Trigger' }, position: { x: 0, y: -80 }, sourcePosition: 'right', targetPosition: 'left',   style: nodeStyle },
+  { id: '1', data: { label: '💬 WhatsApp Trigger' }, position: { x: 0, y: -80 }, sourcePosition: 'right',  style: nodeStyle },
   { id: '2', data: { label: '🔀 If' }, position: { x: 200, y: -80 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
   { id: '3', data: { label: '🕓 Date & Time' }, position: { x: 400, y: -80 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
   { id: '4', data: { label: '🕓 Date & Time1' }, position: { x: 600, y: -80 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
@@ -29,12 +31,13 @@ const initialNodes = [
   { id: '6', data: { label: '⏰ Schedule Trigger' }, position: { x: 400, y: 100 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
   { id: '7', data: { label: '✍️ Edit Fields3' }, position: { x: 600, y: 100 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
   { id: '8', data: { label: '🔗 Merge' }, position: { x: 1000, y: 10 }, sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
-  { id: '9', data: { label: '🤖 AI Agent' }, position: { x: 1200, y: 10 }, style: nodeStyle },
-  { id: '10', data: { label: '🧠 Memory' }, position: { x: 1000, y: 250 }, style: nodeStyle },
-  { id: '11', data: { label: '📆 Get Events' }, position: { x: 1200, y: 250 }, style: nodeStyle },
-  { id: '12', data: { label: '📆 Agendar Evento' }, position: { x: 1400, y: 250 }, style: nodeStyle },
-  { id: '13', data: { label: '📆 Cancelar Evento' }, position: { x: 1400, y: 250 }, style: nodeStyle },
-  { id: '14', data: { label: '📤 WhatsApp Business Cloud' }, position: { x: 1600, y: 10 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
+  { id: '9', data: { label: '🤖 AI Agent' }, position: { x: 1200, y: 10 }, targetPosition: 'bottom',  sourcePosition: 'right',   style: nodeStyle },
+  { id: '10', data: { label: '🧠 Memory' }, position: { x: 1000, y: 250 }, sourcePosition: 'top', style: nodeStyle },
+  { id: '11', data: { label: '🧠 OpenAI Model' }, position: { x: 800, y: 250 }, sourcePosition: 'top', style: nodeStyle },
+  { id: '12', data: { label: '📆 Get Events' }, position: { x: 1200, y: 250 }, sourcePosition: 'top',style: nodeStyle },
+  { id: '13', data: { label: '📆 Agendar Evento' }, position: { x: 1400, y: 250 }, sourcePosition: 'top',style: nodeStyle },
+  { id: '14', data: { label: '📆 Cancelar Evento' }, position: { x: 1600, y: 250 }, sourcePosition: 'top', style: nodeStyle },
+  { id: '15', data: { label: '📤 WhatsApp Business Cloud' }, position: { x: 1600, y: 10 },  sourcePosition: 'right', targetPosition: 'left', style: nodeStyle },
 ];
 
 const nodeDescriptions = {
@@ -67,7 +70,8 @@ const initialEdges = [
   { id: 'e11-9', source: '11', target: '9' },
   { id: 'e12-9', source: '12', target: '9' },
   { id: 'e13-9', source: '13', target: '9' },
-  { id: 'e9-14', source: '9', target: '14' },
+  { id: 'e9-14', source: '14', target: '9' },
+  { id: 'e9-15', source: '9', target: '15' },
 ];
 
 function DiagramaFlujoInteractivo() {
@@ -99,6 +103,7 @@ function DiagramaFlujoInteractivo() {
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             onNodeClick={onNodeClick}
+            style={{ background: '#f0f0f0', borderRadius: '10px' }}
             fitView
             panOnDrag
             zoomOnScroll
@@ -118,7 +123,7 @@ function DiagramaFlujoInteractivo() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 300, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-              className="w-80 bg-white border-l border-gray-200 p-6 shadow-lg"
+              className="w-80 bg-white  p-6 shadow-lg rounded-md"
             >
               <h2 className="text-xl font-bold mb-2">{selectedNode.label}</h2>
               <p className="text-gray-600 mb-4">{nodeDescriptions[selectedNode.id]}</p>
