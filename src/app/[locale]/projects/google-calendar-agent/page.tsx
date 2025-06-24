@@ -1,71 +1,188 @@
-'use client'
+'use client';
+import React from 'react';
 import DiagramaFlujoInteractivo from '@/app/components/projects/DiagramaFlujoInteractivo';
-import React, { useState } from 'react'
+import { motion } from 'framer-motion';
+import { FaArrowDown } from 'react-icons/fa';
+import Image from 'next/image';
 
 const page = () => {
-
-
-    const [activeNode, setActiveNode] = useState(null);
-    const nodes = [
-        { id: 1, title: 'WhatsApp Trigger', emoji: '💬', desc: 'Detecta mensajes entrantes en WhatsApp.' },
-        { id: 2, title: 'If', emoji: '🔀', desc: 'Evalúa condiciones del mensaje para dirigir el flujo.' },
-        { id: 3, title: 'Date & Time', emoji: '🕓', desc: 'Procesa y estructura fechas y horas.' },
-        { id: 4, title: 'Date & Time1', emoji: '🕓', desc: 'Segunda etapa de procesamiento de tiempo.' },
-        { id: 5, title: 'Edit Fields4', emoji: '✍️', desc: 'Prepara los datos finales para el agente.' },
-        { id: 6, title: 'Schedule Trigger', emoji: '⏰', desc: 'Activa el flujo automáticamente en horario definido.' },
-        { id: 7, title: 'Edit Fields3', emoji: '✍️', desc: 'Formato de datos desde flujo programado.' },
-        { id: 8, title: 'Merge', emoji: '🔗', desc: 'Combina ambas entradas para unificarlas.' },
-        { id: 9, title: 'AI Agent', emoji: '🤖', desc: 'Agente que interpreta y gestiona las acciones.' },
-        { id: 10, title: 'Memory', emoji: '🧠', desc: 'Accede al contexto guardado en PostgreSQL.' },
-        { id: 11, title: 'Get Events', emoji: '📆', desc: 'Consulta todos los eventos del calendario.' },
-        { id: 12, title: 'Agendar Evento', emoji: '📆', desc: 'Crea un nuevo evento en Google Calendar.' },
-        { id: 13, title: 'Cancelar Evento', emoji: '📆', desc: 'Elimina un evento existente del calendario.' },
-        { id: 14, title: 'WhatsApp Business Cloud', emoji: '📤', desc: 'Envía la respuesta al usuario por WhatsApp.' }
-    ];
     return (
-        <div>
-            <section className="bg-white py-20  ">
-                <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-                        Así funciona nuestro agente inteligente
-                    </h2>
-                    <p className="text-lg text-gray-600 mb-10">
-                        Este flujo automatizado combina WhatsApp, Google Calendar y un agente con IA para gestionar tus eventos de forma natural.
-                    </p>
-                    < DiagramaFlujoInteractivo/>
+        <div className="bg-white text-gray-800 overflow-x-hidden">
+            {/* 🟣 Hero Full Screen */}
+            <section className="h-screen flex flex-col justify-center items-center text-center  bg-white relative">
+                <Image src="https://my-page-negiupp.s3.amazonaws.com/1750751608365.png" width={400} height={400} alt="Sebastián" className="w-24 h-24 object-cover" />
+                <motion.h1
+                    className="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900 leading-tight"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                >
+                    <span className="text-purple-600">Sebastián</span>, tu Asistente Inteligente
+                </motion.h1>
+
+                <motion.p
+                    className="text-lg md:text-xl text-gray-700 max-w-2xl mb-10"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                >
+                    Automatiza la gestión de tus{' '}
+                    <span className="text-purple-500 font-semibold">citas y eventos</span> desde{' '}
+                    <span className="text-purple-500 font-semibold">WhatsApp</span> usando{' '}
+                    <span className="text-purple-500 font-semibold">IA y Google Calendar</span>.
+                </motion.p>
+
+                <motion.div
+                    className="animate-bounce mt-10 text-purple-500"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                >
+                    <FaArrowDown size={28} />
+                </motion.div>
+            </section>
+
+            {/* 🎯 Interactive Flow Section */}
+            <section className="py-20 bg-white">
+                <div className="max-w-6xl mx-auto text-center ">
+                    <motion.h2
+                        className="text-3xl md:text-4xl font-bold mb-6 text-gray-900"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                    >
+                        Cómo funciona nuestro flujo
+                    </motion.h2>
+                    <motion.p
+                        className="text-gray-600 text-lg mb-12"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        Este diagrama representa el proceso completo: desde que el usuario envía un mensaje por WhatsApp hasta que el asistente responde con IA y gestiona el calendario.
+                    </motion.p>
+                    <motion.div
+                        className="rounded-lg shadow-md overflow-hidden border border-gray-200"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <DiagramaFlujoInteractivo />
+                    </motion.div>
                 </div>
             </section>
-            <section id="como-funciona" className="py-24 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl font-bold text-[#a855f7] mb-12">
-                        ¿Cómo funciona el agente?
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-10 text-left">
+
+            {/* 🔁 Step-by-step section */}
+            <section className="py-20 px-4 bg-gray-50">
+                <div className="max-w-5xl mx-auto ">
+                    <motion.h3
+                        className="text-2xl font-semibold mb-12 text-center"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        viewport={{ once: true }}
+                    >
+                        Flujo paso a paso
+                    </motion.h3>
+                    <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 text-center">
                         {[
-                            {
-                                title: "Conexión con Google Calendar",
-                                desc: "El agente se conecta de forma segura con tu calendario para acceder a tus eventos y disponibilidad.",
-                            },
-                            {
-                                title: "Interfaz conversacional",
-                                desc: "Puedes preguntarle por tus próximas reuniones, agregar eventos o mover citas usando lenguaje natural.",
-                            },
-                            {
-                                title: "Automatización con n8n",
-                                desc: "Gracias a un template de n8n, el agente automatiza respuestas, acciones y flujos según tu necesidad.",
-                            },
+                            { title: '📥 Recibe mensaje', desc: 'El usuario escribe por WhatsApp.' },
+                            { title: '🤖 IA responde', desc: 'El agente interpreta y analiza el mensaje.' },
+                            { title: '📅 Calendar API', desc: 'Consulta, agenda o cancela eventos.' },
+                            { title: '💬 Respuesta cálida', desc: 'Responde al usuario con empatía.' },
                         ].map((step, idx) => (
-                            <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
+                            <motion.div
+                                key={idx}
+                                className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: idx * 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                <h4 className="text-xl font-bold mb-2">{step.title}</h4>
                                 <p className="text-gray-600">{step.desc}</p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-        </div>
-    )
-}
+            {/* 🖼 Screenshot Gallery */}
+            <section className="py-20  bg-white">
+                <div className="max-w-5xl mx-auto text-center ">
+                    <motion.h3
+                        className="text-2xl font-bold mb-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                    >
+                        Capturas del asistente en acción
+                    </motion.h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {[
+                            'https://my-page-negiupp.s3.amazonaws.com/1750748342077.PNG',
+                            'https://my-page-negiupp.s3.amazonaws.com/1750748348421.PNG',
+                        ].map((src) => (
+                            <motion.div
+                                key={src}
+                                className="rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }}
+                            >
+                                <img src={src} alt="Screenshot" className="w-full object-cover" />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-export default page
+            {/* 🚀 Footer */}
+             <section className="relative overflow-hidden bg-white text-gray-900 py-20">
+                 {/* Fondo decorativo animado muy sutil */}
+                 <div className="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#a855f7]/20 via-transparent to-transparent pointer-events-none animate-pulse" />
+           
+                 <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+                   <motion.h2
+                     initial={{ opacity: 0, y: 20 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.6 }}
+                     viewport={{ once: true }}
+                     className="text-4xl md:text-5xl font-extrabold mb-6"
+                   >
+                     <span className="text-[#a855f7]">¿Te interesa</span>{' '}
+                     <span className="text-gray-900">un proyecto así?</span>
+                   </motion.h2>
+           
+                   <motion.p
+                     initial={{ opacity: 0, y: 20 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.6, delay: 0.2 }}
+                     viewport={{ once: true }}
+                     className="text-lg md:text-xl mb-10 text-gray-700"
+                   >
+                     Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.
+                   </motion.p>
+           
+                   <motion.a
+                     href="/contacto"
+                     whileHover={{ scale: 1.05 }}
+                     whileTap={{ scale: 0.97 }}
+                     className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
+                   >
+                     {/* <IoIosSend size={20} className="text-white" /> */}
+                     Contactar ahora
+                   </motion.a>
+                 </div>
+               </section>
+
+        </div>
+    );
+};
+
+export default page;

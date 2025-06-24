@@ -11,14 +11,14 @@ const projects = [
     id: 1,
     title: 'Recommender AI Agent For E-commerce',
     description: 'El sistema de recomendación inteligente de PandorAI. Personalización profunda, búsqueda semántica y automatización lista para escalar tu tienda.',
-    image: 'https://my-page-negiupp.s3.amazonaws.com/1750682608352.jpg',//https://my-page-negiupp.s3.amazonaws.com/1750681232857.png
+    image: 'https://my-page-negiupp.s3.amazonaws.com/1750756449867.png',//https://my-page-negiupp.s3.amazonaws.com/1750681232857.png
     technologies: ['openai ', 'nextjs', 'python','langchain'],
     link: '/projects/ecommerce',
     slug: 'ecommerce-ai'
   },
   {
     id: 2,
-    title: 'Sistema de Gestión de Tareas',
+    title: 'Asistente Inteligente',
     description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
     image: 'https://my-page-negiupp.s3.amazonaws.com/1750684889719.png',
     technologies: ['n8n', 'google', 'whatsapp', 'supabase'],
@@ -27,40 +27,31 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Aplicación de Finanzas',
+    title: 'PandorAI Agency',
     description: 'Una app para administrar gastos y finanzas personales con gráficos interactivos.',
-    image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1692007995201.png&w=640&q=75',
+    image: 'https://my-page-negiupp.s3.amazonaws.com/1750755347523.png',
     technologies: ['angular', 'nodejs', 'bootstrap'],
     link: '/projects/finance-app',
-    slug: 'aplicación-de-finanzas'
+    slug: 'pandorai-agency'
   },
   {
     id: 4,
-    title: 'E-commerce Web App',
+    title: 'Barber Shop',
     description: 'Plataforma moderna de comercio electrónico para una experiencia de compra fluida.',
-    image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1713345137122.png&w=640&q=75',
+    image: 'https://my-page-negiupp.s3.amazonaws.com/1750756003903.png',
     technologies: ['react', 'nextjs', 'tailwindcss'],
     link: '/projects/ecommerce',
     slug: 'e-commerce-web-app'
   },
   {
     id: 5,
-    title: 'Sistema de Gestión de Tareas',
+    title: 'AI Todo List App',
     description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
-    image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1697543716503.png&w=640&q=75',
+    image: 'https://my-page-negiupp.s3.amazonaws.com/1750755686809.png',
     technologies: ['vue', 'firebase', 'sass'],
     link: '/projects/task-manager',
     slug: 'sistema-de-gestión-de-tareas'
   },
-  {
-    id: 6,
-    title: 'Aplicación de Finanzas',
-    description: 'Una app para administrar gastos y finanzas personales con gráficos interactivos.',
-    image: 'https://negiupp.com/_next/image?url=https%3A%2F%2Fmy-page-negiupp.s3.amazonaws.com%2F1692007995201.png&w=640&q=75',
-    technologies: ['angular', 'nodejs', 'bootstrap'],
-    link: '/projects/finance-app',
-    slug: 'aplicación-de-finanzas'
-  }
 ]
 
 const GridProjects = () => {
