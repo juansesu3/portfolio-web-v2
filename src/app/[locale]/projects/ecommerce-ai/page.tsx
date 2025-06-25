@@ -1,8 +1,14 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion';
-import { img } from 'framer-motion/client';
-import { IoIosSend } from "react-icons/io";
+import { HiChevronDoubleDown } from 'react-icons/hi';
+export const fadeUp = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6, ease: 'easeOut' },
+  }
+
 const page = () => {
 
 
@@ -34,60 +40,70 @@ const page = () => {
 
     return (
         <div>
-            <section className="bg-white text-gray-800 py-10  ">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+           <section className="relative ">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        {/* Textual Content */}
+        <motion.div {...fadeUp}>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            🛒 Ecommerce Inteligente con <span className="text-purple-600">IA Integrada</span>
+          </h1>
+          <p className="text-lg text-gray-700 mb-6 max-w-md">
+            Plataforma de ecommerce con sistema de recomendaciones personalizadas, procesamiento automático de pedidos y atención al cliente con agentes inteligentes.
+          </p>
 
-                    {/* Texto descriptivo */}
-                    <div>
-                        <h1 className="text-2xl md:text-3xl font-extrabold mb-6 text-purple-600">
-                            🛒 Ecommerce Inteligente
-                        </h1>
-                        <p className="text-lg text-gray-600 mb-6">
-                            Plataforma de ecommerce con sistema de recomendaciones basado en IA, procesamiento automatizado de pedidos y chat integrado para atención al cliente.
-                        </p>
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold text-purple-500 mb-2">👨‍💻 Mi rol</h2>
+            <p className="text-gray-800">Desarrollo Full Stack: arquitectura, frontend, backend e integración con IA generativa.</p>
+          </div>
 
-                        <div className="mb-6">
-                            <h2 className="font-semibold text-xl text-purple-500 mb-2">👨‍💻 Mi rol</h2>
-                            <p className="text-gray-700">
-                                Desarrollo Full Stack: arquitectura, frontend, backend e integración de agentes de IA.
-                            </p>
-                        </div>
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold text-purple-500 mb-2">🛠️ Stack Tecnológico</h2>
+            <p className="text-gray-800">
+              Next.js · TypeScript · Tailwind CSS · n8n · PostgreSQL · OpenAI API · Stripe · Google Cloud
+            </p>
+          </div>
 
-                        <div className="mb-8">
-                            <h2 className="font-semibold text-xl text-purple-500 mb-2">🛠️ Stack Tecnológico</h2>
-                            <p className="text-gray-700">
-                                Next.js · TypeScript · Tailwind CSS · n8n · PostgreSQL · OpenAI API · Stripe · Google Cloud
-                            </p>
-                        </div>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#overview"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition"
+            >
+              Ver flujo del sistema
+            </a>
+            <a
+              href="https://github.com/tuusuario/ecommerce-inteligente"
+              target="_blank"
+              className="border border-purple-600 text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-purple-50 transition"
+            >
+              Ver código en GitHub
+            </a>
+          </div>
+        </motion.div>
 
-                        {/* Botones */}
-                        <div className="flex flex-wrap gap-4">
-                            <a
-                                href="#overview"
-                                className="bg-purple-500 text-white px-6 py-3 rounded-full hover:bg-purple-600 transition font-semibold"
-                            >
-                                Ver flujo del sistema
-                            </a>
-                            <a
-                                href="https://github.com/tuusuario/ecommerce-inteligente"
-                                target="_blank"
-                                className="border border-purple-500 text-purple-500 px-6 py-3 rounded-full hover:bg-purple-100 transition font-semibold"
-                            >
-                                Ver código en GitHub
-                            </a>
-                        </div>
-                    </div>
+        {/* Visual Content */}
+        <motion.div {...fadeUp} transition={{ delay: 0.3 }} className="relative">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+            <img
+              src="https://my-page-negiupp.s3.amazonaws.com/1750670045607.jpg"
+              alt="Mockup del ecommerce"
+              className="w-full object-cover"
+            />
+          </div>
+        </motion.div>
+      </div>
 
-                    {/* Imagen o mockup */}
-                    <div className="rounded-xl overflow-hidden shadow-xl border border-gray-200">
-                        <img
-                            src="https://my-page-negiupp.s3.amazonaws.com/1750670045607.jpg"
-                            alt="Mockup del ecommerce"
-                            className="w-full object-cover"
-                        />
-                    </div>
-                </div>
-            </section>
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-purple-500 text-3xl"
+      >
+        <a href="#overview" aria-label="Sigue bajando para ver más">
+          <HiChevronDoubleDown />
+        </a>
+      </motion.div>
+    </section>
 
             <section id="overview" className="py-20 bg-white text-gray-800">
                 <div className="max-w-7xl mx-auto px-4">

@@ -41,7 +41,7 @@ const projects = [
     image: 'https://my-page-negiupp.s3.amazonaws.com/1750756003903.png',
     technologies: ['react', 'nextjs', 'tailwindcss'],
     link: '/projects/ecommerce',
-    slug: 'e-commerce-web-app'
+    slug: 'barber-shop-app'
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const projects = [
     image: 'https://my-page-negiupp.s3.amazonaws.com/1750755686809.png',
     technologies: ['vue', 'firebase', 'sass'],
     link: '/projects/task-manager',
-    slug: 'sistema-de-gestión-de-tareas'
+    slug: 'ai-todo-app'
   },
 ]
 

@@ -143,43 +143,43 @@ const page = () => {
             </section>
 
             {/* 🚀 Footer */}
-             <section className="relative overflow-hidden bg-white text-gray-900 py-20">
-                 {/* Fondo decorativo animado muy sutil */}
-                 <div className="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#a855f7]/20 via-transparent to-transparent pointer-events-none animate-pulse" />
-           
-                 <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
-                   <motion.h2
-                     initial={{ opacity: 0, y: 20 }}
-                     whileInView={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.6 }}
-                     viewport={{ once: true }}
-                     className="text-4xl md:text-5xl font-extrabold mb-6"
-                   >
-                     <span className="text-[#a855f7]">¿Te interesa</span>{' '}
-                     <span className="text-gray-900">un proyecto así?</span>
-                   </motion.h2>
-           
-                   <motion.p
-                     initial={{ opacity: 0, y: 20 }}
-                     whileInView={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.6, delay: 0.2 }}
-                     viewport={{ once: true }}
-                     className="text-lg md:text-xl mb-10 text-gray-700"
-                   >
-                     Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.
-                   </motion.p>
-           
-                   <motion.a
-                     href="/contacto"
-                     whileHover={{ scale: 1.05 }}
-                     whileTap={{ scale: 0.97 }}
-                     className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
-                   >
-                     {/* <IoIosSend size={20} className="text-white" /> */}
-                     Contactar ahora
-                   </motion.a>
-                 </div>
-               </section>
+            <section className="relative overflow-hidden bg-white text-gray-900 py-20">
+                {/* Fondo decorativo animado muy sutil */}
+                <div className="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#a855f7]/20 via-transparent to-transparent pointer-events-none animate-pulse" />
+
+                <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-extrabold mb-6"
+                    >
+                        <span className="text-[#a855f7]">¿Te interesa</span>{' '}
+                        <span className="text-gray-900">un proyecto así?</span>
+                    </motion.h2>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="text-lg md:text-xl mb-10 text-gray-700"
+                    >
+                        Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.
+                    </motion.p>
+
+                    <motion.a
+                              href="/contacto"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.97 }}
+                              className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
+                            >
+                              {/* <IoIosSend size={20} className="text-white" /> */}
+                              Contactar ahora
+                            </motion.a>
+                </div>
+            </section>
 
         </div>
     );

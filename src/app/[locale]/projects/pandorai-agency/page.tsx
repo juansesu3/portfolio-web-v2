@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+
 const fadeIn = {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -38,7 +39,7 @@ const page = () => {
     ]
 
     return (
-        <main className="bg-white text-gray-900 font-sans scroll-smooth">
+        <div className="bg-white text-gray-900 font-sans scroll-smooth">
             {/* HERO */}
             <section className="min-h-screen flex items-center justify-center  py-16 ">
                 <motion.div
@@ -91,7 +92,7 @@ const page = () => {
 
 
             {/* ABOUT */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-20 bg-white">
                 <motion.div
                     className="max-w-4xl mx-auto text-center"
                     initial="hidden"
@@ -110,54 +111,67 @@ const page = () => {
             </section>
 
             {/* TECHNOLOGIES */}
-            <section className="py-20 px-6 bg-gray-100">
-                <motion.div
-                    className="max-w-5xl mx-auto text-center"
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    variants={fadeIn}
-                >
-                    <h2 className="text-3xl font-bold mb-6">Tecnologías que usamos</h2>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {stack.map((tech) => (
-                            <motion.span
-                                key={tech}
-                                className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium"
-                                whileHover={{ scale: 1.1 }}
-                            >
-                                {tech}
-                            </motion.span>
-                        ))}
-                    </div>
-                </motion.div>
+            <section className="pt-20 text-center">
+                <h2 className="text-3xl font-bold mb-10 text-gray-800">Tecnologías que usamos</h2>
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 items-center justify-center">
+                    {[
+                        { name: "Next.js", src: "https://my-page-negiupp.s3.amazonaws.com/1750673075840.webp" },
+                        { name: "Tailwind CSS", src: "https://my-page-negiupp.s3.amazonaws.com/1750674643422.png" },
+                        { name: "TypeScript", src: "https://my-page-negiupp.s3.amazonaws.com/1750673498841.webp" },
+                        { name: "python", src: "https://my-page-negiupp.s3.amazonaws.com/1750674739722.jpg" },
+                        { name: "OpenAI", src: "https://my-page-negiupp.s3.amazonaws.com/1750673725972.webp" },
+                        { name: "MongoDb", src: "https://my-page-negiupp.s3.amazonaws.com/1750674094602.png" },
+                        { name: "Pinecone", src: "https://my-page-negiupp.s3.amazonaws.com/1750674173478.webp" },//
+                        { name: "LangChain", src: "https://my-page-negiupp.s3.amazonaws.com/1750674827283.png" },
+                        { name: "Stripe", src: "https://my-page-negiupp.s3.amazonaws.com/1750674558123.png" },
+                        { name: "Google Cloud", src: "https://my-page-negiupp.s3.amazonaws.com/1750674676840.png" },
+
+                    ].map(({ name, src }, idx) => (
+                        <div
+                            key={idx}
+                            className=" rounded-xl flex items-center justify-center"
+                        >
+                            <img
+                                src={src}
+                                alt={name}
+                                className="h-12 w-auto max-w-[100px] object-contain "
+                            />
+                        </div>
+                    ))}
+                </div>
             </section>
 
             {/* PROCESS */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-24 bg-white">
                 <motion.div
-                    className="max-w-5xl mx-auto text-center"
+                    className="max-w-4xl mx-auto"
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
                     variants={fadeIn}
                 >
-                    <h2 className="text-3xl font-bold mb-6">Nuestro Proceso</h2>
-                    <div className="grid md:grid-cols-2 gap-8 text-left">
+                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+                        Nuestro Proceso
+                    </h2>
+
+                    <div className="relative border-l-4 border-purple-600 ml-4">
                         {steps.map(({ title, desc }, idx) => (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-                                whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5, delay: idx * 0.1 } }}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.2 } }}
                                 viewport={{ once: true }}
+                                className="mb-12 ml-6"
                             >
-                                <h3 className="text-xl font-semibold text-purple-600 mb-2">{title}</h3>
-                                <p className="text-gray-600">{desc}</p>
+                                <div className="absolute -left-3 w-6 h-6 bg-purple-600 rounded-full border-4 border-white shadow-md" />
+                                <h3 className="text-xl font-semibold text-purple-700">{title}</h3>
+                                <p className="text-gray-600 mt-2">{desc}</p>
                             </motion.div>
                         ))}
                     </div>
                 </motion.div>
             </section>
+
 
             {/* SERVICES */}
             <section className="py-20 px-6 bg-gray-100">
@@ -181,25 +195,41 @@ const page = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-20 px-6 bg-gradient-to-r from-purple-600 to-purple-800 text-center text-white">
+            <section className="py-20 text-center bg-white text-gray-900">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.6 } }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl font-bold mb-4">¿Listo para trabajar con inteligencia artificial?</h2>
-                    <p className="mb-6 text-lg">Contáctanos y lleva tu negocio al siguiente nivel.</p>
+                    <h2 className="text-3xl font-bold mb-4">
+                        {/** Alternancia visual en el título */}
+                        <span className="text-purple-500">¿</span>
+                        <span className="text-black">Listo</span>{' '}
+                        <span className="text-purple-500">para</span>{' '}
+                        <span className="text-black">trabajar</span>{' '}
+                        <span className="text-purple-500">con</span>{' '}
+                        <span className="text-black">inteligencia</span>{' '}
+                        <span className="text-purple-500">artificial</span>
+                        <span className="text-purple-500">?</span>
+                    </h2>
+
+                    <p className="mb-6 text-lg text-gray-700">
+                        Contáctanos y lleva tu negocio al siguiente nivel.
+                    </p>
+
                     <motion.a
-                        href="mailto:contact@pandorai.ch"
-                        className="inline-block bg-white text-purple-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold transition"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.97 }}
-                    >
-                        Escríbenos
-                    </motion.a>
+                              href="/contacto"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.97 }}
+                              className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
+                            >
+                              {/* <IoIosSend size={20} className="text-white" /> */}
+                              Contactar ahora
+                            </motion.a>
                 </motion.div>
             </section>
-        </main>
+
+        </div>
     )
 }
 
