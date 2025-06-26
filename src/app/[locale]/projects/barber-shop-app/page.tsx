@@ -38,6 +38,7 @@ const page = () => {
                 id="hero"
                 className="relative h-screen  flex items-center justify-center flex-col text-center "
             >
+                <img src="https://my-page-negiupp.s3.amazonaws.com/1750920966907.png" alt="barber img"  className="w-auto h-auto max-w-[200px] md:max-w-[350px] object-contain mx-auto mb-6"/>
 
                 {/* Contenido principal */}
                 <motion.h1

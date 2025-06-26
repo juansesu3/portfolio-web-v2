@@ -15,19 +15,44 @@ const page = () => {
     return (
         <main className="text-[#374151] ">
             {/* HERO */}
-            <section className="relative min-h-screen flex items-center justify-center flex-col text-center ">
+            <section className="relative min-h-screen flex items-center justify-center flex-col text-center">
+                <img
+                    src="https://my-page-negiupp.s3.amazonaws.com/1750920688481.png"
+                    alt="AI Icon"
+                    className="w-auto h-auto max-w-[200px] md:max-w-[350px] object-contain mx-auto mb-6"
+                />
+
                 <motion.h1 {...fadeUp} className="text-4xl md:text-6xl font-bold mb-4">
                     <span className="text-black">AI</span>
                     <span className="text-[#9333ea]"> Todo App</span>
                 </motion.h1>
 
-                <motion.p {...fadeUp} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-gray-600 mb-6 max-w-xl">
+                <motion.p
+                    {...fadeUp}
+                    transition={{ delay: 0.2 }}
+                    className="text-lg md:text-xl text-gray-600 mb-6 max-w-xl"
+                >
                     Organiza tus tareas con ayuda de inteligencia artificial. Prioriza, categoriza y genera ideas automáticamente.
                 </motion.p>
 
-                <motion.div {...fadeUp} transition={{ delay: 0.4 }} className="space-x-4">
-                    <a href="#demo" className="bg-[#9333ea] hover:bg-indigo-700 text-white px-5 py-3 rounded transition">Ver Demo</a>
-                    <a href="https://github.com/tuusuario/ai-todo-app" target="_blank" className="border border-[#9333ea] text-[#9333ea] px-5 py-3 rounded hover:bg-[#9333ea] hover:text-white transition">Ver Código</a>
+                <motion.div
+                    {...fadeUp}
+                    transition={{ delay: 0.4 }}
+                    className="space-x-4"
+                >
+                    <a
+                        href="#demo"
+                        className="bg-[#9333ea] hover:bg-indigo-700 text-white px-5 py-3 rounded transition"
+                    >
+                        Ver Demo
+                    </a>
+                    <a
+                        href="https://github.com/tuusuario/ai-todo-app"
+                        target="_blank"
+                        className="border border-[#9333ea] text-[#9333ea] px-5 py-3 rounded hover:bg-[#9333ea] hover:text-white transition"
+                    >
+                        Ver Código
+                    </a>
                 </motion.div>
 
                 {/* Scroll icon */}
@@ -35,15 +60,16 @@ const page = () => {
                     initial={{ y: 0 }}
                     animate={{ y: [0, 10, 0] }}
                     transition={{ repeat: Infinity, duration: 2 }}
-                    className="absolute bottom-10 text-[#9333ea] text-3xl"
+                    className="mt-20 text-[#9333ea] text-3xl"
                 >
                     <a href="#about"><HiChevronDoubleDown /></a>
                 </motion.div>
             </section>
 
+
             {/* ¿Qué es? */}
             <motion.section id="about" {...fadeUp} className="py-24  max-w-4xl mx-auto text-center">
-                <img src="/assets/ai-icon.svg" alt="AI Icon" className="w-20 h-20 mx-auto mb-6" />
+                <img src="https://my-page-negiupp.s3.amazonaws.com/1750860319501.png" alt="AI Icon" className="w-24 h-24 mx-auto mb-6" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-[#9333ea]">¿Qué</span> <span className="text-black">es AI Todo App?</span>
                 </h2>
@@ -121,6 +147,7 @@ const page = () => {
 
             {/* Tu Rol */}
             <motion.section id="role" {...fadeUp} className="bg-white py-24  text-center">
+                <img src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-black">Mi Rol</span> <span className="text-[#9333ea]">en el Proyecto</span>
                 </h2>

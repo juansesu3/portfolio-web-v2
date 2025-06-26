@@ -16,7 +16,7 @@ const HeroProjects = () => {
           </h1>
           <div className=" flex sm:hidden mb-4">
           <Image
-            src="https://my-page-negiupp.s3.amazonaws.com/1736500882850.png" // Cambia esta imagen según tus recursos
+            src="https://my-page-negiupp.s3.amazonaws.com/1750917720544.png" // Cambia esta imagen según tus recursos
             alt="Proyectos creativos"
             width={500}
             height={500}
@@ -40,11 +40,11 @@ const HeroProjects = () => {
         {/* Imagen destacada */}
         <div className=" sm:flex hidden">
           <Image
-            src="https://my-page-negiupp.s3.amazonaws.com/1736500882850.png" // Cambia esta imagen según tus recursos
+            src="https://my-page-negiupp.s3.amazonaws.com/1750917720544.png" // Cambia esta imagen según tus recursos
             alt="Proyectos creativos"
             width={500}
             height={500}
-            className="rounded-lg md:max-w-56 max-w-40 mx-auto"
+            className="rounded-lg md:max-w-72 max-w-52 mx-auto"
           />
         </div>
        
