@@ -24,7 +24,7 @@ const SectionTwo = () => {
         <div className=''>
             {/* desktop */}
             <div className='lg:flex gap-4 justify-between hidden'>
-                <div className='border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
+                <Link href={`/${locale}/ai-solutions`} className='border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
                     <Image
                         src="https://my-page-negiupp.s3.amazonaws.com/1736256686153.avif"
                         width={500}
@@ -36,7 +36,7 @@ const SectionTwo = () => {
                         <h2 className='uppercase text-slate-500 text-sm'>{t('section_two.box_one.title')}</h2>
                         <h3 className='text-md text-black font-bold'>{t('section_two.box_one.sub_title')}</h3>
                     </div>
-                </div>
+                </Link>
                 <div className='border relative border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
                     <div className='flex justify-between gap-4 my-auto'>
                         <Link href={`/${locale}/services/ai-agents-development`} className='border group  border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2 items-center justify-center text-center ' ><GiProcessor size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_4')}</p></Link>
@@ -91,7 +91,7 @@ const SectionTwo = () => {
                             <h3 className='text-md text-black font-bold'>{t('section_two.box_three.sub_title')}</h3>
                         </div>
                     </div>
-                    <div className='border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
+                    <Link href={`/${locale}/ai-solutions`} className='border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out'>
                         <Image
                             src="https://my-page-negiupp.s3.amazonaws.com/1736256686153.avif"
                             width={500}
@@ -103,7 +103,7 @@ const SectionTwo = () => {
                             <h2 className='uppercase text-slate-500 text-sm'>{t('section_two.box_one.title')}</h2>
                             <h3 className='text-md text-black font-bold'>{t('section_two.box_one.sub_title')}</h3>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion' // <--- 1. Importar motion
 
-// Datos de ejemplo para los proyectos
+// Datos de ejemplo para los proyectos (sin cambios)
 const projects = [
   {
     id: 1,
@@ -54,6 +55,29 @@ const projects = [
   },
 ]
 
+
+// --- Variantes para las animaciones ---
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Tiempo de espera entre la animación de cada hijo
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+}
+
 const GridProjects = () => {
   const t = useTranslations('projects')
 
@@ -64,44 +88,61 @@ const GridProjects = () => {
   useEffect(() => {
     setLocale(localeFromPath);
   }, [localeFromPath]);
+
   return (
     <section className="py-12">
       <h2 className="text-4xl font-bold text-center mb-8">{t('sub_title_two')}</h2>
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:px-0 px-1">
+      
+      {/* 2. Contenedor de la grilla animado */}
+      <motion.div
+        className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:px-0 px-1"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {projects.map((project) => (
-          <Link href={`/${locale}/projects/${project.slug}`} key={project.id} className="group">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 h-full flex flex-col">
-              {/* Imagen del proyecto */}
-              <div className="relative h-52">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="group-hover:opacity-90 transition-opacity duration-300"
-                />
-              </div>
+          // 3. Cada elemento de la grilla (tarjeta) se envuelve en un motion.div
+          <motion.div
+            key={project.id}
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }} // 4. Animación al pasar el ratón
+            transition={{ type: 'spring', stiffness: 300 }} // Transición suave para el hover
+          >
+            <Link href={`/${locale}/projects/${project.slug}`} className="group">
+              {/* Se eliminan clases de transform y transition para que Framer Motion las controle */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                {/* Imagen del proyecto */}
+                <div className="relative h-52">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="group-hover:opacity-90 transition-opacity duration-300"
+                  />
+                </div>
 
-              {/* Contenido del proyecto */}
-              <div className="p-6 flex-grow">
-                <h3 className="text-2xl font-semibold mb-2 text-gray-800">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-              </div>
+                {/* Contenido del proyecto */}
+                <div className="p-6 flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-800">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                </div>
 
-              {/* Tecnologías en el pie */}
-              <div className="p-4 border-t bg-gray-50">
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="inline-block bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
+                {/* Tecnologías en el pie */}
+                <div className="p-4 border-t bg-gray-50">
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="inline-block bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
