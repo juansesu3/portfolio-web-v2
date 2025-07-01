@@ -1,9 +1,17 @@
+'use client'
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { usePathname } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
 
 const Footer = () => {
+     const pathname = usePathname();
+      const localeFromPath = pathname.split("/")[1] || "en";
+      const [locale, setLocale] = useState(localeFromPath);
+      useEffect(() => {
+          setLocale(localeFromPath);
+      }, [localeFromPath]);
   const t = useTranslations("footter");
   return (
     <div className='flex flex-col w-full border-t border-gray-100 pt-4 bg-white mt-6'>
@@ -12,10 +20,10 @@ const Footer = () => {
           <div className='flex flex-col gap-4'>
             <h3 className=' font-bold'>{t('title')}</h3>
             <div className='flex flex-col gap-2'>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.one')}</Link>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.two')}</Link>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.three')}</Link>
-              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={'/'}> {t('links.four')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={`/${locale}/about`}> {t('links.one')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={`/${locale}/negiupp`}> {t('links.two')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={`/${locale}/how-can-i-help-you`}> {t('links.three')}</Link>
+              <Link className=' underline hover:text-purple-500 transition-all duration-300 ease-in-out hover:-translate-y-1 text-sm' href={`/${locale}/contact`}> {t('links.four')}</Link>
             </div>
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>

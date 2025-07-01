@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 
 const fadeIn = {
@@ -10,6 +11,7 @@ const fadeIn = {
 }
 
 const page = () => {
+    const t = useTranslations("projects.projects.pandorai_agency.inside");
     const stack = [
         'Next.js',
         'Tailwind CSS',
@@ -22,20 +24,20 @@ const page = () => {
     ]
 
     const steps = [
-        { title: 'Diagnóstico', desc: 'Analizamos tus procesos y detectamos oportunidades.' },
-        { title: 'Diseño de Agente', desc: 'Creamos un plan técnico y estratégico a medida.' },
-        { title: 'Desarrollo', desc: 'Construimos e integramos el agente en tu entorno.' },
-        { title: 'Entrenamiento', desc: 'Ajustamos el comportamiento con tus datos y reglas.' },
-        { title: 'Despliegue y soporte', desc: 'Lanzamos y damos seguimiento activo.' },
+        { title: t('sec_3.list.1.title'), desc: t('sec_3.list.1.description') },
+        { title: t('sec_3.list.2.title'), desc: t('sec_3.list.2.description')},
+        { title: t('sec_3.list.3.title'), desc: t('sec_3.list.3.description') },
+        { title: t('sec_3.list.4.title'), desc: t('sec_3.list.4.description') },
+        { title: t('sec_3.list.5.title'), desc: t('sec_3.list.5.description') },
     ]
 
     const services = [
-        'Desarrollo de agentes autónomos',
-        'Integración de modelos de lenguaje (LLMs)',
-        'Automatización de procesos empresariales',
-        'Copilots y asistentes personalizados',
-        'Consultoría en IA generativa',
-        'Entrenamiento de modelos con datos privados',
+        t('sec_4.list.1'),
+        t('sec_4.list.2'),
+        t('sec_4.list.3'),
+        t('sec_4.list.4'),
+        t('sec_4.list.5'),
+        t('sec_4.list.6'),
     ]
 
     return (
@@ -73,17 +75,17 @@ const page = () => {
                         viewport={{ once: true }}
                     >
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                            Potenciamos tu empresa con{' '}
-                            <span className="text-purple-600">IA Generativa</span>
+                        {t('sec_1.title')}{' '}
+                            <span className="text-purple-600">{t('sec_1.title_2')}</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-                            En PandorAI desarrollamos agentes de inteligencia artificial a medida para automatizar procesos, mejorar operaciones y escalar tu negocio.
+                        {t('sec_1.description')}
                         </p>
                         <a
-                            href="#contacto"
+                            href="#contact"
                             className="inline-block bg-purple-600 text-white py-3 px-6 rounded-md font-medium hover:bg-purple-700 transition"
                         >
-                            Conoce más
+                             {t('sec_1.cta')}
                         </a>
                     </motion.div>
                 </motion.div>
@@ -100,19 +102,19 @@ const page = () => {
                     viewport={{ once: true }}
                     variants={fadeIn}
                 >
-                    <h2 className="text-3xl font-bold mb-4">Sobre PandorAI</h2>
+                    <h2 className="text-3xl font-bold mb-4">{t('sec_2.title_1')}<span className="text-purple-600">{t('sec_2.title_2')}</span></h2>
                     <p className="text-gray-700 text-lg mb-4">
-                        Somos una agencia especializada en inteligencia artificial generativa. Creamos soluciones personalizadas para empresas que quieren adoptar IA sin complicaciones.
+                    {t('sec_2.description_1')}
                     </p>
                     <p className="text-gray-700 text-lg">
-                        Mi rol dentro del equipo es liderar el diseño de soluciones, integraciones técnicas y desarrollo de agentes autónomos. Tengo experiencia en Next.js, APIs, procesamiento de lenguaje natural (NLP) y arquitectura IA.
+                    {t('sec_2.description_2')}
                     </p>
                 </motion.div>
             </section>
 
             {/* TECHNOLOGIES */}
             <section className="pt-20 text-center">
-                <h2 className="text-3xl font-bold mb-10 text-gray-800">Tecnologías que usamos</h2>
+                <h2 className="text-3xl font-bold mb-10 text-gray-800"> {t('sec_3.title')}</h2>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 items-center justify-center">
                     {[
                         { name: "Next.js", src: "https://my-page-negiupp.s3.amazonaws.com/1750673075840.webp" },
@@ -151,7 +153,7 @@ const page = () => {
                     variants={fadeIn}
                 >
                     <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-                        Nuestro Proceso
+                    {t('sec_3.title_2')}
                     </h2>
 
                     <div className="relative border-l-4 border-purple-600 ml-4">
@@ -182,7 +184,7 @@ const page = () => {
                     viewport={{ once: true }}
                     variants={fadeIn}
                 >
-                    <h2 className="text-3xl font-bold mb-6">Qué hacemos</h2>
+                    <h2 className="text-3xl font-bold mb-6">{t('sec_4.title')}</h2>
                     <ul className="space-y-4 text-left text-gray-700">
                         {services.map((s, i) => (
                             <li key={i} className="flex items-start gap-2">
@@ -203,18 +205,18 @@ const page = () => {
                 >
                     <h2 className="text-3xl font-bold mb-4">
                         {/** Alternancia visual en el título */}
-                        <span className="text-purple-500">¿</span>
-                        <span className="text-black">Listo</span>{' '}
-                        <span className="text-purple-500">para</span>{' '}
-                        <span className="text-black">trabajar</span>{' '}
-                        <span className="text-purple-500">con</span>{' '}
-                        <span className="text-black">inteligencia</span>{' '}
-                        <span className="text-purple-500">artificial</span>
-                        <span className="text-purple-500">?</span>
+                        <span className="text-purple-500">{t('sec_5.title_1')}</span>
+                        <span className="text-black">{t('sec_5.title_2')}</span>{' '}
+                        <span className="text-purple-500">{t('sec_5.title_3')}</span>{' '}
+                        <span className="text-black">{t('sec_5.title_4')}</span>{' '}
+                        <span className="text-purple-500">{t('sec_5.title_5')}</span>{' '}
+                        <span className="text-black">{t('sec_5.title_6')}</span>{' '}
+                        <span className="text-purple-500">{t('sec_5.title_7')}</span>
+                        <span className="text-purple-500">{t('sec_5.title_8')}</span>
                     </h2>
 
                     <p className="mb-6 text-lg text-gray-700">
-                        Contáctanos y lleva tu negocio al siguiente nivel.
+                    {t('sec_5.description')}
                     </p>
 
                     <motion.a
@@ -224,7 +226,7 @@ const page = () => {
                               className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
                             >
                               {/* <IoIosSend size={20} className="text-white" /> */}
-                              Contactar ahora
+                              {t('sec_5.cta')}
                             </motion.a>
                 </motion.div>
             </section>

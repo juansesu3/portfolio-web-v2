@@ -91,6 +91,271 @@
             "paragrah_1": "✨ And if some spark was ignited in you… ✨",
             "paragrah_2": "Let's talk. We could build something amazing together",
             "cta": "Contact me"
+        },
+        "projects": {
+            "recommender-ai-agent-for-ecommece": {
+                "title": "AI Recommender Agent for E-Commerce",
+                "description": "PandorAI's intelligent recommendation system. Deep personalization, semantic search, and automation ready to scale your store.",
+                "inside": {
+                    "title_1": "Smart E-Commerce with",
+                    "title_2": "Integrated AI",
+                    "description": "E-commerce platform with personalized recommendation system, automatic order processing, and customer support with intelligent agents.",
+                    "rol": {
+                        "title": "My Role",
+                        "description": "Fullstack Developer and CEO of PandorAI, leading the implementation of advanced AI to enhance customer experience and optimize operations.",
+                        "technologies": "Tech Stack"
+                    },
+                    "cta": {
+                        "cta_flow": "View system flow",
+                        "cta_code": "View code on GitHub"
+                    },
+                    "sections": {
+                        "flow_section": {
+                            "how_it_works": "How does E-Commerce work?",
+                            "flow": {
+                                "1": "Browse Products",
+                                "2": "Agent recommends",
+                                "3": "Shopping Cart",
+                                "4": "Automatic Checkout",
+                                "5": "Post-Sale Support"
+                            }
+                        },
+                        "algorithm_sect": {
+                            "title": "Smart recommendations with vector search",
+                            "description": "Our system converts your queries into vectors using language models (embeddings) and performs semantic search on a vectorized product database. Finds matches by meaning, not just keywords.",
+                            "list": {
+                                "1": "User query transformed into semantic vectors",
+                                "2": "Intelligent search in a vectorized product database",
+                                "3": "Accurate, relevant, and personalized results in real time"
+                            }
+                        },
+                        "how_it_works": {
+                            "title": "How does the AI recommendation system work?",
+                            "1_sec": {
+                                "title": "User makes a query",
+                                "description": "The system receives a customer's question, such as: 'What product do you recommend for sensitive skin?'."
+                            },
+                            "2_sec": {
+                                "title": "The agent analyzes the profile and responds",
+                                "description": "The AI processes the conversation, history, and customer preferences, and recommends specific products in real time."
+                            }
+                        },
+                        "technologies": {
+                            "title": "Technologies Used"
+                        },
+                        "cta_finish": {
+                            "title_1": "Interested in",
+                            "title_2": "a project like this?",
+                            "description": "I’m available for new opportunities, collaborations, or to help boost your business with AI.",
+                            "cta_btn": "Contact Now"
+                        }
+                    }
+                }
+            },
+            "intelligent_assistent": {
+                "title": "Smart Assistant",
+                "description": "Organize your projects with this intuitive task management system.",
+                "inside": {
+                    "sec_1": {
+                        "title_1": "Sebastian",
+                        "title_2": "your Smart Assistant",
+                        "description_1": "Automate the management of your",
+                        "description_2": "appointments and events",
+                        "description_3": "directly from",
+                        "description_4": "WhatsApp",
+                        "description_5": "using",
+                        "description_6": " AI and Google Calendar."
+                    },
+                    "sec_2": {
+                        "title": "How our workflow works",
+                        "description": "This diagram shows the entire process: from the moment the user sends a WhatsApp message to the assistant responding with AI and managing the calendar."
+                    },
+                    "sec_3": {
+                        "title": "Step-by-step flow",
+                        "flow_1": {
+                            "title": "Receive message",
+                            "description": "The user writes on WhatsApp."
+                        },
+                        "flow_2": {
+                            "title": "AI responds",
+                            "description": "The agent interprets and analyzes the message."
+                        },
+                        "flow_3": {
+                            "title": "Calendar API",
+                            "description": "Checks, schedules, or cancels events."
+                        },
+                        "flow_4": {
+                            "title": "Warm reply",
+                            "description": "Replies to the user with empathy."
+                        }
+                    },
+                    "sec_4": {
+                        "title": "Assistant screenshots in action"
+                    },
+                    "sec_5": {
+                        "title": "Are you interested in",
+                        "title_2": "a project like this?",
+                        "description": "I am available for new opportunities, collaborations, or to help boost your business with AI.",
+                        "cta": "Contact now"
+                    }
+                }
+            },
+            "pandorai_agency": {
+                "title": "PandorAI Agency",
+                "description": "Agency and SaaS platform that drives business growth through AI solutions and data analytics, optimizing processes, customer experience, and content generation.",
+                "inside": {
+                    "sec_1": {
+                        "title": "We boost your business with ",
+                        "title_2": "Generative AI",
+                        "description": "At PandorAI, we develop custom artificial intelligence agents to automate processes, improve operations, and scale your business.",
+                        "cta": "Learn more"
+                    },
+                    "sec_2": {
+                        "title_1": "About ",
+                        "title_2": "PandorAI",
+                        "description_1": "We are an agency specialized in generative artificial intelligence. We create customized solutions for companies that want to adopt AI without complications.",
+                        "description_2": "My role within the team is to lead solution design, technical integrations, and autonomous agent development. I have experience in Next.js, APIs, natural language processing (NLP), and AI architecture."
+                    },
+                    "sec_3": {
+                        "title": "Technologies we use",
+                        "title_2": "Our Process",
+                        "list": {
+                            "1": {
+                                "title": "Diagnosis",
+                                "description": "We analyze your processes and identify opportunities."
+                            },
+                            "2": {
+                                "title": "Agent Design",
+                                "description": "We create a tailored technical and strategic plan."
+                            },
+                            "3": {
+                                "title": "Development",
+                                "description": "We build and integrate the agent into your environment."
+                            },
+                            "4": {
+                                "title": "Training",
+                                "description": "We fine-tune behavior with your data and rules."
+                            },
+                            "5": {
+                                "title": "Deployment & Support",
+                                "description": "We launch and provide active monitoring."
+                            }
+                        }
+                    },
+                    "sec_4": {
+                        "title": "What we do",
+                        "list": {
+                            "1": "Development of autonomous agents",
+                            "2": "Integration of language models (LLMs)",
+                            "3": "Business process automation",
+                            "4": "Custom copilots and assistants",
+                            "5": "Generative AI consulting",
+                            "6": "Training models with private data"
+                        }
+                    },
+                    "sec_5": {
+                        "title_1": "Are ",
+                        "title_2": "you ready ",
+                        "title_3": "to ",
+                        "title_4": "work ",
+                        "title_5": "with ",
+                        "title_6": "artificial ",
+                        "title_7": "intelligence",
+                        "title_8": "?",
+                        "description": "Contact us and take your business to the next level.",
+                        "cta": "Contact now"
+                    }
+                }
+            },
+            "barber_shop": {
+                "title": "Barber App",
+                "description": "It is a web application where users can explore services, make reservations, and check barber shop information.",
+                "inside": {
+                    "sec_1": {
+                        "title_1": "Barber",
+                        "title_2": "App",
+                        "description": " A modern platform for complete barbershop management.",
+                        "cta_1": "View Demo",
+                        "cta_2": "View Code"
+                    },
+                    "sec_2": {
+                        "title": "What",
+                        "title_2": "is BarberApp?",
+                        "description": "It is a web application where users can explore services, make reservations, and check barber shop information. It also has an admin panel to manage appointments and clients."
+                    },
+                    "sec_3": {
+                        "title_1": "Technologies",
+                        "title_2": "Used"
+                    },
+                    "sec_4": {
+                        "title_1": "Project",
+                        "title_2": "Preview",
+                        "admin": "Admin App",
+                        "client": "Client App"
+                    },
+                    "sec_5": {
+                        "title_1": "My Role",
+                        "title_2": "in the Project",
+                        "description": "I was responsible for the complete development of the application: from the frontend with React/Next.js to the backend with Express and MongoDB. I implemented authentication, reservation validation, business logic, and responsive design."
+                    },
+                    "sec_6": {
+                        "title_1": "Did you like",
+                        "title_2": "this project?",
+                        "description": "I am open to new opportunities as a Full Stack Developer.",
+                        "cta": "Contact now"
+                    }
+                }
+            },
+            "ai_todo_app": {
+                "title": "AI Todo App",
+                "description": "Organize your projects with this intuitive task management system.",
+                "inside": {
+                    "sec_1": {
+                        "title_1": "AI",
+                        "title_2": "Todo App",
+                        "description": "A modern task management app that uses AI to help you organize your day. You can generate tasks with AI, automatically sort priorities, and receive smart suggestions.",
+                        "cta_1": "View Demo",
+                        "cta_2": "View Code"
+                    },
+                    "sec_2": {
+                        "title": "What",
+                        "title_2": "is AI Todo App?",
+                        "description": "A modern task management app that uses AI to help you organize your day. You can generate tasks with AI, automatically sort priorities, and receive smart suggestions."
+                    },
+                    "sec_3": {
+                        "title_1": "What it ",
+                        "title_2": "can do",
+                        "list": {
+                            "1": "Create tasks with AI suggestions",
+                            "2": "Automatically sort tasks by priority",
+                            "3": "Daily analysis with smart recommendations",
+                            "4": "Fast, modern, and responsive interface",
+                            "5": "Edit and manage with drag & drop",
+                            "6": "Secure authentication and persistent storage"
+                        }
+                    },
+                    "sec_4": {
+                        "title_1": "Technologies ",
+                        "title_2": "Used"
+                    },
+                    "sec_5": {
+                        "title_1": "Try",
+                        "title_2": "the App",
+                        "description": "* Public demo. It may take a few seconds to load."
+                    },
+                    "sec_6": {
+                        "title_1": "My Role ",
+                        "title_2": "in the Project",
+                        "description": "I designed and fully developed the app. I implemented the integration with OpenAI, the smart priority system, authentication, and scalable architecture using Next.js + Prisma + TypeScript."
+                    },
+                    "sec_7": {
+                        "title_1": "Did you like",
+                        "title_2": "this project?",
+                        "description": "I am open to new opportunities as a Full Stack Developer.",
+                        "cta": "Contact now"
+                    }
+                }
+            }
         }
     },
     "services": {
@@ -252,13 +517,13 @@
             "end_two": "services."
         },
         "inside_article": {
-    "reading_time": "min read",
-    "share": "Share this article!",
-    "end_section": {
-      "title": "Did you enjoy this article?",
-      "description": "Subscribe to our blog to receive exclusive content and stay up-to-date with the latest trends."
-    }
-  }
+            "reading_time": "min read",
+            "share": "Share this article!",
+            "end_section": {
+                "title": "Did you enjoy this article?",
+                "description": "Subscribe to our blog to receive exclusive content and stay up-to-date with the latest trends."
+            }
+        }
     },
     "contact": {
         "title": "Contact Us",

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 
 import { SiNextdotjs, SiTailwindcss, SiOpenai, SiTypescript, SiPrisma } from 'react-icons/si'
 import { HiChevronDoubleDown } from 'react-icons/hi'
+import { useTranslations } from 'next-intl'
 
 export const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -12,6 +13,7 @@ export const fadeUp = {
     transition: { duration: 0.6, ease: 'easeOut' },
 }
 const page = () => {
+    const t = useTranslations('projects.projects.ai_todo_app.inside')
     return (
         <main className="text-[#374151] ">
             {/* HERO */}
@@ -23,8 +25,8 @@ const page = () => {
                 />
 
                 <motion.h1 {...fadeUp} className="text-4xl md:text-6xl font-bold mb-4">
-                    <span className="text-black">AI</span>
-                    <span className="text-[#9333ea]"> Todo App</span>
+                    <span className="text-black">{t('sec_1.title_1')}</span>
+                    <span className="text-[#9333ea]"> {t('sec_1.title_2')}</span>
                 </motion.h1>
 
                 <motion.p
@@ -32,7 +34,7 @@ const page = () => {
                     transition={{ delay: 0.2 }}
                     className="text-lg md:text-xl text-gray-600 mb-6 max-w-xl"
                 >
-                    Organiza tus tareas con ayuda de inteligencia artificial. Prioriza, categoriza y genera ideas automáticamente.
+                   {t('sec_1.description')}
                 </motion.p>
 
                 <motion.div
@@ -44,14 +46,14 @@ const page = () => {
                         href="#demo"
                         className="bg-[#9333ea] hover:bg-indigo-700 text-white px-5 py-3 rounded transition"
                     >
-                        Ver Demo
+                        {t('sec_1.cta_1')}
                     </a>
                     <a
                         href="https://github.com/tuusuario/ai-todo-app"
                         target="_blank"
                         className="border border-[#9333ea] text-[#9333ea] px-5 py-3 rounded hover:bg-[#9333ea] hover:text-white transition"
                     >
-                        Ver Código
+                        {t('sec_1.cta_2')}
                     </a>
                 </motion.div>
 

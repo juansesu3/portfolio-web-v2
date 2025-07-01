@@ -4,8 +4,10 @@ import DiagramaFlujoInteractivo from '@/app/components/projects/DiagramaFlujoInt
 import { motion } from 'framer-motion';
 import { FaArrowDown } from 'react-icons/fa';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const page = () => {
+    const t = useTranslations("projects.projects.intelligent_assistent.inside");
     return (
         <div className="bg-white text-gray-800 overflow-x-hidden">
             {/* 🟣 Hero Full Screen */}
@@ -17,7 +19,7 @@ const page = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <span className="text-purple-600">Sebastián</span>, tu Asistente Inteligente
+                    <span className="text-purple-600">{t('sec_1.title_1')}</span>, {t('sec_1.title_2')}
                 </motion.h1>
 
                 <motion.p
@@ -26,10 +28,10 @@ const page = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                 >
-                    Automatiza la gestión de tus{' '}
-                    <span className="text-purple-500 font-semibold">citas y eventos</span> desde{' '}
-                    <span className="text-purple-500 font-semibold">WhatsApp</span> usando{' '}
-                    <span className="text-purple-500 font-semibold">IA y Google Calendar</span>.
+                    {t('sec_1.description_1')}{' '}
+                    <span className="text-purple-500 font-semibold">{t('sec_1.description_2')}</span> {t('sec_1.description_3')}{' '}
+                    <span className="text-purple-500 font-semibold">{t('sec_1.description_4')}</span> {t('sec_1.description_5')}{' '}
+                    <span className="text-purple-500 font-semibold">{t('sec_1.description_6')}</span>.
                 </motion.p>
 
                 <motion.div
@@ -52,7 +54,7 @@ const page = () => {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
-                        Cómo funciona nuestro flujo
+                        {t('sec_2.title')}
                     </motion.h2>
                     <motion.p
                         className="text-gray-600 text-lg mb-12"
@@ -61,7 +63,7 @@ const page = () => {
                         transition={{ delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        Este diagrama representa el proceso completo: desde que el usuario envía un mensaje por WhatsApp hasta que el asistente responde con IA y gestiona el calendario.
+                        {t('sec_2.description')}
                     </motion.p>
                     <motion.div
                         className="rounded-lg shadow-md overflow-hidden border border-gray-200"
@@ -85,14 +87,14 @@ const page = () => {
                         transition={{ duration: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        Flujo paso a paso
+                        {t('sec_3.title')}
                     </motion.h3>
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 text-center">
                         {[
-                            { title: '📥 Recibe mensaje', desc: 'El usuario escribe por WhatsApp.' },
-                            { title: '🤖 IA responde', desc: 'El agente interpreta y analiza el mensaje.' },
-                            { title: '📅 Calendar API', desc: 'Consulta, agenda o cancela eventos.' },
-                            { title: '💬 Respuesta cálida', desc: 'Responde al usuario con empatía.' },
+                            { title: `📥 ${t('sec_3.flow_1.title')}`, desc: `${t('sec_3.flow_1.description')}` },
+                            { title: `🤖 ${t('sec_3.flow_2.title')}`, desc: `${t('sec_3.flow_2.description')}` },
+                            { title: `📅 ${t('sec_3.flow_3.title')}`, desc: `${t('sec_3.flow_3.description')}` },
+                            { title: `💬 ${t('sec_3.flow_4.title')}`, desc: `${t('sec_3.flow_4.description')}` },
                         ].map((step, idx) => (
                             <motion.div
                                 key={idx}
@@ -120,7 +122,7 @@ const page = () => {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
-                        Capturas del asistente en acción
+                        {t('sec_4.title')}
                     </motion.h3>
                     <div className="grid md:grid-cols-2 gap-6">
                         {[
@@ -155,8 +157,8 @@ const page = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-extrabold mb-6"
                     >
-                        <span className="text-[#a855f7]">¿Te interesa</span>{' '}
-                        <span className="text-gray-900">un proyecto así?</span>
+                        <span className="text-[#a855f7]">{t('sec_5.title')}</span>{' '}
+                        <span className="text-gray-900">{t('sec_5.title_2')}</span>
                     </motion.h2>
 
                     <motion.p
@@ -166,18 +168,18 @@ const page = () => {
                         viewport={{ once: true }}
                         className="text-lg md:text-xl mb-10 text-gray-700"
                     >
-                        Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.
+                        {t('sec_5.description')}
                     </motion.p>
 
                     <motion.a
-                              href="/contacto"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.97 }}
-                              className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
-                            >
-                              {/* <IoIosSend size={20} className="text-white" /> */}
-                              Contactar ahora
-                            </motion.a>
+                        href="/contact"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.97 }}
+                        className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
+                    >
+                        {/* <IoIosSend size={20} className="text-white" /> */}
+                        {t('sec_5.cta')}
+                    </motion.a>
                 </div>
             </section>
 

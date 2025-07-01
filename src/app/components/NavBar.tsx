@@ -160,7 +160,7 @@ const NavBar = () => {
 
           </div>
         </div>
-        <Link href={`/${locale}/blog`} onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('blog')}</Link>
+        {/* <Link href={`/${locale}/blog`} onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('blog')}</Link> */}
         <Link href={`/${locale}/contact`} onClick={toggleMenu} className="block text-center text-sm py-2 px-4 md:py-0 hover:text-purple-500 transition-all duration-300 ease-in-out">{t('contact')}</Link>
       </div>
       <div className='flex-row gap-2 hidden md:flex relative'>

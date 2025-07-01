@@ -91,6 +91,271 @@
             "paragrah_1": "✨ Y si alguna chispa se encendió en ti… ✨",
             "paragrah_2": "Hablemos. Podríamos construir algo increíble juntos",
             "cta": "Contáctame"
+        },
+        "projects": {
+            "recommender-ai-agent-for-ecommece": {
+                "title": "Recomendador AI Agent para E-Commerce",
+                "description": "El sistema de recomendación inteligente de PandorAI. Personalización profunda, búsqueda semántica y automatización lista para escalar tu tienda.",
+                "inside": {
+                    "title_1": "Ecommerce Inteligente con IA Integrada",
+                    "title_2": "IA Integrada",
+                    "description": "Plataforma de ecommerce con sistema de recomendaciones personalizadas, procesamiento automático de pedidos y atención al cliente con agentes inteligentes.",
+                    "rol": {
+                        "title": "Mi Rol",
+                        "description": "Desarrollador Fullstack y CEO de PandorAI, liderando la implementación de IA avanzada para mejorar la experiencia del cliente y optimizar operaciones.",
+                        "technologies": "Stack Tecnológico"
+                    },
+                    "cta": {
+                        "cta_flow": "Ver flujo del sistema",
+                        "cta_code": "Ver código en GitHub"
+                    },
+                    "sections": {
+                        "flow_section": {
+                            "how_it_works": "¿Cómo funciona el Ecommerce?",
+                            "flow": {
+                                "1": "Explora Productos",
+                                "2": "Agente recomienda",
+                                "3": "Carrito de compras",
+                                "4": "Pago automático",
+                                "5": "Soporte postventa"
+                            }
+                        },
+                        "algorithm_sect": {
+                            "title": "Recomendaciones inteligentes con búsqueda vectorial",
+                            "description": "Nuestro sistema convierte tus consultas en vectores utilizando modelos de lenguaje (embeddings) y realiza una búsqueda semántica sobre una base de datos vectorizada de productos. Encuentra coincidencias por significado, no solo por palabras clave.",
+                            "list": {
+                                "1": "Consulta del usuario transformada en vectores semánticos",
+                                "2": "Búsqueda inteligente en una base de datos de productos vectorizados",
+                                "3": "Resultados precisos, relevantes y personalizados en tiempo real"
+                            }
+                        },
+                        "how_it_works": {
+                            "title": "¿Cómo funciona el sistema de recomendaciones con IA?",
+                            "1_sec": {
+                                "title": "1. El usuario hace una consulta",
+                                "description": "El sistema recibe una pregunta del cliente, como: “¿Qué producto me recomiendas para piel sensible?”."
+                            },
+                            "2_sec": {
+                                "title": "2. El agente analiza el perfil y responde",
+                                "description": "La IA procesa la conversación, historial y preferencias del cliente, y recomienda productos específicos en tiempo real."
+                            }
+                        },
+                        "technologies": {
+                            "title": "Tecnologías utilizadas"
+                        },
+                        "cta_finish": {
+                            "title_1": "¿Te interesa ",
+                            "title_2": "un proyecto así?",
+                            "description": "Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.",
+                            "cta_btn": "Contactar Ahora"
+                        }
+                    }
+                }
+            },
+            "intelligent_assistent": {
+                "title": "Asistente Inteligente",
+                "description": "Organiza tus proyectos con este sistema intuitivo para gestión de tareas.",
+                "inside": {
+                    "sec_1": {
+                        "title_1": "Sebastian",
+                        "title_2": "tu Asistente Inteligente",
+                        "description_1": "Automatiza la gestión de tus",
+                        "description_2": "citas y eventos",
+                        "description_3": "desde",
+                        "description_4": "WhatsApp",
+                        "description_5": "usando",
+                        "description_6": " IA y Google Calendar."
+                    },
+                    "sec_2": {
+                        "title": "Cómo funciona nuestro flujo",
+                        "description": "Este diagrama representa el proceso completo: desde que el usuario envía un mensaje por WhatsApp hasta que el asistente responde con IA y gestiona el calendario."
+                    },
+                    "sec_3": {
+                        "title": "Flujo paso a paso",
+                        "flow_1": {
+                            "title": "Recibe mensaje",
+                            "description": "El usuario escribe por WhatsApp."
+                        },
+                        "flow_2": {
+                            "title": "IA responde",
+                            "description": "El agente interpreta y analiza el mensaje."
+                        },
+                        "flow_3": {
+                            "title": "Calendar API",
+                            "description": "Consulta, agenda o cancela eventos."
+                        },
+                        "flow_4": {
+                            "title": "Respuesta cálida",
+                            "description": "Responde al usuario con empatía."
+                        }
+                    },
+                    "sec_4": {
+                        "title": "Capturas del asistente en acción"
+                    },
+                    "sec_5": {
+                        "title": "¿Te interesa ",
+                        "title_2": "un proyecto así?",
+                        "description": "Estoy disponible para nuevas oportunidades, colaboraciones o ayudarte a impulsar tu negocio con IA.",
+                        "cta": "Contactar ahora"
+                    }
+                }
+            },
+            "pandorai_agency": {
+                "title": "PandorAI Agency",
+                "description": "Agencia y plataforma SaaS que impulsa el crecimiento empresarial mediante soluciones de IA y análisis de datos, optimizando procesos, experiencia de cliente y generación de contenidos.",
+                "inside": {
+                    "sec_1": {
+                        "title": "Potenciamos tu empresa con ",
+                        "title_2": "IA Generativa",
+                        "description": "En PandorAI desarrollamos agentes de inteligencia artificial a medida para automatizar procesos, mejorar operaciones y escalar tu negocio.",
+                        "cta": "Conoce más"
+                    },
+                    "sec_2": {
+                        "title_1": "Sobre ",
+                        "title_2": "PandorAI",
+                        "description_1": "Somos una agencia especializada en inteligencia artificial generativa. Creamos soluciones personalizadas para empresas que quieren adoptar IA sin complicaciones.",
+                        "description_2": "Mi rol dentro del equipo es liderar el diseño de soluciones, integraciones técnicas y desarrollo de agentes autónomos. Tengo experiencia en Next.js, APIs, procesamiento de lenguaje natural (NLP) y arquitectura IA."
+                    },
+                    "sec_3": {
+                        "title": "Tecnologías que usamos",
+                        "title_2": "Nuestro Proceso",
+                        "list": {
+                            "1": {
+                                "title": "Diagnóstico",
+                                "description": "Analizamos tus procesos y detectamos oportunidades."
+                            },
+                            "2": {
+                                "title": "Diseño de Agente",
+                                "description": "Creamos un plan técnico y estratégico a medida."
+                            },
+                            "3": {
+                                "title": "Desarrollo",
+                                "description": "Construimos e integramos el agente en tu entorno."
+                            },
+                            "4": {
+                                "title": "Entrenamiento",
+                                "description": "Ajustamos el comportamiento con tus datos y reglas."
+                            },
+                            "5": {
+                                "title": "Despliegue y soporte",
+                                "description": "Lanzamos y damos seguimiento activo."
+                            }
+                        }
+                    },
+                    "sec_4": {
+                        "title": "Qué hacemos",
+                        "list": {
+                            "1": "Desarrollo de agentes autónomos",
+                            "2": "Integración de modelos de lenguaje (LLMs)",
+                            "3": "Automatización de procesos empresariales",
+                            "4": "Copilots y asistentes personalizados",
+                            "5": "Consultoría en IA generativa",
+                            "6": "Entrenamiento de modelos con datos privados"
+                        }
+                    },
+                    "sec_5": {
+                        "title_1": "¿ ",
+                        "title_2": "Listo",
+                        "title_3": "para ",
+                        "title_4": "trabajar ",
+                        "title_5": "con ",
+                        "title_6": "inteligencia ",
+                        "title_7": "artificial",
+                        "title_8": "?",
+                        "description": "Contáctanos y lleva tu negocio al siguiente nivel.",
+                        "cta": "Contactar ahora"
+                    }
+                }
+            },
+            "barber_shop": {
+                "title": "Barber App",
+                "description": "Es una aplicación web donde los usuarios pueden explorar servicios, hacer reservas y consultar información de la barbería.",
+                "inside": {
+                    "sec_1": {
+                        "title_1": "Barber",
+                        "title_2": "App",
+                        "description": " Una plataforma moderna para la gestión completa de barberías.",
+                        "cta_1": "Ver Demo",
+                        "cta_2": "Ver Código"
+                    },
+                    "sec_2": {
+                        "title": "¿Qué",
+                        "title_2": "es BarberApp?",
+                        "description": "Es una aplicación web donde los usuarios pueden explorar servicios, hacer reservas y consultar información de la barbería. También cuenta con un panel administrativo para gestionar citas y clientes."
+                    },
+                    "sec_3": {
+                        "title_1": "Tecnología",
+                        "title_2": "Utilizadas"
+                    },
+                    "sec_4": {
+                        "title_1": "Vista",
+                        "title_2": "previa del proyecto",
+                        "admin": "App Admin",
+                        "client": "App Cliente"
+                    },
+                    "sec_5": {
+                        "title_1": "Mi Rol",
+                        "title_2": "en el Proyecto",
+                        "description": "Fui responsable del desarrollo completo de la aplicación: desde el frontend con React/Next.js hasta el backend con Express y MongoDB. Implementé autenticación, validación de reservas, lógica de negocio y diseño responsive."
+                    },
+                    "sec_6": {
+                        "title_1": "¿Te gustó",
+                        "title_2": "este proyecto?",
+                        "description": "Estoy abierto a nuevas oportunidades como Full Stack Developer.",
+                        "cta": "Contactar ahora"
+                    }
+                }
+            },
+            "ai_todo_app": {
+                "title": "AI Todo App",
+                "description": "Organiza tus proyectos con este sistema intuitivo para gestión de tareas.",
+                "inside": {
+                    "sec_1": {
+                        "title_1": "AI",
+                        "title_2": "Todo App",
+                        "description": "Una aplicación moderna de gestión de tareas que usa IA para ayudarte a organizar tu día. Puedes generar tareas con IA, clasificar prioridades automáticamente y recibir sugerencias inteligentes.",
+                        "cta_1": "Ver Demo",
+                        "cta_2": "Ver Código"
+                    },
+                    "sec_2": {
+                        "title": "¿Qué",
+                        "title_2": "es AI Todo App?",
+                        "description": "Una aplicación moderna de gestión de tareas que usa IA para ayudarte a organizar tu día. Puedes generar tareas con IA, clasificar prioridades automáticamente y recibir sugerencias inteligentes."
+                    },
+                    "sec_3": {
+                        "title_1": "Lo que ",
+                        "title_2": "puede hacer",
+                        "list": {
+                            "1": "Crear tareas con sugerencias de IA",
+                            "2": "Clasificar tareas por prioridad automáticamente",
+                            "3": "Análisis diario con recomendaciones inteligentes",
+                            "4": "Interfaz rápida, moderna y responsive",
+                            "5": "Edición y gestión con drag & drop",
+                            "6": "Autenticación segura y almacenamiento persistente"
+                        }
+                    },
+                    "sec_4": {
+                        "title_1": "Tecnologías ",
+                        "title_2": "Utilizadas"
+                    },
+                    "sec_5": {
+                        "title_1": "Prueba",
+                        "title_2": "la App",
+                        "description": "* Demo pública. Puede demorar en cargar unos segundos."
+                    },
+                    "sec_6": {
+                        "title_1": "Mi Rol o",
+                        "title_2": "en el Proyect",
+                        "description": "Diseñé y desarrollé completamente la app. Implementé la integración con OpenAI, el sistema de prioridades inteligentes, autenticación, y arquitectura escalable usando Next.js + Prisma + TypeScript."
+                    },
+                    "sec_7": {
+                        "title_1": "¿Te gustó",
+                        "title_2": "este proyecto?",
+                        "description": "Estoy abierto a nuevas oportunidades como Full Stack Developer.",
+                        "cta": "Contactar ahora"
+                    }
+                }
+            }
         }
     },
     "services": {
@@ -251,14 +516,13 @@
             "end": "¿Interesado en trabajar con nosotros? Revisa nuestros",
             "end_two": "servicios."
         },
-        "inside_article":{
-            "reading_time":"min de lectura",
-            "share":"¡Comparte este artículo!",
-            "end_section":{
-                "title":"¿Disfrutaste este artículo?",
-                "description":"Suscríbete a nuestro blog para recibir contenido exclusivo y mantenerte actualizado con las últimas tendencias."
+        "inside_article": {
+            "reading_time": "min de lectura",
+            "share": "¡Comparte este artículo!",
+            "end_section": {
+                "title": "¿Disfrutaste este artículo?",
+                "description": "Suscríbete a nuestro blog para recibir contenido exclusivo y mantenerte actualizado con las últimas tendencias."
             }
-
         }
     },
     "contact": {

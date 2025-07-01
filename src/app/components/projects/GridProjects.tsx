@@ -6,56 +6,6 @@ import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion' // <--- 1. Importar motion
 
-// Datos de ejemplo para los proyectos (sin cambios)
-const projects = [
-  {
-    id: 1,
-    title: 'Recommender AI Agent For E-commerce',
-    description: 'El sistema de recomendación inteligente de PandorAI. Personalización profunda, búsqueda semántica y automatización lista para escalar tu tienda.',
-    image: 'https://my-page-negiupp.s3.amazonaws.com/1750756449867.png',//https://my-page-negiupp.s3.amazonaws.com/1750681232857.png
-    technologies: ['openai ', 'nextjs', 'python','langchain'],
-    link: '/projects/ecommerce',
-    slug: 'ecommerce-ai'
-  },
-  {
-    id: 2,
-    title: 'Asistente Inteligente',
-    description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
-    image: 'https://my-page-negiupp.s3.amazonaws.com/1750684889719.png',
-    technologies: ['n8n', 'google', 'whatsapp', 'supabase'],
-    link: '/projects/task-manager',
-    slug: 'google-calendar-agent'
-  },
-  {
-    id: 3,
-    title: 'PandorAI Agency',
-    description: 'Una app para administrar gastos y finanzas personales con gráficos interactivos.',
-    image: 'https://my-page-negiupp.s3.amazonaws.com/1750755347523.png',
-    technologies: ['angular', 'nodejs', 'bootstrap'],
-    link: '/projects/finance-app',
-    slug: 'pandorai-agency'
-  },
-  {
-    id: 4,
-    title: 'Barber Shop',
-    description: 'Plataforma moderna de comercio electrónico para una experiencia de compra fluida.',
-    image: 'https://my-page-negiupp.s3.amazonaws.com/1750756003903.png',
-    technologies: ['react', 'nextjs', 'tailwindcss'],
-    link: '/projects/ecommerce',
-    slug: 'barber-shop-app'
-  },
-  {
-    id: 5,
-    title: 'AI Todo List App',
-    description: 'Organiza tus proyectos con este sistema intuitivo para gestión de tareas.',
-    image: 'https://my-page-negiupp.s3.amazonaws.com/1750755686809.png',
-    technologies: ['vue', 'firebase', 'sass'],
-    link: '/projects/task-manager',
-    slug: 'ai-todo-app'
-  },
-]
-
-
 // --- Variantes para las animaciones ---
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -79,8 +29,55 @@ const itemVariants = {
 }
 
 const GridProjects = () => {
-  const t = useTranslations('projects')
-
+  const t = useTranslations("projects");
+  
+  const projects = [
+    {
+      id: 1,
+      title: t('projects.recommender-ai-agent-for-ecommece.title'),
+      description: t('projects.recommender-ai-agent-for-ecommece.description'),
+      image: 'https://my-page-negiupp.s3.amazonaws.com/1750756449867.png',//https://my-page-negiupp.s3.amazonaws.com/1750681232857.png
+      technologies: ['openai ', 'nextjs', 'python','langchain'],
+      link: '/projects/ecommerce',
+      slug: 'ecommerce-ai'
+    },
+    {
+      id: 2,
+      title: t('projects.intelligent_assistent.title'),
+      description: t('projects.intelligent_assistent.description'),
+      image: 'https://my-page-negiupp.s3.amazonaws.com/1750684889719.png',
+      technologies: ['n8n', 'google', 'whatsapp', 'supabase'],
+      link: '/projects/task-manager',
+      slug: 'google-calendar-agent'
+    },
+    {
+      id: 3,
+      title: t('projects.pandorai_agency.title'),
+      description:  t('projects.pandorai_agency.description'),
+      image: 'https://my-page-negiupp.s3.amazonaws.com/1750755347523.png',
+      technologies: ['openai ', 'nextjs', 'python','langchain'],
+      link: '/projects/finance-app',
+      slug: 'pandorai-agency'
+    },
+    {
+      id: 4,
+      title: t('projects.barber_shop.title'),
+      description: t('projects.barber_shop.description'),
+      image: 'https://my-page-negiupp.s3.amazonaws.com/1750756003903.png',
+      technologies: ['react', 'nextjs', 'tailwindcss'],
+      link: '/projects/ecommerce',
+      slug: 'barber-shop-app'
+    },
+    {
+      id: 5,
+      title: t('projects.ai_todo_app.title'),
+      description: t('projects.ai_todo_app.description'),
+      image: 'https://my-page-negiupp.s3.amazonaws.com/1750755686809.png',
+      technologies: ['vue', 'firebase', 'sass'],
+      link: '/projects/task-manager',
+      slug: 'ai-todo-app'
+    },
+  ]
   const pathname = usePathname();
   const localeFromPath = pathname.split("/")[1] || "en";
   const [locale, setLocale] = useState(localeFromPath);
