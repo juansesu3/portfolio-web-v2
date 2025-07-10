@@ -77,6 +77,15 @@ const GridProjects = () => {
       link: '/projects/task-manager',
       slug: 'ai-todo-app'
     },
+    {
+      id: 6,
+      title: 'Ai Rox Pro',
+      description: 'Planificador de entrenamiento Hyrox que adapta bloques de 4 semanas con IA según el feedback del atleta.',
+      image: 'https://my-page-negiupp.s3.amazonaws.com/1751454106820.png',
+      technologies: ['openai ', 'nextjs', 'python','langchain'],
+      link: '/projects/task-manager',
+      slug: 'ai-rox-pro'
+    },
   ]
   const pathname = usePathname();
   const localeFromPath = pathname.split("/")[1] || "en";

@@ -101,9 +101,7 @@ const page = () => {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-purple-500 text-3xl"
       >
-        <a href="#overview" aria-label="Sigue bajando para ver más">
-          <HiChevronDoubleDown />
-        </a>
+       
       </motion.div>
     </section>
 

@@ -3,26 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaEye, FaShieldAlt, FaRocket, FaTrophy, FaMountain, FaLightbulb } from 'react-icons/fa';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 // --- Datos Estructurados para el Viaje (sin cambios) ---
-const journeySteps = [
-    {
-        icon: FaMountain,
-        text: "Throughout my life, I've encountered a series of challenges that have propelled me to discover new strengths and consistently strive for the best version of myself. Each obstacle has transformed into an opportunity for personal evolution and the development of greater resilience."
-    },
-    {
-        icon: FaShieldAlt,
-        text: "NeGiupp encapsulates the attitude of never giving up, of persisting even when circumstances are daunting. It reflects my unwavering determination to surmount barriers and achieve goals that once appeared unattainable. Through this approach, I've been able to learn, grow, and evolve across all facets of my life."
-    },
-    {
-        icon: FaLightbulb,
-        text: "In my professional trajectory and personal development, NeGiupp has become a guiding beacon towards continuous achievement and self-improvement. It serves as a constant reminder that difficulties are disguised opportunities and that resilience is the key to turning them into triumphs."
-    },
-    {
-        icon: FaTrophy,
-        text: "NeGiupp is a living testament to my belief that perseverance and the 'never give up' mindset pave the way for ongoing progress. Through this philosophy, I've unearthed the inner strength to confront any challenge and turn it into a stepping stone towards advancement on my journey towards growth and success."
-    }
-];
+
 
 // --- El Componente Principal ---
 const PersonalBrandPage = () => {
@@ -30,16 +14,35 @@ const PersonalBrandPage = () => {
 
     const { scrollYProgress } = useScroll();
     const pathLength = useTransform(scrollYProgress, [0.15, 0.7], [0, 1]);
+    const t = useTranslations('self_brand')
 
+    const journeySteps = [
+        {
+            icon: FaMountain,
+            text: t('sect_1.list.1'),
+        },
+        {
+            icon: FaShieldAlt,
+            text: t('sect_1.list.2'),
+        },
+        {
+            icon: FaLightbulb,
+            text: t('sect_1.list.3'),
+        },
+        {
+            icon: FaTrophy,
+            text: t('sect_1.list.4'),
+        }
+    ];
     return (
         // ---> 1. Fondo claro y texto oscuro
         <section className="relative w-full  text-slate-800 overflow-hidden">
             {/* ---> 2. Orbe de energía adaptado para fondo claro */}
 
             {/* ---> 3. Cabecera Heroica con nuevo color principal */}
-             {/* ---> SECCIÓN DE CABECERA ACTUALIZADA <--- */}
-             <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-10">
-                
+            {/* ---> SECCIÓN DE CABECERA ACTUALIZADA <--- */}
+            <div className="min-h-screen flex flex-col items-center justify-center text-center relative z-10">
+
                 {/* 1. Imagen de la marca integrada con animación */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -64,7 +67,7 @@ const PersonalBrandPage = () => {
                     transition={{ duration: 0.8, delay: 0.3 }} // Se retrasa un poco para entrar después de la imagen
                     className="font-black text-7xl md:text-9xl tracking-tighter text-black"
                 >
-                    NeGiupp
+                    {t('title')}
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -72,7 +75,7 @@ const PersonalBrandPage = () => {
                     transition={{ duration: 0.8, delay: 0.5 }} // También se retrasa
                     className="mt-4 max-w-xl text-lg md:text-xl text-slate-600"
                 >
-                    If you can imagine it, you can program it. Just never stop trying and, under no circumstances, give up!
+                    {t('description')}
                 </motion.p>
             </div>
 
@@ -105,9 +108,9 @@ const PersonalBrandPage = () => {
                     transition={{ duration: 0.8 }}
                     className="mb-24 lg:pl-24"
                 >
-                    <h2 className="text-3xl font-bold mb-4" style={{ color: '#9333ea' }}>A Commitment to Growth</h2>
+                    <h2 className="text-3xl font-bold mb-4" style={{ color: '#9333ea' }}>{t('sect_1.title')}</h2>
                     <p className="text-lg text-slate-600">
-                        NeGiupp is far more than a mere personal brand; it's a profound and unwavering commitment to growth and overcoming challenges. It embodies the 'Never Give Up' philosophy that has been the driving force behind every trial and achievement in my personal and professional journey.
+                        {t('sect_1.description')}
                     </p>
                 </motion.div>
 
@@ -142,7 +145,7 @@ const PersonalBrandPage = () => {
                     className="font-black text-6xl md:text-8xl"
                     style={{ color: '#9333ea' }}
                 >
-                    ¡Never Give Up!
+                    {t('sect_1.finished')}
                 </motion.h2>
             </div>
         </section>

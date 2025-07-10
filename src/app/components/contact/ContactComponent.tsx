@@ -1,8 +1,9 @@
 'use client'
 import { useTranslations } from 'next-intl'
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion' // ---> 1. Importar motion
-
+import Swal from 'sweetalert2'
+import { usePathname, useRouter } from 'next/navigation'
 // ---> 2. Definir variantes para las animaciones
 const containerVariants = {
     hidden: {},
@@ -33,6 +34,79 @@ const columnFromRight = {
 
 const ContactComponent = () => {
     const t = useTranslations("contact")
+    const router = useRouter()
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    })
+
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [status, setStatus] = useState('')
+
+
+    const pathname = usePathname();
+    const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
+
+
+    // 👉 Función para manejar cambios en los campos
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }))
+    }
+
+    // 👉 Función para enviar datos al webhook de n8n
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+        setStatus('')
+
+        try {
+            const response = await fetch('https://n8n.pandorai.ch/webhook/c0845e60-fc38-4131-9546-8dee4afee02e', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            })
+
+            if (response.ok) {
+                setStatus('success')
+                setFormData({ name: '', email: '', message: '' })
+
+                // 👉 Aquí lanzas el SweetAlert
+                Swal.fire({
+                    icon: 'success',
+                    title: t('alert.success.title'),
+                    text: t('alert.success.text'),
+                    confirmButtonText: t('alert.success.cta'),
+                    confirmButtonColor: '#7e22ce',
+                }).then(() => {
+                    // 👉 Redirige a la página de proyectos
+                    router.push(`/${locale}/projects`)
+                })
+            } else {
+                setStatus('error')
+                Swal.fire({
+                    icon: 'error',
+                    title: t('alert.error.title'),
+                    text: t('alert.error.text'),
+                })
+            }
+        } catch (error) {
+            console.error('Error sending form:', error)
+            setStatus('error')
+            Swal.fire({
+                icon: 'error',
+                title: t('alert.error.title'),
+                text: t('alert.error.text'),
+            })
+        }
+
+        setIsSubmitting(false)
+    }
     return (
         // ---> 3. Aplicar el orquestador de animación a la sección principal
         <motion.section
@@ -51,7 +125,7 @@ const ContactComponent = () => {
 
                 {/* Formulario de Contacto */}
                 <div className="max-w-4xl mx-auto bg-white border border-gray-100 shadow-lg rounded-lg p-8">
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         {/* Nombre */}
                         <div>
                             <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -62,6 +136,8 @@ const ContactComponent = () => {
                                 id="name"
                                 name="name"
                                 placeholder={t('form.input_name')}
+                                value={formData.name}
+                                onChange={handleChange}
                                 className="w-full border border-gray-200 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3"
                                 required
                             />
@@ -77,6 +153,8 @@ const ContactComponent = () => {
                                 id="email"
                                 name="email"
                                 placeholder="ejemplo@correo.com"
+                                value={formData.email}
+                                onChange={handleChange}
                                 className="w-full border border-gray-200 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3"
                                 required
                             />
@@ -92,6 +170,8 @@ const ContactComponent = () => {
                                 name="message"
                                 rows={4}
                                 placeholder={t('form.input_message')}
+                                value={formData.message}
+                                onChange={handleChange}
                                 className="w-full border border-gray-200 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3"
                                 required
                             />

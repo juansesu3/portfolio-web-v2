@@ -67,6 +67,139 @@
             }
         }
     },
+    "how_can_i_help_you": {
+        "title_1": "How My",
+        "title_2": "Philosophy",
+        "title_3": "Becomes",
+        "title_4": "Your",
+        "title_5": "Advantage",
+        "description_1": "The ",
+        "description_2": "mindset is more than a mantra — it's the engine that powers every project. It transforms complex challenges into elegant, resilient, and high-performing solutions.",
+        "list": {
+            "1": {
+                "title": "Intelligent AI & Automation",
+                "description": "I build custom AI agents and intelligent systems that automate complex processes, providing deep insights and driving efficiency for your business."
+            },
+            "2": {
+                "title": "Resilient Web Development",
+                "description": "Leveraging modern frameworks like Next.js and React, I create fast, scalable, and robust web applications that deliver exceptional user experiences."
+            },
+            "3": {
+                "title": "Intuitive UX/UI Design",
+                "description": "My design process is user-obsessed, focusing on creating interfaces that are not only beautiful but also intuitive, accessible, and engaging."
+            }
+        },
+        "sect_2": {
+            "title": "My Guiding Principles",
+            "list": {
+                "1": "Resilience",
+                "2": "Creativity",
+                "3": "User-Centric"
+            }
+        },
+        "sect_3": {
+            "title": "Have a challenge in mind?",
+            "description": "Let's build something incredible together.",
+            "cta": "Get in Touch"
+        }
+    },
+    "self_brand": {
+        "title": "NeGiUpp",
+        "description": "If you can imagine it, you can program it. Just never stop trying and, under no circumstances, give up!",
+        "sect_1": {
+            "title": "A Commitment to Growth",
+            "description": "NeGiupp is far more than a mere personal brand; it's a profound and unwavering commitment to growth and overcoming challenges. It embodies the 'Never Give Up' philosophy that has been the driving force behind every trial and achievement in my personal and professional journey.",
+            "list": {
+                "1": "Throughout my life, I've encountered a series of challenges that have propelled me to discover new strengths and consistently strive for the best version of myself. Each obstacle has transformed into an opportunity for personal evolution and the development of greater resilience.",
+                "2": "NeGiupp encapsulates the attitude of never giving up, of persisting even when circumstances are daunting. It reflects my unwavering determination to surmount barriers and achieve goals that once appeared unattainable. Through this approach, I've been able to learn, grow, and evolve across all facets of my life.",
+                "3": "In my professional trajectory and personal development, NeGiupp has become a guiding beacon towards continuous achievement and self-improvement. It serves as a constant reminder that difficulties are disguised opportunities and that resilience is the key to turning them into triumphs.",
+                "4": "NeGiupp is a living testament to my belief that perseverance and the 'never give up' mindset pave the way for ongoing progress. Through this philosophy, I've unearthed the inner strength to confront any challenge and turn it into a stepping stone towards advancement on my journey towards growth and success."
+            },
+            "finished": "¡Never Give Up!"
+        }
+    },
+    "ai_solutions": {
+        "title": "Artificial Intelligence Solutions",
+        "description": "We empower your business with AI technology: from intelligent agents to fully integrated multi-agent systems.",
+        "list": {
+            "1": {
+                "title": "Autonomous AI Agents",
+                "description": "Smart agents capable of performing complex tasks, integrated with your favorite platforms.",
+                "metrics": {
+                    "1": {
+                        "title": "Cost Reduction",
+                        "description": "Automation of repetitive tasks without human intervention."
+                    },
+                    "2": {
+                        "title": "Execution Speed",
+                        "description": "Processes completed up to 4 times faster."
+                    },
+                    "3": {
+                        "title": "Availability",
+                        "description": "Agents active without interruption across all channels."
+                    }
+                }
+            },
+            "2": {
+                "title": "Multi-Agent Systems",
+                "description": "Collaboration between multiple AI agents to solve problems in a scalable and efficient way.",
+                "metrics": {
+                    "1": {
+                        "title": "Coordinated Efficiency",
+                        "description": "Parallel task resolution with effective communication."
+                    },
+                    "2": {
+                        "title": "Response Time",
+                        "description": "Significant reduction in resolving complex workflows."
+                    },
+                    "3": {
+                        "title": "Scalability",
+                        "description": "Ability to grow with multiple intelligent nodes."
+                    }
+                }
+            },
+            "3": {
+                "title": "Integration with Existing Systems",
+                "description": "We bring AI to your current tools seamlessly, enhancing their performance with intelligence.",
+                "metrics": {
+                    "1": {
+                        "title": "Compatibility",
+                        "description": "Interface with CRMs, ERPs, and more without changing infrastructure."
+                    },
+                    "2": {
+                        "title": "Implementation Time",
+                        "description": "Quick integration without disrupting operations."
+                    },
+                    "3": {
+                        "title": "Error Reduction",
+                        "description": "Automatic validation of existing data and processes."
+                    }
+                }
+            },
+            "4": {
+                "title": "AI-Native Software Development",
+                "description": "We build software from scratch, designed to coexist with and boost AI capabilities.",
+                "metrics": {
+                    "1": {
+                        "title": "Resource Optimization",
+                        "description": "Architecture optimized for AI-first performance."
+                    },
+                    "2": {
+                        "title": "Customization",
+                        "description": "Software fully aligned with your processes."
+                    },
+                    "3": {
+                        "title": "Maintenance",
+                        "description": "Designed to scale without unnecessary overhead."
+                    }
+                }
+            }
+        },
+        "sect_final": {
+            "title": "Ready to take your system to the next level?",
+            "description": "Let's talk"
+        }
+    },
     "projects": {
         "title": "Explore our ",
         "title_two": "Projects",
@@ -355,6 +488,58 @@
                         "cta": "Contact now"
                     }
                 }
+            },
+            "ai_rox_pro": {
+                "title": "AI Rox Pro",
+                "description": "Hyrox training planner that adapts 4-week blocks with AI based on athlete feedback.",
+                "inside": {
+                    "sect_1": {
+                        "title": "Hyrox Training",
+                        "title_2": "Smart Workout Generator",
+                        "description": "Automates the creation of 4-week training blocks. We use AI to analyze your performance and generate progressive routines based on overload principles.",
+                        "cta": "Generate your next block"
+                    },
+                    "sect_2": {
+                        "title": "Why is it different?",
+                        "description": "Everything you need for a planned, progressive, and safe training program, generated automatically.",
+                        "list": {
+                            "1": {
+                                "title": "Automatic feedback analysis",
+                                "description": "The app analyzes your comments after each session. Was an exercise too easy, too hard, or caused discomfort? Our AI system reads your feedback to intelligently adjust your next plan."
+                            },
+                            "2": {
+                                "title": "Structured 4-week blocks",
+                                "description": "Your training is organized in 4-week mesocycles. This proven structure ensures steady progress and helps you focus on clear goals each month, avoiding plateaus."
+                            },
+                            "3": {
+                                "title": "Scheduled deload weeks",
+                                "description": "To prevent overtraining, the fourth week of each block is a deload. The system reduces intensity to ensure recovery and help you come back stronger."
+                            },
+                            "4": {
+                                "title": "Adaptive load progression",
+                                "description": "Based on your feedback, the system adjusts weights, reps, or rest times. If an exercise was easy, the load will increase; if it was tough, your strength will be safely consolidated."
+                            },
+                            "5": {
+                                "title": "Safe alternatives for injuries",
+                                "description": "If you feel pain with an exercise, just report it. The AI will replace it with a safer alternative in your next block, allowing you to train without interruptions."
+                            },
+                            "6": {
+                                "title": "All in ready-to-use JSON format",
+                                "description": "Each plan is generated in a clean JSON format. This ensures your plan loads into the app quickly and reliably, with no display errors."
+                            }
+                        }
+                    },
+                    "sect_3": {
+                        "title": "Track Your Progress",
+                        "description": "A clean and clear interface so you can focus on what really matters: training."
+                    },
+                    "sec_4": {
+                        "title": "Ready to stop planning and start training?",
+                        "description": "Get your first smart training block and take your Hyrox preparation to the next level.",
+                        "cta": "Start now",
+                        "closed": "All rights reserved."
+                    }
+                }
             }
         }
     },
@@ -540,6 +725,18 @@
         "calendly": {
             "title": "Schedule a Meeting",
             "subtitle": "Prefer a chat in person? Use our calendar to schedule a meeting."
+        },
+        "alert":{
+            "success":{
+                "title": "Message received!",
+                "text": "Thank you for contacting me. I will get back to you soon.",
+                "cta": "See my projects"
+            },
+            "error":{
+                "title": "Oops!",
+                "text": "Something went wrong. Please try again later."
+            }
+
         }
     },
     "chtabot": {

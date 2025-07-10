@@ -67,6 +67,139 @@
             }
         }
     },
+    "ai_solutions": {
+        "title": "Soluciones de Inteligencia Artificial",
+        "description": "Potenciamos tu negocio con tecnología AI: desde agentes inteligentes hasta sistemas multiagente completamente integrados.",
+        "list": {
+            "1": {
+                "title": "Agentes de AI Autónomos",
+                "description": "Agentes inteligentes capaces de ejecutar tareas complejas, integrados con tus plataformas favoritas.",
+                "metrics": {
+                    "1": {
+                        "title": "Reducción de Costos",
+                        "description": "Automatización de tareas repetitivas sin intervención humana."
+                    },
+                    "2": {
+                        "title": "Velocidad de Ejecución",
+                        "description": "Procesos completados hasta 4 veces más rápido."
+                    },
+                    "3": {
+                        "title": "Disponibilidad",
+                        "description": "Agentes activos sin interrupción en todos los canales."
+                    }
+                }
+            },
+            "2": {
+                "title": "Sistemas Multi-Agente",
+                "description": "Colaboración entre múltiples agentes AI para resolver problemas de forma escalable y eficiente.",
+                "metrics": {
+                    "1": {
+                        "title": "Eficiencia Coordinada",
+                        "description": "Resolución de tareas paralelas con comunicación efectiva."
+                    },
+                    "2": {
+                        "title": "Tiempo de Respuesta",
+                        "description": "Disminución significativa en resolución de flujos complejos."
+                    },
+                    "3": {
+                        "title": "Escalabilidad",
+                        "description": "Capacidad de crecimiento con múltiples nodos inteligentes."
+                    }
+                }
+            },
+            "3": {
+                "title": "Integración con Sistemas Existentes",
+                "description": "Llevamos AI a tus herramientas actuales sin fricción, potenciando su rendimiento con inteligencia.",
+                "metrics": {
+                    "1": {
+                        "title": "Compatibilidad",
+                        "description": "Interfaz con CRMs, ERPs y más sin modificar infraestructura."
+                    },
+                    "2": {
+                        "title": "Tiempo de Implementación",
+                        "description": "Integración rápida sin interrupción de operaciones."
+                    },
+                    "3": {
+                        "title": "Reducción de Errores",
+                        "description": "Validación automática de datos y procesos existentes."
+                    }
+                }
+            },
+            "4": {
+                "title": "Desarrollo de Software AI-Nativo",
+                "description": "Creamos software desde cero, diseñado para convivir e impulsar las capacidades de AI.",
+                "metrics": {
+                    "1": {
+                        "title": "Optimización de Recursos",
+                        "description": "Arquitectura optimizada para rendimiento AI-first."
+                    },
+                    "2": {
+                        "title": "Customización",
+                        "description": "Software alineado completamente con tus procesos."
+                    },
+                    "3": {
+                        "title": "Mantenimiento",
+                        "description": "Diseñado para escalar sin cargas innecesarias."
+                    }
+                }
+            }
+        },
+        "sect_final": {
+            "title": "¿Listo para llevar tu sistema al siguiente nivel?",
+            "description": "Hablemos"
+        }
+    },
+    "self_brand": {
+        "title": "NeGiUpp",
+        "description": "Si puedes imaginarlo, puedes programarlo. Nunca dejes de intentarlo y, bajo ninguna circunstancia, te rindas.",
+        "sect_1": {
+            "title": "Un Compromiso con el Crecimiento",
+            "description": "NeGiupp es mucho más que una simple marca personal; es un compromiso profundo e inquebrantable con el crecimiento y la superación de retos. Encarna la filosofía de 'Never Give Up' que ha sido la fuerza impulsora detrás de cada prueba y logro en mi trayectoria personal y profesional.",
+            "list": {
+                "1": "A lo largo de mi vida, me he enfrentado a una serie de desafíos que me han impulsado a descubrir nuevas fortalezas y a esforzarme constantemente por alcanzar la mejor versión de mí mismo. Cada obstáculo se ha transformado en una oportunidad de evolución personal y desarrollo de mayor resiliencia.",
+                "2": "NeGiupp encapsula la actitud de nunca rendirse, de persistir incluso cuando las circunstancias son desalentadoras. Refleja mi determinación inquebrantable de superar barreras y alcanzar metas que alguna vez parecieron inalcanzables. Gracias a este enfoque, he podido aprender, crecer y evolucionar en todos los aspectos de mi vida.",
+                "3": "En mi trayectoria profesional y desarrollo personal, NeGiupp se ha convertido en una guía hacia el logro continuo y la mejora constante. Es un recordatorio permanente de que las dificultades son oportunidades disfrazadas y que la resiliencia es la clave para convertirlas en triunfos.",
+                "4": "NeGiupp es un testimonio viviente de mi convicción de que la perseverancia y la mentalidad de 'nunca rendirse' abren el camino hacia un progreso continuo. A través de esta filosofía, he encontrado la fortaleza interior para enfrentar cualquier reto y transformarlo en un peldaño hacia el avance en mi camino de crecimiento y éxito."
+            },
+            "finished": "¡Nunca Te Rindas!"
+        }
+    },
+    "how_can_i_help_you": {
+        "title_1": "Cómo Mi",
+        "title_2": "Filosofía",
+        "title_3": "Se Convierte",
+        "title_4": "En Tu",
+        "title_5": "Ventaja",
+        "description_1": "La ",
+        "description_2": "mentalidad es más que un mantra: es el motor que impulsa cada proyecto. Transforma desafíos complejos en soluciones elegantes, resilientes y de alto rendimiento.",
+        "list": {
+            "1": {
+                "title": "AI Inteligente y Automatización",
+                "description": "Desarrollo agentes de IA personalizados y sistemas inteligentes que automatizan procesos complejos, aportan información valiosa y aumentan la eficiencia de tu negocio."
+            },
+            "2": {
+                "title": "Desarrollo Web Resiliente",
+                "description": "Aprovechando frameworks modernos como Next.js y React, creo aplicaciones web rápidas, escalables y robustas que ofrecen experiencias de usuario excepcionales."
+            },
+            "3": {
+                "title": "Diseño UX/UI Intuitivo",
+                "description": "Mi proceso de diseño está centrado en el usuario, enfocado en crear interfaces que no solo sean atractivas, sino también intuitivas, accesibles y atractivas."
+            }
+        },
+        "sect_2": {
+            "title": "Mis Principios Rectores",
+            "list": {
+                "1": "Resiliencia",
+                "2": "Creatividad",
+                "3": "Centrado en el Usuario"
+            }
+        },
+        "sect_3": {
+            "title": "¿Tienes un reto en mente?",
+            "description": "Construyamos algo increíble juntos.",
+            "cta": "Hablemos"
+        }
+    },
     "projects": {
         "title": "Explora nuestros ",
         "title_two": "Proyectos",
@@ -344,7 +477,7 @@
                         "description": "* Demo pública. Puede demorar en cargar unos segundos."
                     },
                     "sec_6": {
-                        "title_1": "Mi Rol o",
+                        "title_1": "Mi Rol",
                         "title_2": "en el Proyect",
                         "description": "Diseñé y desarrollé completamente la app. Implementé la integración con OpenAI, el sistema de prioridades inteligentes, autenticación, y arquitectura escalable usando Next.js + Prisma + TypeScript."
                     },
@@ -353,6 +486,58 @@
                         "title_2": "este proyecto?",
                         "description": "Estoy abierto a nuevas oportunidades como Full Stack Developer.",
                         "cta": "Contactar ahora"
+                    }
+                }
+            },
+            "ai_rox_pro": {
+                "title": "AI Rox Pro",
+                "description": "Planificador de entrenamiento Hyrox que adapta bloques de 4 semanas con IA según el feedback del atleta.",
+                "inside": {
+                    "sect_1": {
+                        "title": "Generador de Entrenamientos ",
+                        "title_2": "Inteligente para Hyrox",
+                        "description": "Automatiza la creación de bloques de entrenamiento de 4 semanas. Usamos IA para analizar tu rendimiento y generar rutinas progresivas basadas en la sobrecarga.",
+                        "cta": "Generar tu próximo bloque"
+                    },
+                    "sect_2": {
+                        "title": "¿Por qué es diferente?",
+                        "description": "Todo lo que necesitas para un entrenamiento planificado, progresivo y seguro, generado automáticamente.",
+                        "list": {
+                            "1": {
+                                "title": "Análisis de feedback automático",
+                                "description": "La aplicación analiza tus comentarios de cada sesión. ¿Un ejercicio fue demasiado fácil, difícil o te causó molestias? Nuestro sistema de IA lee tu feedback para ajustar tu próximo plan de manera inteligente."
+                            },
+                            "2": {
+                                "title": "Bloques estructurados de 4 semanas",
+                                "description": "Tu entrenamiento se organiza en mesociclos de 4 semanas. Esta estructura probada garantiza un progreso constante y te permite enfocarte en objetivos claros cada mes, evitando el estancamiento."
+                            },
+                            "3": {
+                                "title": "Semanas de descarga programadas",
+                                "description": "Para prevenir el sobreentrenamiento, la cuarta semana de cada bloque es una descarga. El sistema reduce la intensidad para asegurar tu recuperación y que vuelvas más fuerte."
+                            },
+                            "4": {
+                                "title": "Progresión adaptativa de cargas",
+                                "description": "Basado en tu feedback, el sistema ajusta pesos, repeticiones o descansos. Si un ejercicio fue fácil, la carga aumentará; si fue difícil, se consolidará tu fuerza de forma segura."
+                            },
+                            "5": {
+                                "title": "Alternativas seguras ante lesiones",
+                                "description": "Si sientes dolor con un ejercicio, indícalo. La IA lo sustituirá por una alternativa más segura en tu próximo bloque, permitiéndote entrenar sin interrupciones."
+                            },
+                            "6": {
+                                "title": "Todo en formato JSON listo para usar",
+                                "description": "Cada plan se genera en un formato JSON limpio. Esto asegura que tu plan se cargue en la app de forma rápida y fiable, sin errores de presentación."
+                            }
+                        }
+                    },
+                    "sect_3": {
+                        "title": "Visualiza tu Progreso",
+                        "description": "Una interfaz limpia y clara para que te centres en lo que importa: entrenar."
+                    },
+                    "sec_4": {
+                        "title": "¿Listo para dejar de planificar y empezar a entrenar?",
+                        "description": "Obtén tu primer bloque de entrenamiento inteligente y lleva tu preparación para Hyrox al siguiente nivel.",
+                        "cta": "Empezar ahora",
+                        "closed": "Todos los derechos reservados."
                     }
                 }
             }
@@ -540,6 +725,17 @@
         "calendly": {
             "title": "Agenda una Reunión",
             "subtitle": "¿Prefieres una charla en persona? Usa nuestro calendario para agendar una reunión."
+        },
+        "alert": {
+            "success": {
+                "title": "¡Mensaje recibido!",
+                "text": "Gracias por contactarme. Me pondré en contacto contigo pronto.",
+                "cta": "Ver mis proyectos"
+            },
+            "error": {
+                "title": "¡Ups!",
+                "text": "Algo salió mal. Por favor, inténtalo de nuevo más tarde."
+            }
         }
     },
     "chtabot": {

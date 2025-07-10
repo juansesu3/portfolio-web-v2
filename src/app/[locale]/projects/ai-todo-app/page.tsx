@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-
 import { SiNextdotjs, SiTailwindcss, SiOpenai, SiTypescript, SiPrisma } from 'react-icons/si'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import { useTranslations } from 'next-intl'
@@ -73,10 +72,10 @@ const page = () => {
             <motion.section id="about" {...fadeUp} className="py-24  max-w-4xl mx-auto text-center">
                 <img src="https://my-page-negiupp.s3.amazonaws.com/1750860319501.png" alt="AI Icon" className="w-24 h-24 mx-auto mb-6" />
                 <h2 className="text-3xl font-semibold mb-6">
-                    <span className="text-[#9333ea]">¿Qué</span> <span className="text-black">es AI Todo App?</span>
+                    <span className="text-[#9333ea]">{t('sec_2.title')}</span> <span className="text-black">{t('sec_2.title_2')}</span>
                 </h2>
                 <p className="text-gray-700 text-lg">
-                    Una aplicación moderna de gestión de tareas que usa IA para ayudarte a organizar tu día. Puedes generar tareas con IA, clasificar prioridades automáticamente y recibir sugerencias inteligentes.
+                {t('sec_2.description')}
                 </p>
             </motion.section>
 
@@ -84,16 +83,17 @@ const page = () => {
             <motion.section id="features" {...fadeUp} className="py-24  bg-white">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl font-semibold mb-10">
-                        <span className="text-black">Lo que </span><span className="text-[#9333ea]">puede hacer</span>
+                        <span className="text-black"> </span>{t('sec_3.title_1')} <span className="text-[#9333ea]">{t('sec_3.title_1')}</span>
                     </h2>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-lg text-gray-700">
                         {[
-                            "Crear tareas con sugerencias de IA",
-                            "Clasificar tareas por prioridad automáticamente",
-                            "Análisis diario con recomendaciones inteligentes",
-                            "Interfaz rápida, moderna y responsive",
-                            "Edición y gestión con drag & drop",
-                            "Autenticación segura y almacenamiento persistente"
+                            t('sec_3.list.1'),
+                            t('sec_3.list.2'),
+                            t('sec_3.list.3'),
+                            t('sec_3.list.4'),
+                            t('sec_3.list.5'),
+                            t('sec_3.list.6'),
+  
                         ].map((item, i) => (
                             <motion.li
                                 key={i}
@@ -111,7 +111,7 @@ const page = () => {
             <motion.section id="stack" {...fadeUp} className="py-24 ">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl font-semibold mb-10">
-                        <span className="text-black">Tecnologías </span><span className="text-[#9333ea]">Utilizadas</span>
+                        <span className="text-black"> {t('sec_4.title_1')} </span><span className="text-[#9333ea]">{t('sec_4.title_1')}</span>
                     </h2>
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-8 justify-center">
                         {[
@@ -133,7 +133,7 @@ const page = () => {
             {/* Demo interactiva */}
             <motion.section id="demo" {...fadeUp} className="py-24 max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold mb-10">
-                    <span className="text-[#9333ea]">Prueba</span> <span className="text-black">la App</span>
+                    <span className="text-[#9333ea]">{t('sec_5.title_1')}</span> <span className="text-black">{t('sec_5.title_2')}</span>
                 </h2>
                 <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg border">
                     <iframe
@@ -144,17 +144,17 @@ const page = () => {
                         allow="clipboard-write; encrypted-media"
                     />
                 </div>
-                <p className="mt-4 text-gray-600">* Demo pública. Puede demorar en cargar unos segundos.</p>
+                <p className="mt-4 text-gray-600">{t('sec_5.description')}</p>
             </motion.section>
 
             {/* Tu Rol */}
             <motion.section id="role" {...fadeUp} className="bg-white py-24  text-center">
                 <img src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
                 <h2 className="text-3xl font-semibold mb-6">
-                    <span className="text-black">Mi Rol</span> <span className="text-[#9333ea]">en el Proyecto</span>
+                    <span className="text-black">{t('sec_6.title_1')}</span> <span className="text-[#9333ea]">{t('sec_6.title_2')} </span>
                 </h2>
                 <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-                    Diseñé y desarrollé completamente la app. Implementé la integración con OpenAI, el sistema de prioridades inteligentes, autenticación, y arquitectura escalable usando Next.js + Prisma + TypeScript.
+                    {t('sec_6.description')}
                 </p>
             </motion.section>
 
@@ -162,10 +162,10 @@ const page = () => {
             <motion.section id="contact" {...fadeUp} className="py-24 text-center relative ">
                 <div className="relative z-10">
                     <h2 className="text-3xl font-semibold mb-6">
-                        <span className="text-[#9333ea]">¿Te gustó</span> <span className="text-black">este proyecto?</span>
+                        <span className="text-[#9333ea]">{t('sec_7.title_1')} </span> <span className="text-black"> {t('sec_7.title_2')}</span>
                     </h2>
                     <p className="text-gray-700 text-lg mb-6">
-                        Estoy abierto a nuevas oportunidades como Full Stack Developer.
+                        {t('sec_7.description')}
                     </p>
                     <div className="space-x-4">
                         <motion.a
@@ -175,7 +175,7 @@ const page = () => {
                             className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
                         >
                             {/* <IoIosSend size={20} className="text-white" /> */}
-                            Contactar ahora
+                            {t('sec_7.cta')}
                         </motion.a>
                     </div>
                 </div>
