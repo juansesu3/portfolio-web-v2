@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 
@@ -198,12 +199,12 @@ const t = useTranslations('ai_solutions')
         <p className="text-gray-600 text-lg">
           {t('sect_final.title')}
         </p>
-        <a
+        <Link
           href="/contact"
           className="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all"
         >
           {t('sect_final.description')}
-        </a>
+        </Link>
       </motion.div>
     </div>
   )

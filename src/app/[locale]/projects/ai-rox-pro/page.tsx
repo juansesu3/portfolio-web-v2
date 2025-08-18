@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import React, { useMemo } from "react";
+import React from "react";
 import {
     FaArrowRight,
     FaRobot,
@@ -43,8 +42,8 @@ const itemVariants = {
 // --- Página Principal ---
 const Page: React.FC = () => {
     const t = useTranslations('projects.projects.ai_rox_pro.inside')
-          const pathname = usePathname();
-          const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
+         
+          
 
     const featuresData = [
         {

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo} from 'react'
 import CircularProgressBar from './CircularProgressBar'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'

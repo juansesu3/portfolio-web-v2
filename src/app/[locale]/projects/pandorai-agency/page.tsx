@@ -11,20 +11,11 @@ const fadeIn = {
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 }
 
-const page = () => {
+const Page = () => {
     const t = useTranslations("projects.projects.pandorai_agency.inside");
           const pathname = usePathname();
           const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
-    const stack = [
-        'Next.js',
-        'Tailwind CSS',
-        'Typescript',
-        'Python',
-        'LangChain',
-        'OpenAI API',
-        'Pinecone',
-        'Supabase',
-    ]
+
 
     const steps = [
         { title: t('sec_3.list.1.title'), desc: t('sec_3.list.1.description') },
@@ -136,7 +127,7 @@ const page = () => {
                             key={idx}
                             className=" rounded-xl flex items-center justify-center"
                         >
-                            <img
+                            <Image width={500} height={500} 
                                 src={src}
                                 alt={name}
                                 className="h-12 w-auto max-w-[100px] object-contain "
@@ -238,4 +229,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

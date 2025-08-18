@@ -76,7 +76,7 @@ const Page = () => {
           variants={itemVariants}
           className="mt-4 max-w-2xl mx-auto text-lg text-slate-600 text-center"
         >
-          {t('description_1')} "<span className="text-purple-500 font-semibold">Never Give Up</span>" {t('description_2')}
+          {t('description_1')} &quot;<span className="text-purple-500 font-semibold">Never Give Up</span>&quot; {t('description_2')}
         </motion.p>
       </motion.div>
 

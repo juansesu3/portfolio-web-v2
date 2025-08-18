@@ -7,6 +7,7 @@ import {
 } from 'react-icons/si'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 export const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -32,7 +33,7 @@ const techStack = [
     { icon: <SiAxios size={28} />, name: 'Axios' },
 ]
 
-const page = () => {
+const Page = () => {
     const t = useTranslations('projects.projects.barber_shop.inside')
           const pathname = usePathname();
           const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
@@ -43,7 +44,7 @@ const page = () => {
                 id="hero"
                 className="relative h-screen  flex items-center justify-center flex-col text-center "
             >
-                <img src="https://my-page-negiupp.s3.amazonaws.com/1750920966907.png" alt="barber img"  className="w-auto h-auto max-w-[200px] md:max-w-[350px] object-contain mx-auto mb-6"/>
+                <Image width={500} height={500} src="https://my-page-negiupp.s3.amazonaws.com/1750920966907.png" alt="barber img"  className="w-auto h-auto max-w-[200px] md:max-w-[350px] object-contain mx-auto mb-6"/>
 
                 {/* Contenido principal */}
                 <motion.h1
@@ -86,7 +87,7 @@ const page = () => {
 
             {/* About */}
             <motion.section id="about" {...fadeUp} className=" max-w-4xl mx-auto text-center">
-                <img src="https://my-page-negiupp.s3.amazonaws.com/1750842845653.png" alt="Barbería" className="w-24 h-24 mx-auto mb-6" />
+                <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750842845653.png" alt="Barbería" className="w-24 h-24 mx-auto mb-6" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-[#a855f7]">{t('sec_2.title')}</span> <span className="text-black">{t('sec_2.title_2')}</span>
                 </h2>
@@ -158,7 +159,7 @@ const page = () => {
 
             {/* Mi Rol */}
             <motion.section id="role" {...fadeUp} className="bg-white py-24 px-6 text-center">
-                <img src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
+                <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-black">{t('sec_5.title_1')}</span> <span className="text-[#a855f7]">{t('sec_5.title_2')}</span>
                 </h2>
@@ -169,7 +170,7 @@ const page = () => {
 
             {/* CTA final */}
             <motion.section id="contact" {...fadeUp} className="py-24 text-center relative  overflow-hidden">
-                <img src="https://my-page-negiupp.s3.amazonaws.com/1750854994616.png" alt="Barbería fondo" className="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none" />
+                <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750854994616.png" alt="Barbería fondo" className="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none" />
                 <div className="relative z-10">
                     <h2 className="text-3xl font-semibold mb-6">
                         <span className="text-[#a855f7]">{t('sec_6.title_1')}</span> <span className="text-black">{t('sec_6.title_2')}</span>
@@ -194,4 +195,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

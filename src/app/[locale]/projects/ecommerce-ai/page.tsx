@@ -1,9 +1,9 @@
 'use client'
 import React, { useMemo } from 'react'
 import { motion } from 'framer-motion';
-import { HiChevronDoubleDown } from 'react-icons/hi';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 export const fadeUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
@@ -87,7 +87,7 @@ const Page = () => {
           {/* Visual Content */}
           <motion.div {...fadeUp} transition={{ delay: 0.3 }} className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
-              <img
+              <Image width={500} height={500} 
                 src="https://my-page-negiupp.s3.amazonaws.com/1750670045607.jpg"
                 alt="Mockup del ecommerce"
                 className="w-full object-cover"
@@ -154,7 +154,7 @@ const Page = () => {
             </ul>
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg bg-white p-4">
-            <img src="https://my-page-negiupp.s3.amazonaws.com/1750670285626.png" alt="Arquitectura de recomendación con IA" />
+            <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750670285626.png" alt="Arquitectura de recomendación con IA" />
           </div>
         </div>
       </section>
@@ -189,7 +189,7 @@ const Page = () => {
                     className="w-full md:w-1/2 rounded-xl shadow-lg"
                   />
                 ) : (
-                  <img
+                  <Image width={500} height={500} 
                     src={img}
                     alt={title}
                     className="w-full md:w-1/2 rounded-xl shadow-lg"
@@ -230,7 +230,7 @@ const Page = () => {
                 key={idx}
                 className=" rounded-xl flex items-center justify-center"
               >
-                <img
+                <Image width={500} height={500} 
                   src={src}
                   alt={name}
                   className="h-12 w-auto max-w-[120px] object-contain "

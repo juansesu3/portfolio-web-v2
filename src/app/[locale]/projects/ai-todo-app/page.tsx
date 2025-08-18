@@ -5,6 +5,7 @@ import { SiNextdotjs, SiTailwindcss, SiOpenai, SiTypescript, SiPrisma } from 're
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 export const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -20,9 +21,11 @@ const Page = () => {
         <main className="text-[#374151] ">
             {/* HERO */}
             <section className="relative min-h-screen flex items-center justify-center flex-col text-center">
-                <img
+                <Image
                     src="https://my-page-negiupp.s3.amazonaws.com/1750920688481.png"
                     alt="AI Icon"
+                    width={500}
+                    height={500}
                     className="w-auto h-auto max-w-[200px] md:max-w-[350px] object-contain mx-auto mb-6"
                 />
 
@@ -73,7 +76,7 @@ const Page = () => {
 
             {/* ¿Qué es? */}
             <motion.section id="about" {...fadeUp} className="py-24  max-w-4xl mx-auto text-center">
-                <img src="https://my-page-negiupp.s3.amazonaws.com/1750860319501.png" alt="AI Icon" className="w-24 h-24 mx-auto mb-6" />
+                <Image src="https://my-page-negiupp.s3.amazonaws.com/1750860319501.png" alt="AI Icon" className="w-24 h-24 mx-auto mb-6" width={500} height={500} />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-[#9333ea]">{t('sec_2.title')}</span> <span className="text-black">{t('sec_2.title_2')}</span>
                 </h2>
@@ -152,7 +155,7 @@ const Page = () => {
 
             {/* Tu Rol */}
             <motion.section id="role" {...fadeUp} className="bg-white py-24  text-center">
-                <img src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
+                <Image width={500} height={500} src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-black">{t('sec_6.title_1')}</span> <span className="text-[#9333ea]">{t('sec_6.title_2')} </span>
                 </h2>

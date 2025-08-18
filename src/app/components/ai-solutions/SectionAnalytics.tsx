@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl';
+
 
 const metrics = [
   {
@@ -25,7 +25,7 @@ const metrics = [
 ]
 
 const SectionAnalytics = () => {
-  const t = useTranslations("home")
+
 
   return (
     <section className="bg-white py-20 px-4">

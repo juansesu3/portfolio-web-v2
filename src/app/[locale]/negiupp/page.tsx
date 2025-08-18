@@ -1,7 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { FaEye, FaShieldAlt, FaRocket, FaTrophy, FaMountain, FaLightbulb } from 'react-icons/fa';
+import {  FaShieldAlt, FaTrophy, FaMountain, FaLightbulb } from 'react-icons/fa';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 

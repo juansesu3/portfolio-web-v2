@@ -141,7 +141,7 @@ const Page = () => {
                                 transition={{ duration: 0.5 }}
                                 viewport={{ once: true }}
                             >
-                                <img src={src} alt="Screenshot" className="w-full object-cover" />
+                                <Image width={500} height={500}  src={src} alt="Screenshot" className="w-full object-cover" />
                             </motion.div>
                         ))}
                     </div>

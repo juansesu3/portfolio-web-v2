@@ -1,6 +1,6 @@
 'use client'
 import { useTranslations } from 'next-intl'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { motion } from 'framer-motion' // ---> 1. Importar motion
 import Swal from 'sweetalert2'
 import { usePathname, useRouter } from 'next/navigation'
