@@ -15,7 +15,15 @@ const nodeTypes = {
   custom: CustomNode,
 };
 
-const initialNodes = [
+import { Node } from 'react-flow-renderer';
+
+type CustomNodeData = {
+  label: string;
+  sourcePosition: string;
+  targetPosition?: string;
+};
+
+const initialNodes: Node<CustomNodeData>[] = [
   { id: '1', type: 'custom', data: { label: 'WhatsApp Trigger', sourcePosition: 'right' }, position: { x: 0, y: -80 } },
   { id: '2', type: 'custom', data: { label: 'If', sourcePosition: 'right', targetPosition: 'left' }, position: { x: 200, y: -80 } },
   { id: '3', type: 'custom', data: { label: 'Date & Time', sourcePosition: 'right', targetPosition: 'left' }, position: { x: 400, y: -80 } },
@@ -70,19 +78,19 @@ const initialEdges = [
 
 function DiagramaFlujoInteractivo() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [edges, onEdgesChange] = useEdgesState(initialEdges);
   const [selectedNode, setSelectedNode] = useState(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('saved-nodes');
     if (saved) setNodes(JSON.parse(saved));
-  }, []);
+  }, [setNodes]);
 
   useEffect(() => {
     localStorage.setItem('saved-nodes', JSON.stringify(nodes));
   }, [nodes]);
 
-  const onNodeClick = useCallback((_, node) => {
+  const onNodeClick = useCallback((_: React.MouseEvent, node: Node<CustomNodeData>) => {
     setSelectedNode({ id: node.id, label: node.data.label });
   }, []);
 

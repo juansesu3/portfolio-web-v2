@@ -2,10 +2,10 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
-import { motion } from 'framer-motion'; // ---> 1. Importar motion
+import { motion, Variants } from 'framer-motion'; // ---> 1. Importar motion
 
 // ---> 2. Definir variantes de animación
-const containerVariants = {
+const containerVariants: Variants  = {
   hidden: { opacity: 1 }, // El contenedor en sí no se anima, solo orquesta
   visible: {
     opacity: 1,
@@ -15,7 +15,7 @@ const containerVariants = {
   },
 };
 
-const textBlockVariants = {
+const textBlockVariants: Variants  = {
     hidden: { opacity: 1 },
     visible: {
         opacity: 1,
@@ -25,12 +25,12 @@ const textBlockVariants = {
     }
 }
 
-const itemVariants = {
+const itemVariants: Variants  = {
   hidden: { opacity: 0, x: -30 },
   visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 120 } },
 };
 
-const imageVariants = {
+const imageVariants: Variants  = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { type: 'spring', duration: 0.8 } },
 };

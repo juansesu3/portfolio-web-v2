@@ -32,8 +32,14 @@ const iconMap = {
   'WhatsApp Business Cloud': { icon: <FaComments />, color: '#1D4ED8' },
 };
 
-const CustomNode = ({ data }) => {
-  const info = iconMap[data.label] || {};
+interface CustomNodeData {
+  label: string;
+  targetPosition?: Position;
+  sourcePosition?: Position;
+}
+
+const CustomNode = ({ data }: { data: CustomNodeData }) => {
+  const info = iconMap[data.label as keyof typeof iconMap] || {};
   const { icon, color } = info;
 
   return (

@@ -9,14 +9,14 @@ import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 
-export const fadeUp = {
+ const fadeUp = {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
     transition: { duration: 0.6, ease: 'easeOut' },
 }
 
-export const fadeIn = {
+ const fadeIn = {
     initial: { opacity: 0 },
     whileInView: { opacity: 1 },
     viewport: { once: true },
@@ -49,6 +49,10 @@ const Page = () => {
                 {/* Contenido principal */}
                 <motion.h1
                     {...fadeUp}
+                    transition={{
+                        duration: 0.5,
+                        ease: 'easeInOut', // Use a valid easing function
+                    }}
                     className="text-4xl md:text-6xl font-bold mb-4 relative z-10"
                 >
                     <span className="text-black">{t('sec_1.title_1')}</span>
@@ -86,7 +90,10 @@ const Page = () => {
             </section>
 
             {/* About */}
-            <motion.section id="about" {...fadeUp} className=" max-w-4xl mx-auto text-center">
+            <motion.section id="about" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className=" max-w-4xl mx-auto text-center">
                 <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750842845653.png" alt="Barbería" className="w-24 h-24 mx-auto mb-6" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-[#a855f7]">{t('sec_2.title')}</span> <span className="text-black">{t('sec_2.title_2')}</span>
@@ -118,7 +125,10 @@ const Page = () => {
             </motion.section>
 
             {/* Demo */}
-            <motion.section id="demo" {...fadeUp} className="py-24 px-6 max-w-6xl mx-auto text-center">
+            <motion.section id="demo" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24 px-6 max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold mb-10">
                     <span className="text-[#a855f7]">{t('sec_4.title_1')}</span>{" "}
                     <span className="text-black">{t('sec_4.title_2')}</span>
@@ -126,7 +136,10 @@ const Page = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* Cliente */}
-                    <motion.div {...fadeUp} className="flex flex-col items-center">
+                    <motion.div {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="flex flex-col items-center">
                         <h3 className="text-lg font-medium mb-4 text-gray-700">{t('sec_4.client')}</h3>
                         <video
                             src="/assets/mobilebarberclient.mov"
@@ -158,7 +171,10 @@ const Page = () => {
             </motion.section>
 
             {/* Mi Rol */}
-            <motion.section id="role" {...fadeUp} className="bg-white py-24 px-6 text-center">
+            <motion.section id="role" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="bg-white py-24 px-6 text-center">
                 <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-black">{t('sec_5.title_1')}</span> <span className="text-[#a855f7]">{t('sec_5.title_2')}</span>
@@ -169,7 +185,10 @@ const Page = () => {
             </motion.section>
 
             {/* CTA final */}
-            <motion.section id="contact" {...fadeUp} className="py-24 text-center relative  overflow-hidden">
+            <motion.section id="contact" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24 text-center relative  overflow-hidden">
                 <Image width={500} height={500}  src="https://my-page-negiupp.s3.amazonaws.com/1750854994616.png" alt="Barbería fondo" className="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none" />
                 <div className="relative z-10">
                     <h2 className="text-3xl font-semibold mb-6">

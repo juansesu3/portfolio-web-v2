@@ -2,10 +2,10 @@
 import React from 'react'
 import CardArticle from './CardArticle'
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion'; // ---> 1. Importar motion
+import { motion, Variants } from 'framer-motion';
 
 // ---> 2. Definir las variantes para la animación
-const containerVariants = {
+const containerVariants:Variants  = {
   hidden: { opacity: 1 }, // El estado inicial del contenedor
   visible: {
     opacity: 1,
@@ -15,7 +15,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants:Variants  = {
   hidden: { y: 20, opacity: 0 }, // Cada tarjeta empieza 20px abajo y transparente
   visible: {
     y: 0,

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-export const fadeUp = {
+ const fadeUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
@@ -47,7 +47,10 @@ const Page = () => {
       <section className="relative ">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Textual Content */}
-          <motion.div {...fadeUp}>
+          <motion.div {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }}>
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
               🛒 {t('inside.title_1')} <span className="text-purple-600">{t('inside.title_2')}</span>
             </h1>

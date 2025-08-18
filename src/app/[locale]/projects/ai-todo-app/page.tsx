@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 
-export const fadeUp = {
+const fadeUp = {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
@@ -29,7 +29,10 @@ const Page = () => {
                     className="w-auto h-auto max-w-[200px] md:max-w-[350px] object-contain mx-auto mb-6"
                 />
 
-                <motion.h1 {...fadeUp} className="text-4xl md:text-6xl font-bold mb-4">
+                <motion.h1 {...fadeUp} className="text-4xl md:text-6xl font-bold mb-4"  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }}>
                     <span className="text-black">{t('sec_1.title_1')}</span>
                     <span className="text-[#9333ea]"> {t('sec_1.title_2')}</span>
                 </motion.h1>
@@ -75,7 +78,10 @@ const Page = () => {
 
 
             {/* ¿Qué es? */}
-            <motion.section id="about" {...fadeUp} className="py-24  max-w-4xl mx-auto text-center">
+            <motion.section  id="about" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24  max-w-4xl mx-auto text-center">
                 <Image src="https://my-page-negiupp.s3.amazonaws.com/1750860319501.png" alt="AI Icon" className="w-24 h-24 mx-auto mb-6" width={500} height={500} />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-[#9333ea]">{t('sec_2.title')}</span> <span className="text-black">{t('sec_2.title_2')}</span>
@@ -86,7 +92,10 @@ const Page = () => {
             </motion.section>
 
             {/* Funcionalidades */}
-            <motion.section id="features" {...fadeUp} className="py-24  bg-white">
+            <motion.section id="features" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24  bg-white">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl font-semibold mb-10">
                         <span className="text-black"> </span>{t('sec_3.title_1')} <span className="text-[#9333ea]">{t('sec_3.title_1')}</span>
@@ -114,7 +123,10 @@ const Page = () => {
             </motion.section>
 
             {/* Stack tecnológico */}
-            <motion.section id="stack" {...fadeUp} className="py-24 ">
+            <motion.section id="stack" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24 ">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl font-semibold mb-10">
                         <span className="text-black"> {t('sec_4.title_1')} </span><span className="text-[#9333ea]">{t('sec_4.title_1')}</span>
@@ -137,7 +149,10 @@ const Page = () => {
             </motion.section>
 
             {/* Demo interactiva */}
-            <motion.section id="demo" {...fadeUp} className="py-24 max-w-6xl mx-auto text-center">
+            <motion.section id="demo" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24 max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold mb-10">
                     <span className="text-[#9333ea]">{t('sec_5.title_1')}</span> <span className="text-black">{t('sec_5.title_2')}</span>
                 </h2>
@@ -154,7 +169,10 @@ const Page = () => {
             </motion.section>
 
             {/* Tu Rol */}
-            <motion.section id="role" {...fadeUp} className="bg-white py-24  text-center">
+            <motion.section id="role" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="bg-white py-24  text-center">
                 <Image width={500} height={500} src="https://my-page-negiupp.s3.amazonaws.com/1750854346858.png" alt="Developer icon" className="w-16 h-16 mx-auto mb-4" />
                 <h2 className="text-3xl font-semibold mb-6">
                     <span className="text-black">{t('sec_6.title_1')}</span> <span className="text-[#9333ea]">{t('sec_6.title_2')} </span>
@@ -165,7 +183,10 @@ const Page = () => {
             </motion.section>
 
             {/* CTA */}
-            <motion.section id="contact" {...fadeUp} className="py-24 text-center relative ">
+            <motion.section id="contact" {...fadeUp}  transition={{
+        duration: 0.5,
+        ease: 'easeInOut', // Use a valid easing function
+    }} className="py-24 text-center relative ">
                 <div className="relative z-10">
                     <h2 className="text-3xl font-semibold mb-6">
                         <span className="text-[#9333ea]">{t('sec_7.title_1')} </span> <span className="text-black"> {t('sec_7.title_2')}</span>

@@ -1,7 +1,7 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import React, { useMemo, useState } from 'react'
-import { motion } from 'framer-motion' // ---> 1. Importar motion
+import { motion, Variants } from 'framer-motion' // ---> 1. Importar motion
 import Swal from 'sweetalert2'
 import { usePathname, useRouter } from 'next/navigation'
 // ---> 2. Definir variantes para las animaciones
@@ -14,7 +14,7 @@ const containerVariants = {
     },
 };
 
-const columnFromLeft = {
+const columnFromLeft: Variants = {
     hidden: { opacity: 0, x: -40 },
     visible: {
         opacity: 1,
@@ -23,7 +23,7 @@ const columnFromLeft = {
     },
 };
 
-const columnFromRight = {
+const columnFromRight: Variants  = {
     hidden: { opacity: 0, x: 40 },
     visible: {
         opacity: 1,
@@ -44,6 +44,7 @@ const ContactComponent = () => {
 
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [status, setStatus] = useState('')
+    console.log(isSubmitting, status)
 
 
     const pathname = usePathname();
@@ -51,7 +52,7 @@ const ContactComponent = () => {
 
 
     // 👉 Función para manejar cambios en los campos
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
         setFormData((prev) => ({
             ...prev,
@@ -60,7 +61,7 @@ const ContactComponent = () => {
     }
 
     // 👉 Función para enviar datos al webhook de n8n
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setIsSubmitting(true)
         setStatus('')

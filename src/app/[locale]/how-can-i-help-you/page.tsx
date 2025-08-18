@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { FaBrain, FaCode, FaPalette, FaShieldAlt, FaLightbulb, FaUserCheck } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 
@@ -11,12 +11,12 @@ import { useTranslations } from 'next-intl';
 
 
 // --- Variantes de Animación ---
-const containerVariants = {
+const containerVariants: Variants ={
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
 };
