@@ -1,8 +1,9 @@
 'use client'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 
 
 const fadeIn = {
@@ -12,6 +13,8 @@ const fadeIn = {
 
 const page = () => {
     const t = useTranslations("projects.projects.pandorai_agency.inside");
+          const pathname = usePathname();
+          const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
     const stack = [
         'Next.js',
         'Tailwind CSS',
@@ -220,7 +223,7 @@ const page = () => {
                     </p>
 
                     <motion.a
-                              href="/contacto"
+                              href={`/${locale}/contact`}
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.97 }}
                               className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"

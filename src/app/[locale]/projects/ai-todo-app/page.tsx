@@ -1,9 +1,10 @@
 'use client'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { SiNextdotjs, SiTailwindcss, SiOpenai, SiTypescript, SiPrisma } from 'react-icons/si'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 
 export const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -11,8 +12,10 @@ export const fadeUp = {
     viewport: { once: true },
     transition: { duration: 0.6, ease: 'easeOut' },
 }
-const page = () => {
+const Page = () => {
     const t = useTranslations('projects.projects.ai_todo_app.inside')
+          const pathname = usePathname();
+          const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
     return (
         <main className="text-[#374151] ">
             {/* HERO */}
@@ -169,7 +172,7 @@ const page = () => {
                     </p>
                     <div className="space-x-4">
                         <motion.a
-                            href="/contacto"
+                            href={`/${locale}/contact`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.97 }}
                             className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
@@ -184,4 +187,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

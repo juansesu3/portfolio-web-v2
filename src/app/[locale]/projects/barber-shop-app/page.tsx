@@ -1,11 +1,12 @@
 'use client'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import {
     SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiAxios, SiJsonwebtokens, SiNodedotjs
 } from 'react-icons/si'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 
 export const fadeUp = {
     initial: { opacity: 0, y: 40 },
@@ -33,6 +34,8 @@ const techStack = [
 
 const page = () => {
     const t = useTranslations('projects.projects.barber_shop.inside')
+          const pathname = usePathname();
+          const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
     return (
         <div className="text-[#374151]">
             {/* Hero Section */}
@@ -176,7 +179,7 @@ const page = () => {
                     </p>
                     <div className="space-x-4">
                         <motion.a
-                            href="/contacto"
+                            href={`/${locale}/contact`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.97 }}
                             className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"

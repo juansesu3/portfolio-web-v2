@@ -1,9 +1,14 @@
 'use client'
 import { useTranslations } from 'next-intl';
-import React from 'react'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React, { useMemo } from 'react'
 
 const SectionThree = () => {
     const t = useTranslations("home");
+
+      const pathname = usePathname();
+        const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
     return (
         <div className='flex gap-4 flex-col md:flex-row'>
             <div className='border  border-gray-100 flex flex-col custom2:flex-row  gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full '>
@@ -20,12 +25,12 @@ const SectionThree = () => {
                     <p className='uppercase text-slate-500 text-center'>{t('section_three.box_one.title_3')}</p>
                 </div>
             </div>
-            <div className='group border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white'>
+            <Link href={`/${locale}/contact`} className='group border border-gray-100 flex flex-col justify-end gap-2 cursor-pointer rounded-2xl shadow-md p-4 w-full hover:-translate-y-1 transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white'>
                 <h1 className='text-5xl font-bold'>
                 {t('section_three.box_two.title')} <br />
                     <span className='text-purple-500 group-hover:text-white'>  {t('section_three.box_two.title_2')} </span>   {t('section_three.box_two.title_3')} 
                 </h1>
-            </div>
+            </Link>
         </div>
     )
 }

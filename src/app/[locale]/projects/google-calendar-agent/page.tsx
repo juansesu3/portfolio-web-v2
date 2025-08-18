@@ -1,13 +1,17 @@
 'use client';
-import React from 'react';
+import React, { useMemo } from 'react';
 import DiagramaFlujoInteractivo from '@/app/components/projects/DiagramaFlujoInteractivo';
 import { motion } from 'framer-motion';
 import { FaArrowDown } from 'react-icons/fa';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
-const page = () => {
+const Page = () => {
     const t = useTranslations("projects.projects.intelligent_assistent.inside");
+      const pathname = usePathname();
+      const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
+    
     return (
         <div className="bg-white text-gray-800 overflow-x-hidden">
             {/* 🟣 Hero Full Screen */}
@@ -172,7 +176,7 @@ const page = () => {
                     </motion.p>
 
                     <motion.a
-                        href="/contact"
+                        href={`/${locale}/contact`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
                         className="inline-flex items-center gap-3 bg-[#a855f7] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#9333ea] transition"
@@ -187,4 +191,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

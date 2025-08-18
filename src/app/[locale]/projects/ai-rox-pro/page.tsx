@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
+import { usePathname } from "next/navigation";
+import React, { useMemo } from "react";
 import {
     FaArrowRight,
     FaRobot,
@@ -42,6 +43,8 @@ const itemVariants = {
 // --- Página Principal ---
 const Page: React.FC = () => {
     const t = useTranslations('projects.projects.ai_rox_pro.inside')
+          const pathname = usePathname();
+          const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
 
     const featuresData = [
         {
@@ -123,7 +126,7 @@ const Page: React.FC = () => {
                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                     >
                         <a
-                            href="#"
+                            href="hyrox-pro.vercel.app"
                             className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-full font-semibold text-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300"
                         >
                             {t('sect_1.cta')} <FaArrowRight className="w-5 h-5" />
@@ -245,7 +248,7 @@ const Page: React.FC = () => {
                         </motion.p>
                         <motion.div variants={itemVariants}>
                             <a
-                                href="#"
+                                href="hyrox-pro.vercel.app"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-full font-semibold text-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300"
                             >
                                 {t('sec_4.cta')} <FaMousePointer className="w-5 h-5" />

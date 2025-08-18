@@ -1,22 +1,22 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import CircularProgressBar from './CircularProgressBar'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import EducationSection from './EducationSection'
 import { motion } from 'framer-motion'
 import { FaDownload } from "react-icons/fa6";
+import Link from 'next/link'
 const MyCard = () => {
-    const pathname = usePathname()
-    const localeFromPath = pathname.split("/")[1] || "en"
-    const [locale, setLocale] = useState(localeFromPath)
+
+
+    const pathname = usePathname();
+    const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
     const t = useTranslations("profile")
 
-    useEffect(() => {
-        setLocale(localeFromPath)
-    }, [localeFromPath])
+
 
     const introYourSelf = t('introYourSelf').split('//').map((item, index) => (
         <p key={index}>{item}</p>
@@ -66,9 +66,9 @@ const MyCard = () => {
                     </div>
                 </div>
 
-                <button className='bg-purple-500 text-white rounded-md p-2 text-lg font-medium transition-all duration-300 ease-in-out  hover:shadow-md  hover:bg-purple-600 '>
+                <Link href={`/${locale}/contact`} className='bg-purple-500 text-white rounded-md p-2 text-lg font-medium transition-all duration-300 ease-in-out  hover:shadow-md  hover:bg-purple-600 text-center '>
                     {t('cta_button')}
-                </button>
+                </Link>
                 <a
                     href="/assets/CV-Juan-Sebastian-Suarez.pdf" // actualiza esto a la ruta real del CV
                     download

@@ -1,8 +1,14 @@
+'use client'
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React, { useMemo } from 'react';
 
 const ThanksGrid = () => {
     const t = useTranslations('projects');
+
+    const pathname = usePathname();
+    const locale = useMemo(() => pathname.split('/')[1] || 'en', [pathname]);
     return (
         <section className=" py-16  text-center rounded-lg ">
             <div className="max-w-3xl mx-auto">
@@ -18,12 +24,12 @@ const ThanksGrid = () => {
                 <p className="text-lg font-semibold mb-8">
                     {t('end_section.paragrah_3')}
                 </p>
-                <a
-                    href="#contacto" // Enlace que puedes personalizar
+                <Link
+                    href={`/${locale}/contact`} // Enlace que puedes personalizar
                     className="bg-purple-500 text-white hover:text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-white border border-gray-100  transition duration-300"
                 >
                     {t('end_section.cta')}
-                </a>
+                </Link>
             </div>
         </section>
     );
