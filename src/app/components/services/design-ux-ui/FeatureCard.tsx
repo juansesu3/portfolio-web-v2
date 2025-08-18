@@ -1,19 +1,27 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { ICONS } from './UxUiDesign'; // Reutiliza la configuración de iconos
 
-const cardVariants = {
+type IconKey = keyof typeof ICONS; // Define a union type for ICONS keys
+
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 100 } },
 };
+interface FeatureCardProps {
+  icon: IconKey;
+  color: string;
+  title: string;
+  description: string;
+}
 
-const FeatureCard = ({ icon, color, title, description }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, color, title, description }) => {
   const IconComponent = ICONS[icon];
-  const cardRef = useRef(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     const { clientX, clientY } = e;
     const { left, top, width, height } = cardRef.current.getBoundingClientRect();

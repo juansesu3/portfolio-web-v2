@@ -78,9 +78,9 @@ const initialEdges = [
 
 function DiagramaFlujoInteractivo() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, onEdgesChange] = useEdgesState(initialEdges);
-  const [selectedNode, setSelectedNode] = useState(null);
-
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [selectedNode, setSelectedNode] = useState<{ id: string; label: string } | null>(null);
+console.log(setEdges)
   useEffect(() => {
     const saved = localStorage.getItem('saved-nodes');
     if (saved) setNodes(JSON.parse(saved));
@@ -127,7 +127,7 @@ function DiagramaFlujoInteractivo() {
               className="w-80 bg-white p-6 shadow-lg rounded-md"
             >
               <h2 className="text-xl font-bold mb-2">{selectedNode.label}</h2>
-              <p className="text-gray-600 mb-4">{nodeDescriptions[selectedNode.id]}</p>
+              <p className="text-gray-600 mb-4">{nodeDescriptions[selectedNode.id as keyof typeof nodeDescriptions]}</p>
               <button
                 onClick={() => setSelectedNode(null)}
                 className="text-purple-600 text-sm underline"

@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaRobot, FaIndustry, FaChartLine, FaShoppingCart, FaUserTie } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion'; // ---> 1. Importaciones necesarias
+import { motion, AnimatePresence, Variants } from 'framer-motion'; // ---> 1. Importaciones necesarias
 
 const AiAgentsServices = () => {
   type ServiceTabs = 'development' | 'benefits' | 'ecommerce';
@@ -11,17 +11,17 @@ const AiAgentsServices = () => {
   const t = useTranslations("services.ai_agents_development");
 
   // --- Variantes de Animación ---
-  const containerVariants = {
+  const containerVariants:Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.1 } },
   };
 
-  const itemVariants = {
+  const itemVariants:Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
   };
 
-  const contentVariants = {
+  const contentVariants:Variants = {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
     exit: { opacity: 0, y: -10, transition: { duration: 0.2, ease: 'easeIn' } },

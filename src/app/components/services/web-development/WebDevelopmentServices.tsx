@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { FaCode, FaServer, FaCogs, FaTools, FaDatabase, FaRocket, FaGithub, FaGitAlt, FaClipboardCheck } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image'; // ---> Importar Image de Next.js
 
 // --- Variantes de Animación ---
@@ -13,23 +13,23 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants:Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
 };
 
-const cardVariants = {
+const cardVariants:Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 150, damping: 15 } },
 };
 
 // ---> Nuevas variantes para la sección de dos columnas
-const slideInLeft = {
+const slideInLeft:Variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 80 } },
 }
 
-const slideInRight = {
+const slideInRight:Variants = {
     hidden: { opacity: 0, x: 50 },
     visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 80 } },
 }

@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion , Variants} from 'framer-motion';
 import {
   FaMobileAlt, FaLaptop, FaPaintBrush, FaUserFriends, FaDraftingCompass, FaEye
 } from 'react-icons/fa';
@@ -27,17 +27,17 @@ const FEATURES: Array<{
   ];
 
 // --- Variantes de Animación ---
-const containerVariants = {
+const containerVariants:Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
-const itemVariants = {
+const itemVariants:Variants = {
   hidden: { opacity: 0, x: -30 },
   visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 100 } },
 };
 
-const imageVariants = {
+const imageVariants:Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 80, delay: 0.2 } },
 }

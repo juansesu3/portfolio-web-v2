@@ -3,12 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 // --- Variantes de animación mejoradas ---
 
 // 1. Orquesta la animación principal (texto vs imagen)
-const containerVariants = {
+const containerVariants:Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -18,7 +18,7 @@ const containerVariants = {
 }
 
 // 2. Orquesta los elementos dentro del bloque de texto (título, párrafo, botón)
-const textContainerVariants = {
+const textContainerVariants:Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -29,7 +29,7 @@ const textContainerVariants = {
 
 
 // 3. Animación con "spring" para cada elemento de texto
-const itemVariants = {
+const itemVariants:Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -43,7 +43,7 @@ const itemVariants = {
 }
 
 // 4. Animación de "pop-in" para la imagen
-const imageVariants = {
+const imageVariants:Variants = {
   hidden: { opacity: 0, scale: 0.6, rotate: -10 },
   visible: {
     opacity: 1,
