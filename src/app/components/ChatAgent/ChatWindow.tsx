@@ -54,48 +54,35 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
         time: getCurrentTime(),
       };
       dispatch(addMessage(userMessage));
-
+  
       setInput("");
       setIsTyping(true);
       setBotTypingMessage(null);
       const controller = new AbortController();
       setAbortController(controller);
-      ;
-
+  
       try {
         const response = await axios.post(
-          // 
-          `https://ecommerce-demo-960512295965.us-central1.run.app/chatbot/query`,
+          "/api/ai-agent", // 👈 Ahora usamos nuestro backend interno
           {
             query: input,
-            userUUID: userUUID,
+            userUUID: userUUID, // lo puedes mantener por si luego quieres memoria
           },
           {
             signal: controller.signal,
           }
         );
+  
+        // El backend devuelve solo texto
         const botResponseText = response.data.response;
-        const productData = response.data.products?.principal || null;
-        const secondaryProducts = response.data.products?.secondary || [];
-
+  
         const botMessage = {
           sender: "bot" as const,
           text: botResponseText,
           time: getCurrentTime(),
-          product: productData,
         };
-
+  
         dispatch(addMessage(botMessage));
-
-        if (secondaryProducts.length > 0) {
-          const secondaryMessage = {
-            sender: "bot" as const,
-            text: "", // Este mensaje puede tener un texto opcional, algo como "Otros productos que te pueden interesar:"
-            time: getCurrentTime(),
-            secondaryProducts: secondaryProducts
-          };
-          dispatch(addMessage(secondaryMessage));
-        }
         setIsTyping(false);
       } catch (error) {
         if (axios.isCancel(error)) {
@@ -106,7 +93,6 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
             time: getCurrentTime(),
           };
           dispatch(addMessage(cancelMessage));
-
         } else {
           console.error("Error al obtener la respuesta del bot:", error);
           const errorMessage = {
@@ -120,6 +106,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
       }
     }
   };
+  
 
   useEffect(() => {
     if (messagesEndRef.current) {

@@ -46,17 +46,18 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     title: metadataLocale.title,
     description: metadataLocale.description,
     keywords: metadataLocale.keywords.split(', '), // Convertir a un array
+   
     openGraph: {
       title: metadataLocale.title,
       description: metadataLocale.description,
-      url: 'https://pandorai.ch',
-      siteName: 'PandorAI',
+      url: 'https://www.juansedev.ch/',
+      siteName: 'Portfolio - Juan Sebastian Suarez Ramirez',
       images: [
         {
-          url: 'https://my-page-negiupp.s3.amazonaws.com/1723452735373.PNG', // Reemplaza con la URL de tu imagen real
+          url: 'https://my-page-negiupp.s3.amazonaws.com/1758271932786.png', // Reemplaza con la URL de tu imagen real
           width: 1200,
           height: 630,
-          alt: 'AI Solutions for E-Commerce and Customer Support by PandorAI',
+          alt: 'Full-stack development work demonstrating AI applications across industries by Juan Sebastián Suárez',
         },
       ],
       locale: metadataLocale.locale, // Formato locale como 'en_US'
@@ -64,10 +65,10 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@pandorai',
+      site: '@tianking_',
       title: metadataLocale.title,
       description: metadataLocale.description,
-      images: ['https://my-page-negiupp.s3.amazonaws.com/1723452735373.PNG'], // Reemplaza con la URL de tu imagen real
+      images: ['https://my-page-negiupp.s3.amazonaws.com/1758271932786.png'], // Reemplaza con la URL de tu imagen real
     },
   };
 }
