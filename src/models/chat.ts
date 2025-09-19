@@ -1,4 +1,4 @@
-import mongoose, { Schema, model, models } from "mongoose";
+import  { Schema, model, models } from "mongoose";
 
 const messageSchema = new Schema({
   userUUID: { type: String, required: true }, // para identificar al usuario
