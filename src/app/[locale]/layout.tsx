@@ -6,6 +6,8 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script";
+import { structuredData } from "@/lib/structured-data";
 
 
 type Locale = 'en' | 'es' | 'fr' | 'de';
@@ -14,30 +16,42 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
 
   const metadataTranslations = {
     en: {
-      title: 'Software Solutions | Juan Sebastian Suarez Ramirez',
-      description: 'Official website of Juan Sebastián Suárez Ramírez, Full-Stack Software Developer with over 4 years of experience. Welcome to Negiupp, your hub for exploring innovative digital solutions, articles on software development, and the integration of artificial intelligence in cutting-edge projects. Empower your business with customized AI solutions and automation.',
-      keywords: 'Full-Stack Software Development, AI Solutions, Custom AI Systems, Automation for Businesses, AI Integration, Digital Innovation, PandorAI',
-      locale: 'en_US',
+      title: "Full-Stack Developer & AI Integrations | Juan Sebastián Suárez",
+      description:
+        "Official website of Juan Sebastián Suárez, Full-Stack Developer based in Switzerland with 4+ years of experience building modern web applications and integrating AI into real products. Actively seeking new opportunities in Full-Stack or AI Engineering. Explore projects in Next.js, Node.js, Python, AI agents, automations, LangChain and OpenAI.",
+      keywords:
+        "Full-Stack Developer Switzerland, AI Engineer, Software Engineer Jobs, Next.js Developer, React Developer, Node.js Developer, Python Developer, AI Integrations, OpenAI, LangChain, RAG, Automation, PandorAI",
+      locale: "en_US",
     },
+
     es: {
-      title: 'Soluciones de Software | Soluciones de IA para Comercio Electrónico y Soporte al Cliente',
-      description: 'Sitio oficial de Juan Sebastián Suárez Ramírez, desarrollador de software Full-Stack con más de 4 años de experiencia. Bienvenido a Negiupp, tu espacio para explorar soluciones digitales innovadoras, artículos sobre desarrollo de software y la integración de inteligencia artificial en proyectos de vanguardia. Potencia tu negocio con soluciones personalizadas en IA y automatización.',
-      keywords: 'Desarrollo Full-Stack, Soluciones de IA, Sistemas IA Personalizados, Automatización para Empresas, Integración de IA, Innovación Digital, PandorAI',
-      locale: 'es_ES',
+      title: "Desarrollador Full-Stack & Integraciones de IA | Juan Sebastián Suárez",
+      description:
+        "Sitio oficial de Juan Sebastián Suárez, desarrollador Full-Stack en Suiza con más de 4 años de experiencia creando aplicaciones web modernas e integrando inteligencia artificial en productos reales. Actualmente en búsqueda activa de oportunidades como Full-Stack Developer o AI Engineer. Explora proyectos con Next.js, Node.js, Python, agentes de IA, automatizaciones, LangChain y OpenAI.",
+      keywords:
+        "Desarrollador Full-Stack Suiza, Ingeniero de IA, Empleo Software, Next.js, React, Node.js, Python, Integraciones IA, OpenAI, LangChain, RAG, Automatización, PandorAI",
+      locale: "es_ES",
     },
+
     fr: {
-      title: 'Solutions Logiciels | Solutions IA pour le E-Commerce et le Support Client',
-      description: "Site officiel de Juan Sebastián Suárez Ramírez, développeur Full-Stack avec plus de 4 ans d'expérience. Bienvenue sur Negiupp, votre espace pour découvrir des solutions numériques innovantes, des articles sur le développement de logiciels et l'intégration de l'intelligence artificielle dans des projets à la pointe de la technologie. Boostez votre entreprise avec des solutions IA personnalisées et de l'automatisation.",
-      keywords: 'Développement Full-Stack, Solutions IA, Systèmes IA Personnalisés, Automatisation pour Entreprises, Intégration IA, Innovation Numérique, PandorAI',
-      locale: 'fr_FR',
+      title: "Développeur Full-Stack & Intégrations IA | Juan Sebastián Suárez",
+      description:
+        "Site officiel de Juan Sebastián Suárez, développeur Full-Stack basé en Suisse avec plus de 4 ans d'expérience dans la création d’applications web modernes et l’intégration de l’IA dans des produits réels. Actuellement en recherche active d’opportunités en développement Full-Stack ou en ingénierie IA. Découvrez ses projets avec Next.js, Node.js, Python, agents IA, automatisations, LangChain et OpenAI.",
+      keywords:
+        "Développeur Full-Stack Suisse, Ingénieur IA, Emploi Développeur, Next.js, React, Node.js, Python, Intégrations IA, OpenAI, LangChain, RAG, Automatisation, PandorAI",
+      locale: "fr_FR",
     },
+
     de: {
-      title: 'Softwarelösungen | KI-Lösungen für E-Commerce und Kundenservice',
-      description: 'Offizielle Website von Juan Sebastián Suárez Ramírez, Full-Stack-Softwareentwickler mit über 4 Jahren Erfahrung. Willkommen bei Negiupp, Ihrem Zentrum für innovative digitale Lösungen, Artikeln über Softwareentwicklung und der Integration von Künstlicher Intelligenz in fortschrittliche Projekte. Stärken Sie Ihr Unternehmen mit maßgeschneiderten KI-Lösungen und Automatisierung.',
-      keywords: 'Full-Stack-Entwicklung, KI-Lösungen, Maßgeschneiderte KI-Systeme, Automatisierung für Unternehmen, KI-Integration, Digitale Innovation, PandorAI',
-      locale: 'de_DE',
+      title: "Full-Stack Entwickler & KI-Integrationen | Juan Sebastián Suárez",
+      description:
+        "Offizielle Website von Juan Sebastián Suárez, Full-Stack Entwickler in der Schweiz mit über 4 Jahren Erfahrung in der Entwicklung moderner Webanwendungen und der Integration von KI in reale Produkte. Derzeit aktiv auf Jobsuche als Full-Stack Developer oder AI Engineer. Entdecken Sie Projekte mit Next.js, Node.js, Python, KI-Agenten, Automatisierung, LangChain und OpenAI.",
+      keywords:
+        "Full-Stack Entwickler Schweiz, KI Ingenieur, Softwareentwickler Jobs, Next.js, React, Node.js, Python, KI-Integrationen, OpenAI, LangChain, RAG, Automatisierung, PandorAI",
+      locale: "de_DE",
     },
   };
+
 
 
   const metadataLocale = metadataTranslations[locale] || metadataTranslations.en;
@@ -100,7 +114,15 @@ export default async function RootLayout({
             <NavBar />
             <div className='max-w-5xl mx-auto px-2'>
               {children}
-              <Analytics/>
+              <Script
+                id="structured-data"
+                type="application/ld+json"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify(structuredData),
+                }}
+              />
+              <Analytics />
             </div>
 
             <Footer />
@@ -109,6 +131,8 @@ export default async function RootLayout({
 
         </NextIntlClientProvider>
       </body>
+
+
     </html>
   );
 }
