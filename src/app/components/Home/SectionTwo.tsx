@@ -43,7 +43,17 @@ const SectionTwo = () => {
                         <Link href={`/${locale}/services/design-ux-ui`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><CiMobile3 size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_3')}</p></Link>
                         <Link href={`/${locale}/services/web-development`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><FaCode size={60} /><p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_2')}</p></Link>
                     </div>
-                    <Image className='w-16 absolute -right-2 -bottom-0.5' src='https://my-page-negiupp.s3.amazonaws.com/1736495010295.webp' width={500} height={500} alt='robot ' />
+                    <div className="absolute -right-2 -bottom-1.5 w-16 overflow-hidden rounded-xl">
+                        <video
+                            src="/assets/animate-bot.mp4"
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                        />
+
+                    </div>
                     <div>
                         <h2 className='uppercase text-slate-500 text-sm'>{t('section_two.box_two.sub_title')}</h2>
                         <h3 className='text-md text-black font-bold'>{t('section_two.box_two.sub_title')}</h3>
@@ -71,7 +81,18 @@ const SectionTwo = () => {
                         <Link href={`/${locale}/services/design-ux-ui`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><CiMobile3 size={60} /> <p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_3')}</p></Link>
                         <Link href={`/${locale}/services/web-development`} className='border group border-gray-100 p-6 rounded-xl hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-purple-500 hover:text-white text-black flex flex-col gap-2  items-center justify-center text-center  ' ><FaCode size={60} /><p className='text-purple-500 font-medium group-hover:text-white'>{t_('services.service_2')}</p></Link>
                     </div>
-                    <Image className='w-16 absolute -right-2 -bottom-0.5' src='https://my-page-negiupp.s3.amazonaws.com/1736495010295.webp' width={500} height={500} alt='robot ' />
+                 {/* <Image className='w-16 absolute -right-2 -bottom-0.5' src='https://my-page-negiupp.s3.amazonaws.com/1736495010295.webp' width={500} height={500} alt='robot ' /> */}
+                    <div className="absolute -right-2 -bottom-1.5 w-16 overflow-hidden rounded-xl">
+                        <video
+                            src="/assets/animate-bot.mp4"
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                        />
+
+                    </div>
                     <div>
                         <h2 className='uppercase text-slate-500 text-sm'>{t('section_two.box_two.title')}</h2>
                         <h3 className='text-md text-black font-bold'>{t('section_two.box_two.sub_title')}</h3>

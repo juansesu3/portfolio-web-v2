@@ -12,6 +12,7 @@
     "@langchain/core": "^0.3.77",
     "@langchain/openai": "^0.6.13",
     "@reduxjs/toolkit": "^2.5.0",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.7.9",
     "framer-motion": "^12.18.1",
     "franc": "^6.2.0",

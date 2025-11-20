@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 type Locale = 'en' | 'es' | 'fr' | 'de';
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     title: metadataLocale.title,
     description: metadataLocale.description,
     keywords: metadataLocale.keywords.split(', '), // Convertir a un array
-   
+
     openGraph: {
       title: metadataLocale.title,
       description: metadataLocale.description,
@@ -91,19 +91,22 @@ export default async function RootLayout({
     messages = {}; // fallback para evitar errores si no se encuentran los mensajes
   }
   return (
-    <html lang={locale}>
+    <html lang={locale}
+
+    >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-        <Layout>
-        <NavBar />
-          <div className='max-w-5xl mx-auto px-2'>
-            {children}
-          </div>
-       
-          <Footer />
+          <Layout>
+            <NavBar />
+            <div className='max-w-5xl mx-auto px-2'>
+              {children}
+              <Analytics/>
+            </div>
 
-        </Layout>
-       
+            <Footer />
+
+          </Layout>
+
         </NextIntlClientProvider>
       </body>
     </html>
