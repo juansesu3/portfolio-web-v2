@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='flex justify-center'>
-          <p className='text-slate-500/50 font-bold'>© 2025 <Link href={'/'} className='text-purple-500 hover:text-purple-600 transition-all duration-300 ease-in-out '> negiupp.com </Link> | {t('rigth')}</p>
+          <p className='text-slate-500/50 font-bold'>© 2026 <Link href={'/'} className='text-purple-500 hover:text-purple-600 transition-all duration-300 ease-in-out '> juansedev.ch </Link> | {t('rigth')}</p>
         </div>
       </div>
     </div>

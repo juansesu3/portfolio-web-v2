@@ -70,7 +70,7 @@ const MyCard = () => {
                     {t('cta_button')}
                 </Link>
                 <a
-                    href="/assets/CV-Juan-Sebastian-Suarez.pdf" // actualiza esto a la ruta real del CV
+                    href={`/assets/cv/${locale}/Juan_Sebastian_Suarez_${locale}_cv.pdf`} // actualiza esto a la ruta real del CV
                     download
                     className="group flex gap-2 items-center justify-center mt-2 text-center text-gray-400 text-sm font-medium hover:underline hover:text-purple-500"
                 >
@@ -112,14 +112,14 @@ const MyCard = () => {
                         <h2 className='text-purple-500 font-semibold text-lg mb-4 uppercase'>Language</h2>
                         <div className='flex gap-4 justify-around'>
                             {[
-                                { flag: '🇬🇧', label: 'English', level: 'B2+' },
-                                { flag: '🇫🇷', label: 'French', level: 'A2' },
-                                { flag: '🇪🇸', label: 'Spanish', level: 'Native' },
+                                { flag: '🇬🇧', label: t('languages.eng.language'), level: 'C1' },
+                                { flag: '🇫🇷', label: t('languages.fra.language'), level: 'B1' },
+                                { flag: '🇪🇸', label: t('languages.esp.language'), level: 'Native' },
                             ].map(({ flag, label, level }) => (
                                 <div key={label} className='flex flex-col items-center justify-center'>
                                     <span>{flag}</span>
                                     <h3 className='text-lg font-bold '>{label}</h3>
-                                    <p className='text-purple-500'>Level {level}</p>
+                                    <p className='text-purple-500'>{t('languages.lev')} <strong>{level}</strong></p>
                                 </div>
                             ))}
                         </div>
@@ -134,7 +134,7 @@ const MyCard = () => {
                     >
                         <h2 className='text-purple-500 font-semibold text-lg mb-4 uppercase'>Experiences</h2>
                         <div className='flex flex-col gap-4'>
-                            {['pandorai', 'negiupp', 'talent', 'makaia'].map((exp) => (
+                            {['upskillingRelocation','pandorai', 'negiupp', 'talent', 'makaia'].map((exp) => (
                                 <div key={exp}>
                                     <p className='text-slate-500'>
                                         {formatDate(t(`experinces.${exp}.startDateExp`))} -{' '}

@@ -785,40 +785,48 @@
         "cta_button": "Conversemos",
         "username": "Juan Sebastian Suarez Ramirez",
         "greeting": "¡Te contaré algo que siempre me ha movido como desarrollador.!",
-        "shortIntro": "Detrás de cada línea de código que escribo hay una historia: un negocio que quiere crecer, una persona que quiere resolver un problema, una idea que merece funcionar.",
-        "introYourSelf": "Soy Juan Sebastián Suárez Ramírez, Full Stack Developer con experiencia en frontend moderno (React, Next.js, TypeScript) y backend robusto (Node.js, Python). Ayudo a convertir ideas en productos funcionales, optimizando tiempo, costo y rendimiento.\n//\nComo cofundador de PandorAI, lideré soluciones de IA aplicadas con técnicas como RAG, reduciendo significativamente costos operativos y aumentando el impacto tecnológico en negocios reales.\n//\nSi tu equipo necesita transformar la complejidad técnica en claridad y resultados, puedo ayudarte a lograrlo.\n//\n¿Tienes una idea lista para dar el siguiente paso? Conectemos.",
+        "shortIntro": "Detrás de cada línea de código que escribo hay un propósito: un negocio que quiere crecer, un problema real por resolver o una idea lista para convertirse en producto.",
+        "introYourSelf": "Soy Juan Sebastián Suárez Ramírez, desarrollador Full Stack con experiencia creando frontends modernos (React, Next.js, TypeScript) y backends robustos (Node.js, Python).\n//\nTrabajo de cerca con los proyectos desde la idea hasta el despliegue, transformando conceptos en soluciones digitales escalables y de alto rendimiento, optimizando tiempo, costos y performance. Mi trabajo abarca plataformas web, funcionalidades impulsadas por IA y flujos de automatización, con foco en una arquitectura limpia, código mantenible y soluciones prácticas que generan valor medible.\n//\nDisfruto colaborar con equipos, comprender las necesidades reales de los usuarios y convertir la complejidad técnica en claridad y ejecución. Si tu equipo necesita a alguien que haga avanzar un proyecto con foco y fiabilidad, estaré encantado de ayudar. ¿Tienes una idea lista para dar el siguiente paso? Construyámosla juntos.",
         "experinces": {
+            "upskillingRelocation": {
+                "company": "Desarrollo de habilidades y reubicación",
+                "startDateExp": "2025-08-01T00:00:00.000Z",
+                "endDateExp": "2028-02-14T22:00:00.000Z",
+                "position": "Pausa profesional (Reagrupación familiar — Permiso B)",
+                "roldescription": "Pausa profesional vinculada a la reagrupación familiar (trámite del permiso B). Aproveché el período de espera de la autorización de trabajo para perfeccionar mis competencias en IA generativa, RAG y LangChain. Desarrollo de proyectos personales full-stack para reforzar el dominio de Next.js, FastAPI, Python y Node.js. Estado: actualmente plenamente autorizado para trabajar (Permiso B activo).",
+                "urlCompany": "Friburgo, Suiza"
+            },
             "makaia": {
                 "company": "Makaia",
-                "endDateExp": "2022-01-25T17:00:00.000Z",
-                "position": "Desarrollador Frontend",
-                "roldescription": "Participé como Desarrollador Frontend en un bootcamp dinámico, abordando desafíos tecnológicos del mundo real. Creé soluciones digitales innovadoras utilizando React.js y TypeScript, además de implementar preprocesadores CSS para mejorar los estilos. Apliqué metodologías ágiles y prácticas de CI/CD para una ejecución de proyectos eficiente. Entusiasmado por aprovechar esta experiencia y conjunto de habilidades en nuevas oportunidades.",
-                "urlCompany": "https://makaia.org/bootcamp-makaia/",
-                "startDateExp": "2021-07-01T10:00:00.000Z"
+                "startDateExp": "2021-09-01T10:00:00.000Z",
+                "endDateExp": "2022-02-01T17:00:00.000Z",
+                "position": "Desarrollador Frontend (Formación intensiva)",
+                "roldescription": "Desarrollo de componentes SPA tipados con React y TypeScript dentro de un programa intensivo orientado a proyectos reales. Aplicación de metodologías Agile/Scrum, contribución a los primeros flujos CI/CD y creación de interfaces responsive siguiendo buenas prácticas de Design Systems.",
+                "urlCompany": "https://makaia.org/bootcamp-makaia/"
             },
             "talent": {
                 "company": "Talent.com",
+                "startDateExp": "2022-02-01T15:00:00.000Z",
                 "endDateExp": "2022-12-15T15:00:00.000Z",
-                "position": "Desarrollador JavaScript",
-                "roldescription": "Como Desarrollador JavaScript, diseñé y ejecuté scripts sofisticados de web scraping, asegurando la calidad de los datos y optimizando las metodologías de almacenamiento. Aproveché el trabajo en equipo colaborativo y tecnologías avanzadas, logrando una posición destacada en mi rol. Entusiasmado por llevar esta experiencia y éxito a nuevos desafíos.",
-                "urlCompany": "https://talent.com/",
-                "startDateExp": "2022-01-14T15:00:00.000Z"
+                "position": "Desarrollador JavaScript (Backend y Datos)",
+                "roldescription": "Desarrollo y optimización de pipelines backend en Node.js para procesar más de 200.000 ofertas de empleo al día. Mejora de algoritmos de extracción y mecanismos de almacenamiento, reduciendo los errores de scraping en un 32 %. Colaboración estrecha con un equipo internacional para integrar nuevas fuentes de datos.",
+                "urlCompany": "https://talent.com/"
             },
             "negiupp": {
-                "company": "negiupp.com - mi propia marca",
-                "endDateExp": "2023-10-10T18:00:00.000Z",
-                "position": "Desarrollador FullStack Freelance especializado en React.js y Node.js",
-                "roldescription": "Como desarrollador fullstack he creado proyectos increíbles resolviendo problemas cotidianos mediante productos digitales con una potente pila de tecnologías, entre las que destacan React.js, Node.js, Next.js, JavaScript, Express.js, MongoDB, SQL y NoSQL. Puedes visitar la sección de proyectos en mi sitio web para saber más.",
-                "urlCompany": "Freelancer",
-                "startDateExp": "2023-01-30T21:00:00.000Z"
+                "company": "Freelance",
+                "startDateExp": "2023-01-01T21:00:00.000Z",
+                "endDateExp": "2023-12-31T18:00:00.000Z",
+                "position": "Desarrollador Web y Consultor Técnico",
+                "roldescription": "Diseño y entrega de aplicaciones web modernas con React, Next.js y TypeScript. Desarrollo de APIs REST seguras con Node.js y gestión de bases de datos MongoDB y SQL. Acompañamiento técnico a clientes en arquitectura, rendimiento y mantenibilidad de las soluciones.",
+                "urlCompany": "Freelancer"
             },
             "pandorai": {
                 "company": "PandorAI.ch",
-                "endDateExp": "2028-02-14T22:00:00.000Z",
-                "position": "CEO y Cofundador",
-                "roldescription": "Como CEO y cofundador de PandorAI, lideré la creación de una visión clara, la formación de un equipo talentoso y la estructuración de nuestros servicios. Aprovechando mi experiencia como desarrollador fullstack, implementamos la técnica RAG (Retrieval-Augmented Generation), lo que redujo significativamente los costos operativos de los modelos de lenguaje. Este enfoque no solo mejoró nuestra oferta para los clientes, sino que también aumentó las ganancias de la empresa, alineando la innovación tecnológica con la eficiencia empresarial para democratizar el acceso a soluciones avanzadas de inteligencia artificial.",
-                "urlCompany": "https://pandorai.ch",
-                "startDateExp": "2024-02-14T22:00:00.000Z"
+                "startDateExp": "2024-01-01T22:00:00.000Z",
+                "endDateExp": "2025-07-31T22:00:00.000Z",
+                "position": "Líder Full Stack Developer y AI Engineer",
+                "roldescription": "Diseño y desarrollo de una plataforma SaaS combinando Next.js, Python, FastAPI y pipelines de IA basados en RAG y LangChain. Implementación de arquitecturas escalables, bases de datos vectoriales y despliegues CI/CD automatizados. Mejora medible del rendimiento con una reducción del 30 % en la latencia y del 45 % en las alucinaciones de IA. Responsabilidad completa de extremo a extremo: Backend, IA, Frontend y Cloud.",
+                "urlCompany": "https://pandorai.ch"
             }
         },
         "education": {
@@ -866,17 +874,18 @@
             }
         },
         "languages": {
+            "lev": "Nivel",
             "esp": {
                 "language": "Español",
                 "levelLang": "Nativo"
             },
             "eng": {
                 "language": "Ingles",
-                "levelLang": "B2"
+                "levelLang": "C1"
             },
             "fra": {
                 "language": "Francés",
-                "levelLang": "A2"
+                "levelLang": "B1"
             }
         },
         "skills": {
