@@ -92,10 +92,10 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>
 }>) {
   // Accede a `params.locale` directamente sin `await`
-  const { locale } = await params;
+  const { locale } = await params
   // Obtener los mensajes correspondientes al locale
   let messages;
   try {
