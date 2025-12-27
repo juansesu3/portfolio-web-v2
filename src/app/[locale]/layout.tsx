@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { getMessages } from "next-intl/server";
+import { getMessages,setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -11,8 +11,10 @@ import { structuredData } from "@/lib/structured-data";
 
 
 type Locale = 'en' | 'es' | 'fr' | 'de';
-export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
-  const { locale } = await params; // Esperar a que `params` se resuelva
+export async function generateMetadata(
+  { params }: { params: { locale: Locale } }
+): Promise<Metadata> {
+  const { locale } = await  params;
 
   const metadataTranslations = {
     en: {
@@ -95,11 +97,14 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }>) {
   // Accede a `params.locale` directamente sin `await`
+
   const { locale } = await params
+  setRequestLocale(locale);
   // Obtener los mensajes correspondientes al locale
   let messages;
   try {
-    messages = await getMessages({ locale });
+    
+
   } catch (error) {
     console.error(`Error fetching messages for locale: ${locale}`, error);
     messages = {}; // fallback para evitar errores si no se encuentran los mensajes
