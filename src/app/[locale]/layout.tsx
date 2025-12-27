@@ -8,7 +8,8 @@ import Layout from "../components/Layout";
 import { Analytics } from "@vercel/analytics/react"
 import Script from "next/script";
 import { structuredData } from "@/lib/structured-data";
-import { GoogleAnalytics } from '@next/third-parties/google'
+
+
 const GA_ID = 'G-YD6B7D6Q2N'
 type Locale = 'en' | 'es' | 'fr' | 'de';
 export async function generateMetadata(
@@ -113,6 +114,21 @@ export default async function RootLayout({
     <html lang={locale}
 
     >
+       <head>
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Layout>
@@ -133,7 +149,7 @@ export default async function RootLayout({
             <Footer />
 
           </Layout>
-          <GoogleAnalytics gaId={GA_ID} />
+     
         </NextIntlClientProvider>
       </body>
 
