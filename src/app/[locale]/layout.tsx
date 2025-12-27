@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { getMessages,setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -8,8 +8,8 @@ import Layout from "../components/Layout";
 import { Analytics } from "@vercel/analytics/react"
 import Script from "next/script";
 import { structuredData } from "@/lib/structured-data";
-
-
+import { GoogleAnalytics } from '@next/third-parties/google'
+const GA_ID = 'G-YD6B7D6Q2N'
 type Locale = 'en' | 'es' | 'fr' | 'de';
 export async function generateMetadata(
   { params }: { params: { locale: Locale } }
@@ -133,7 +133,7 @@ export default async function RootLayout({
             <Footer />
 
           </Layout>
-
+          <GoogleAnalytics gaId={GA_ID} />
         </NextIntlClientProvider>
       </body>
 
