@@ -135,7 +135,7 @@ const NavBar = () => {
           </button>
 
           <div
-            className={`w-52 border border-gray-100 md:shadow-md mt-2 rounded-md md:absolute md:top-5 overflow-hidden transition-all duration-300 ease-in-out
+            className={`w-52 border border-gray-100 md:shadow-md mt-2 bg-white rounded-md md:absolute md:top-5 overflow-hidden transition-all duration-300 ease-in-out
               ${isDropdownOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
           >
             <Link href={`/${locale}/services/ai-agents-development`} onClick={() => { toggleMenu(); closeDropdowns(); }} className="block text-sm py-2 px-4 hover:bg-purple-100">{t('services.service_4')}</Link>
